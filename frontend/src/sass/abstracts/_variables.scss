@@ -1,0 +1,39 @@
+//PRIMARY COLORS
+$color-primary: linear-gradient(180deg, rgba(102,126,234,1) 0%, rgba(100,182,255,1) 100%);
+$color-primary-light: #64B6FF;
+$color-primary-dark: #667EEA;
+
+//OTHER COLORS
+$color-black: #171515;
+$color-grey-light-1: #F1F1F1;
+$color-grey-light-2: #E1E1E1;
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-white: #FFF;
+
+//BLOCK SHADOWS
+$shadow-box-card: 0 1.5rem 4rem rgba($color-black, 0.15);
+$shadow-box-booking: 0 1.5rem 4rem rgba($color-black, 0.3);
+$shadow-box-story: 0 3rem 6rem rgba($color-black, 0.1);
+$shadow-box-button-hover: 0 1rem 2rem rgba($color-black, 0.2);
+$shadow-box-button-active: 0 0.5rem 1rem rgba($color-black, 0.2);
+$shadow-box-form: 0 1rem 2rem rgba($color-black, 0.1);
+$shadow-box-footer-element: 0 1rem 2rem rgba($color-black, 0.4);
+
+//TEXT SHADOWS
+$shadow-text-heading: 0.5rem 1rem 1rem rgba($color-black, 0.2);
+$shadow-text-button-hover: 0 1rem 2rem rgba($color-black, 0.15);
+$shadow-text-button-active: 0 0.5rem 1rem rgba($color-black, 0.15);
+
+//PHOTO SHADOWS
+$shadow-photo: 0 1.5rem 4rem rgba($color-black, 0.4);
+$shadow-photo-hover: 0 2.5rem 4rem rgba($color-black, 0.5);
+
+//RADIUS VARIABLES
+$border-radius-2: 2px;
+$border-radius-3: 3px;
+$border-radius-10: 10px;
+
+//FONT
+$default-font-size: 1.6rem;

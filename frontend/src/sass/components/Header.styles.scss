@@ -1,0 +1,18 @@
+@import "../../sass/abstracts/variables";
+
+.nav-link {
+    color: $color-black !important;
+    font-size: 1.4rem;
+}
+
+.navbar-toggler.icon {
+    color: $color-black;
+}
+
+.fas {
+    color: $color-black;
+}
+
+// .my-auto {
+//     margin-left: 10rem;
+// }

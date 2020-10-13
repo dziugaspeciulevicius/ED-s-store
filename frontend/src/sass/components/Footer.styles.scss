@@ -1,0 +1,62 @@
+@import "../../sass/abstracts/variables";
+
+.footer {
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary-dark,
+    $color-primary-light
+  );
+  color: $color-white;
+  padding: 3rem 0;
+  //   position: relative;
+}
+
+.row {
+  justify-content: center;
+  border-top: 1px solid 6px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+i {
+  color: $color-white;
+  // font-size: 25px;
+  font-size: $default-font-size;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  a {
+    color: $color-white;
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
+
+p {
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0;
+  padding-top: 1.5rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.sub-title {
+  h6 {
+    color: $color-white;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  .contact-list {
+    i {
+      color: $color-white;
+    }
+    li {
+      color: $color-white;
+    }
+  }
+}
