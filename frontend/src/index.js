@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './bootstrap.min.css';
-// import './index.css';
+import './index.css';
 import './sass/base/_base.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
   document.getElementById('root')
 );
 

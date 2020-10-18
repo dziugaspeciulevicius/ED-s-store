@@ -1,0 +1,112 @@
+// @import "../abstracts/variables";
+// @import "../abstracts/mixins";
+
+// .breadcrumb-section {
+//   background-color: rgba($color-primary-dark, 0.2);
+//   padding: 30px 2rem;
+//   .page-title {
+//     display: flex;
+//     height: 100%;
+//     align-items: center;
+//     h2 {
+//       font-size: 2rem;
+//       font-weight: 500;
+//       margin-bottom: 0;
+//     }
+//   }
+//   .breadcrumb {
+//     background-color: transparent;
+//     justify-content: flex-end;
+//     text-transform: uppercase;
+//     font-size: 2.4rem;
+//     color: $color-black;
+//     font-weight: 600;
+//     margin: 0;
+//     a {
+//       color: $color-black;
+//       font-weight: 600;
+//       font-size: 1.6rem;
+//     }
+//   }
+// }
+
+// .column-md-6 {
+//   flex: 0 0 50%;
+//   max-width: 50%;
+// }
+
+// .breadcrumb-item {
+//   .breadcrumb-item {
+//     padding-right: 2rem;
+//     padding-left: 0;
+//     &:before {
+//       padding-right: 0;
+//       padding-left: 0.5rem;
+//     }
+//   }
+// }
+
+// .breadcrumb-item.active {
+//   color: $color-primary-dark;
+//   font-size: 1.6rem;
+// }
+
+// .bread-row {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   margin-right: -15px;
+//   margin-left: -15px;
+// }
+
+// /*RESPONSIVENESS*/
+// @media (max-width: 767px) {
+//   .breadcrumb-section {
+//     .page-title,
+//     .breadcrumb {
+//       justify-content: center;
+//       padding-bottom: 0;
+//       margin-bottom: -4px;
+//     }
+//   }
+//   .column-md-6 {
+//     flex: 0 0 50%;
+//     max-width: 46%;
+//   }
+// }
+
+// @media (max-width: 577px) {
+//   .about-page {
+//     .about-head {
+//       display: inline-block;
+//       width: 100%;
+//       text-align: center;
+//       .theme-breadcrumb {
+//         .breadcrumb {
+//           justify-content: center;
+//           padding-top: 10px;
+//           padding-bottom: 0;
+//         }
+//       }
+//     }
+//   }
+//   .breadcrumb-section {
+//     .page-title {
+//       text-align: center;
+//       margin: 0 auto;
+//       vertical-align: middle;
+//       display: unset;
+//     }
+//     .breadcrumb {
+//       justify-content: center;
+//       padding: 0;
+//       line-height: 30px;
+//     }
+//   }
+// }
+
+// @media (max-width: 420px) {
+//   .breadcrumb-section {
+//     padding: 15px 0;
+//   }
+// }
