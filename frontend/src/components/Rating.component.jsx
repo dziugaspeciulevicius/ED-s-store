@@ -6,7 +6,9 @@ import "../sass/components/Rating.styles.scss";
 const Rating = ({ value, text, color }) => {
   return (
     <div className="rating">
+      {/* We're using font-awesome for icons */}
       <span>
+        {/* If the value is >1 we're showing full star. Else if the value is >= 0.5 then we're showing half of the star. And else we're showing just an empty star */}
         <i
           style={{ color }}
           className={
@@ -19,6 +21,7 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
+        {/* If the value is >2 we're showing full 2 star. Else if the value is >= 1.5 then we're showing 1.5 stars. And else we're showing just an empty star */}
         <i
           style={{ color }}
           className={
@@ -31,6 +34,7 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
+        {/* If the value is >3 we're showing full 3 star. Else if the value is >= 2.5 then we're showing 2.5 stars. And else we're showing just an empty star */}
         <i
           style={{ color }}
           className={
@@ -43,6 +47,7 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
+        {/* If the value is >4 we're showing full 4 star. Else if the value is >= 3.5 then we're showing 3.5 stars. And else we're showing just an empty star */}
         <i
           style={{ color }}
           className={
@@ -55,6 +60,7 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
+        {/* If the value is >5 we're showing full 5 star. Else if the value is >= 4.5 then we're showing 4.5 stars. And else we're showing just an empty star */}
         <i
           style={{ color }}
           className={
@@ -66,7 +72,8 @@ const Rating = ({ value, text, color }) => {
           }
         ></i>
       </span>
-      <div className="reviews-count">{text && text}</div>
+      {/* If there's text, then show it. This below is basically the same as => {text ? text : ''}*/}
+      <span className="reviews-count">{text && text}</span>
     </div>
   );
 };

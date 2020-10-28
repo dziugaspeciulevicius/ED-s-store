@@ -3,6 +3,14 @@
 // }
 
 .col-xl-3 {
-    flex: 0 0 20%;
-    max-width: 25%;
+  flex: 0 0 20%;
+  max-width: 25%;
+}
+
+// cutom boostrap css
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -155px;
+  margin-left: -155px;
 }

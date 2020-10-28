@@ -1,0 +1,54 @@
+@import "../abstracts/variables";
+
+// Back button styles
+.btn-custom-blue {
+  color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.16);
+  background-image: $color-primary;
+
+  &:hover {
+    color: $color-white;
+    box-shadow: $shadow-box-button-hover;
+  }
+
+  &:active {
+    color: $color-white;
+    box-shadow: $shadow-box-button-active;
+  }
+}
+
+//Product description styles
+.product-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+// Product price styles
+.product-price {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: $color-primary-light;
+}
+
+// Product stock information styles
+.stock-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+// Add to cart button styles
+.add-to-cart-button {
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.16);
+  background-image: $color-primary;
+
+  &:hover {
+    box-shadow: $shadow-box-button-hover;
+  }
+
+    &:active {
+    box-shadow: $shadow-box-button-active;
+  }
+}
