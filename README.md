@@ -8,4 +8,4 @@ This ecommerce application was build for a software engineering module. The docu
 
 [Here's documentation repository for this ecommerce app](https://github.com/dziugaspeciulevicius/ED-s-store-docs).
 
-<b>Documentation itself for this ecommerce app can be found [here]().</b>
+<b>Documentation itself for this ecommerce app can be found [here](https://dziugaspeciulevicius.github.io/ED-s-store-docs/).</b>
