@@ -5,9 +5,9 @@ import Breadcrumb from "../components/Breadcrumb.component";
 import "../sass/pages/SignInPage.styles.scss";
 
 class SignInPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (

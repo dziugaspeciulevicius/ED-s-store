@@ -5,9 +5,7 @@ import Rating from "./Rating.component";
 
 import "../sass/components/Product.styles.scss";
 
-{
-  /* We can destructure product that we passed in so we can take our product directly */
-}
+// We can destructure product that we passed in so we can take our product directly
 const Product = ({ product }) => {
   return (
     <Card className="my-3 p-3 rounded">

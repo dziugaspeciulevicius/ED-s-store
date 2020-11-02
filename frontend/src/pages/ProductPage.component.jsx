@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Row,
@@ -10,20 +10,25 @@ import {
   ListGroupItem,
 } from "react-bootstrap";
 import Rating from "../components/Rating.component";
-import products from "../products";
-import HomePage from "./HomePage.component";
 
 import Breadcrumb from "../components/Breadcrumb.component";
 // import DetailsTopTabs from "../components/details-top-tabs";
 // import "react-tabs/style/react-tabs.scss";
+import axios from "axios";
 
 import "../sass/pages/ProductPage.styles.scss";
 
 const ProductPage = ({ match }) => {
-  {
-    /* for now products array find for each where the product _id is = to product url */
-  }
-  const product = products.find((p) => p._id === match.params.id);
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+
+      setProduct(data);
+    };
+    fetchProduct();
+  }, [match]);
 
   return (
     <>
@@ -46,7 +51,9 @@ const ProductPage = ({ match }) => {
                 text={`${product.numReviews} reviews`}
               />
             </ListGroupItem>
-            <ListGroupItem className='product-description'>Description: {product.description}</ListGroupItem>
+            <ListGroupItem className="product-description">
+              Description: {product.description}
+            </ListGroupItem>
             {/*<ListGroupItem>Price: ${product.price}</ListGroupItem>*/}
           </ListGroup>
         </Col>
@@ -60,14 +67,20 @@ const ProductPage = ({ match }) => {
               </ListGroupItem>
               <ListGroupItem>
                 <Row>
-                  <div className='stock-text'>
+                  <div className="stock-text">
                     Availability:{" "}
                     {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
                   </div>
                 </Row>
               </ListGroupItem>
               <ListGroupItem>
-                <Button className="add-to-cart-button" type='button' disabled={product.countInStock === 0}>Add to cart</Button>
+                <Button
+                  className="add-to-cart-button"
+                  type="button"
+                  disabled={product.countInStock === 0}
+                >
+                  Add to cart
+                </Button>
               </ListGroupItem>
             </ListGroup>
           </Card>
