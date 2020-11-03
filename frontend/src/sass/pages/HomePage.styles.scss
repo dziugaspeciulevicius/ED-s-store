@@ -14,3 +14,17 @@
   margin-right: -155px;
   margin-left: -155px;
 }
+
+.latest-products {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+
+  &--title {
+    padding-top: 3rem;
+  }
+  // align-items: center;
+  // align-self: center;
+  // align-content: center;
+  // text-align: center;
+}

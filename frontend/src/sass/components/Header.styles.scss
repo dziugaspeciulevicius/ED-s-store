@@ -1,18 +1,27 @@
 @import "../../sass/abstracts/variables";
 
 .nav-link {
-    color: $color-black !important;
-    font-size: 1.4rem;
+  color: $color-black !important;
+  font-size: 1.4rem;
 }
 
 .navbar-toggler.icon {
-    color: $color-black;
+  color: $color-black;
 }
 
 .fas {
-    color: $color-black;
+  color: $color-black;
 }
 
 .my-auto {
-    padding: 0 18rem;
+  padding: 0 28rem;
+}
+
+.navbar-stick,
+navbar,
+navbar-expand-lg,
+navbar-light,
+bg-light {
+  padding: 1.5rem 5rem;
+  width: 92%;
 }

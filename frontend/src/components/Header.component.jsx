@@ -19,7 +19,6 @@ const Header = () => {
           className="navbar-stick"
           fixed="top"
         >
-          <Container>
             <Navbar.Brand href="/">
               <img
                 src={Logo}
@@ -52,7 +51,6 @@ const Header = () => {
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
-          </Container>
         </Navbar>
       </header>
     </Router>
