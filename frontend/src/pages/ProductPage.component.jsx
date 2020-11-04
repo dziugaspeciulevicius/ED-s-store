@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
-import { Container } from "react-bootstrap";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Container, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.scss";
 import {
   Row,
   Col,
@@ -12,19 +13,16 @@ import {
   Button,
   ListGroupItem,
 } from "react-bootstrap";
+import Breadcrumb from "../components/Breadcrumb.component";
 import Rating from "../components/Rating.component";
 import Spinner from "../components/Spinner.component";
 import Message from "../components/Message.component";
-
-import Breadcrumb from "../components/Breadcrumb.component";
-// import ProductDetails from "../components/productDetails.component";
-import "react-tabs/style/react-tabs.scss";
-
 import "../sass/pages/ProductPage.styles.scss";
-
 import { listProductDetails } from "../actions/productActions";
 
-const ProductPage = ({ match }) => {
+const ProductPage = ({ history, match }) => {
+  const [qty, setQty] = useState(0);
+
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.productDetails);
@@ -33,6 +31,30 @@ const ProductPage = ({ match }) => {
   useEffect(() => {
     dispatch(listProductDetails(match.params.id));
   }, [dispatch, match]);
+
+  const addToCartHandler = () => {
+    history.push(`/cart/${match.params.id}?qty=${qty}`);
+  };
+
+  const minusQty = () => {
+    if (qty > 0) {
+      setQty(qty - 1);
+    } else {
+      console.log("Bro, you cannot go into negative orders")
+    }
+  };
+
+  const plusQty = () => {
+    if (qty < product.countInStock) {
+      setQty(qty + 1);
+    } else {
+      console.log("Out of stock");
+    }
+  };
+
+  // const changeQty = (e) => {
+    // setQty(qty);
+  // };
 
   return (
     <>
@@ -88,15 +110,92 @@ const ProductPage = ({ match }) => {
                     <Row>
                       <div className="stock-text">
                         Availability:{" "}
-                        {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                        {product.countInStock > 0
+                          ? `${product.countInStock} left`
+                          : "Out of Stock"}
                       </div>
                     </Row>
                   </ListGroupItem>
+
+                  {product.countInStock > 0 && (
+                    <ListGroupItem>
+                      <Row>
+                        <div className="stock-text">Select quantity:</div>
+                      </Row>
+                      <Row>
+                        <div>
+                          {/*<Counter
+                            // props={qty}
+                            value={qty}
+                            min={0}
+                            max={product.countInStock}
+                            onChange={(e) => {
+                              setQty(e.target.value);
+                            }}
+                          />*/}
+
+                          <div className="qty-box">
+                            <div className="input-group">
+                              <span className="input-group-prepend">
+                                <button
+                                  type="button"
+                                  className="btn quantity-left-minus"
+                                  onClick={minusQty}
+                                  data-type="minus"
+                                  data-field=""
+                                >
+                                  <i className="fas fa-angle-left"></i>
+                                </button>
+                              </span>
+                              <input
+                                type="text"
+                                name="quantity"
+                                value={qty}
+                                // onChange={changeQty}
+                                className="form-control input-number"
+                              />
+                              <span className="input-group-prepend">
+                                <button
+                                  type="button"
+                                  className="btn quantity-right-plus"
+                                  onClick={plusQty}
+                                  data-type="plus"
+                                  data-field=""
+                                >
+                                  <i className="fas fa-angle-right"></i>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+
+                          {/*<Row>
+                          <Form.Control
+                            as="select"
+                            value={qty}
+                            onChange={(e) => {
+                              setQty(e.target.value);
+                            }}
+                          >
+                            {[...Array(product.countInStock).keys()].map(
+                              (x) => (
+                                <option key={x + 1} value={x + 1}>
+                                  {x + 1}
+                                </option>
+                              )
+                            )}
+                          </Form.Control>
+                        </Row>*/}
+                        </div>
+                      </Row>
+                    </ListGroupItem>
+                  )}
+
                   <ListGroupItem>
                     <Button
+                      onClick={addToCartHandler}
                       className="add-to-cart-button"
                       type="button"
-                      disabled={product.countInStock === 0}
+                      disabled={product.countInStock === 0 || qty <= 0}
                     >
                       Add to cart
                     </Button>
@@ -144,8 +243,8 @@ const ProductPage = ({ match }) => {
                           </Tab>
                           <Tab className="nav-item">
                             <span className="nav-link">
-                              <i className="icofont icofont-contacts"></i>Write
-                              Review
+                              <i className="icofont icofont-contacts"></i>
+                              Write Review
                             </span>
                             <div className="material-border"></div>
                           </Tab>
