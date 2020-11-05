@@ -1,11 +1,257 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  Col,
+  Form,
+  Button,
+} from "react-bootstrap";
+import Message from "../components/Message.component";
+import Breadcrumb from "../components/Breadcrumb.component";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 
-const CartPage = () => {
-    return (
-        <div>
-            CART
-        </div>
-    )
-}
+import "../sass/pages/CartPage.styles.scss";
 
-export default CartPage
+const CartPage = ({ match, location, history }) => {
+  const productId = match.params.id;
+
+  const qty = location.search ? Number(location.search.split("=")[1]) : 1;
+  const dispatch = useDispatch();
+
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
+  useEffect(() => {
+    if (productId) {
+      dispatch(addToCart(productId, qty));
+    }
+  }, [dispatch, productId, qty]);
+
+  // const minusQty = () => {
+  //   if (qty > 0) {
+  //     qty = qty - 1;
+  //   } else {
+  //     console.log("Bro, you cannot go into negative orders");
+  //   }
+  // };
+
+  // const plusQty = () => {
+  //   if (qty < cartItems.productId.qty) {
+  //     qty = qty + 1;
+  //   } else {
+  //     console.log("Out of stock");
+  //   }
+  // };
+
+  //   const changeQty = (e) => {
+  //     dispatch(addToCart(item.product, Number(e.target.value)));
+  //   };
+
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
+
+  const checkoutHandler = () => {
+    //if they are not logged in, redirect to login
+    history.push("/login?redirect=shipping");
+  };
+
+  return (
+    <div>
+      <Breadcrumb title={"Cart Page"} />
+
+      {cartItems.length === 0 ? (
+        <section className="cart-section section-b-space">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <div>
+                  <div className="col-sm-12 empty-cart-cls text-center">
+                    <img
+                      src={require(`${process.env.PUBLIC_URL}../assets/images/icon-empty-cart.png`)}
+                      className="img-fluid mb-4"
+                      alt="empty-cart-img"
+                    />
+                    <h3>
+                      <strong>Your Cart is Empty</strong>
+                    </h3>
+                    <Message>
+                      <Link to="/">Go back and add some items first</Link>
+                    </Message>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section className="cart-section section-b-space">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <table className="table cart-table table-responsive-xs">
+                  <thead>
+                    <tr className="table-head">
+                      <th scope="col">image</th>
+                      <th scope="col">product name</th>
+                      <th scope="col">price</th>
+                      <th scope="col">quantity</th>
+                      <th scope="col">action</th>
+                      {/*<th scope="col">total</th>*/}
+                    </tr>
+                  </thead>
+                  {cartItems.map((item, index) => {
+                    return (
+                      <tbody key={index}>
+                        <tr>
+                          <td>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/product/${item.product}`}
+                            >
+                              <img src={item.image} alt="item" />
+                            </Link>
+                          </td>
+
+                          <td>
+                            <Link
+                              className="custom-link-name"
+                              to={`${process.env.PUBLIC_URL}/product/${item.product}`}
+                            >
+                              {item.name}
+                            </Link>
+                          </td>
+
+                          <td>
+                            <h2>${item.price}</h2>
+                          </td>
+
+                          <td>
+                            {/*<div className="qty-box">
+                              <div className="input-group">
+                                <span className="input-group-prepend">
+                                  <button
+                                    type="button"
+                                    className="btn quantity-left-minus"
+                                    onClick={minusQty}
+                                    data-type="minus"
+                                    data-field=""
+                                  >
+                                    <i className="fas fa-angle-left"></i>
+                                  </button>
+                                </span>
+                                <input
+                                  type="text"
+                                  name="quantity"
+                                  value={item.qty}
+                                  readOnly={true}
+                                  className="form-control input-number"
+                                  onChange={(e) =>
+                                    dispatch(
+                                      addToCart(
+                                        item.product,
+                                        Number(e.target.value)
+                                      )
+                                    )
+                                  }
+                                />
+
+                                <span className="input-group-prepend">
+                                  <button
+                                    type="button"
+                                    className="btn quantity-right-plus"
+                                    onClick={plusQty}
+                                    data-type="plus"
+                                    data-field=""
+                                  >
+                                    <i className="fas fa-angle-right"></i>
+                                  </button>
+                                </span>
+                              </div>
+                            </div>
+                            {/*item.qty >= item.stock ? "out of Stock" : ""*/}
+                            <Col md={8} className="text-center">
+                              <Form.Control
+                                as="select"
+                                value={item.qty}
+                                onChange={(e) => {
+                                  dispatch(
+                                    addToCart(
+                                      item.product,
+                                      Number(e.target.value)
+                                    )
+                                  );
+                                }}
+                              >
+                                {[...Array(item.countInStock).keys()].map(
+                                  (x) => (
+                                    <option key={x + 1} value={x + 1}>
+                                      {x + 1}
+                                    </option>
+                                  )
+                                )}
+                              </Form.Control>
+                            </Col>
+                          </td>
+
+                          <td>
+                            <Button
+                              type="button"
+                              variant="light"
+                              onClick={() =>
+                                removeFromCartHandler(item.product)
+                              }
+                            >
+                              <i className="fas fa-times"></i>
+                            </Button>
+                          </td>
+
+                          {/*<td>
+                            <h2 className="custom-price">${item.price}</h2>
+                            </td>*/}
+                        </tr>
+                      </tbody>
+                    );
+                  })}
+                </table>
+                <table className="table cart-table table-responsive-md">
+                  <tfoot>
+                    <tr>
+                      <td>
+                        total price (
+                        {`${cartItems.reduce(
+                          (acc, item) => acc + item.qty,
+                          0
+                        )} items`}
+                        ):
+                      </td>
+                      <td>
+                        <h2 className="custom-total-price">
+                          $
+                          {cartItems
+                            .reduce(
+                              (acc, item) => acc + item.qty * item.price,
+                              0
+                            )
+                            .toFixed(2)}
+                        </h2>
+                        <Link
+                          to={`${process.env.PUBLIC_URL}/checkout`}
+                          className="btn btn-custom-checkout-blue"
+                        >
+                          check out
+                        </Link>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          {/*</div>*/}
+        </section>
+      )}
+    </div>
+  );
+};
+
+export default CartPage;

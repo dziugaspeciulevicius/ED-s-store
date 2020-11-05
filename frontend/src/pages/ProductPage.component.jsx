@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.scss";
@@ -21,7 +21,7 @@ import "../sass/pages/ProductPage.styles.scss";
 import { listProductDetails } from "../actions/productActions";
 
 const ProductPage = ({ history, match }) => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ const ProductPage = ({ history, match }) => {
     if (qty > 0) {
       setQty(qty - 1);
     } else {
-      console.log("Bro, you cannot go into negative orders")
+      console.log("Bro, you cannot go into negative orders");
     }
   };
 
@@ -51,10 +51,6 @@ const ProductPage = ({ history, match }) => {
       console.log("Out of stock");
     }
   };
-
-  // const changeQty = (e) => {
-    // setQty(qty);
-  // };
 
   return (
     <>
@@ -124,16 +120,6 @@ const ProductPage = ({ history, match }) => {
                       </Row>
                       <Row>
                         <div>
-                          {/*<Counter
-                            // props={qty}
-                            value={qty}
-                            min={0}
-                            max={product.countInStock}
-                            onChange={(e) => {
-                              setQty(e.target.value);
-                            }}
-                          />*/}
-
                           <div className="qty-box">
                             <div className="input-group">
                               <span className="input-group-prepend">
@@ -151,7 +137,6 @@ const ProductPage = ({ history, match }) => {
                                 type="text"
                                 name="quantity"
                                 value={qty}
-                                // onChange={changeQty}
                                 className="form-control input-number"
                               />
                               <span className="input-group-prepend">
@@ -167,24 +152,6 @@ const ProductPage = ({ history, match }) => {
                               </span>
                             </div>
                           </div>
-
-                          {/*<Row>
-                          <Form.Control
-                            as="select"
-                            value={qty}
-                            onChange={(e) => {
-                              setQty(e.target.value);
-                            }}
-                          >
-                            {[...Array(product.countInStock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
-                            )}
-                          </Form.Control>
-                        </Row>*/}
                         </div>
                       </Row>
                     </ListGroupItem>

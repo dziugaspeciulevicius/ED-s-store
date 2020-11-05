@@ -37,6 +37,15 @@
   font-weight: 400;
 }
 
+.form-control, input-number {
+ text-align: center;
+}
+
+.quantity-left-minus, .quantity-right-plus, .input-number {
+  margin-top: 1rem;
+  border: 1px solid $color-grey-dark-4
+}
+
 // Add to cart button styles
 .add-to-cart-button {
   width: 90%;

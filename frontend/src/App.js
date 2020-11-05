@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header.component";
@@ -18,13 +17,13 @@ const App = () => {
     <Router>
       <Header />
       <main className="pb-3">
-          <Route exact path="/" component={HomePage} />
-          <Route path="/product/:id" component={ProductPage} />
-          <Route exact path="/shop" component={ShopPage} />
-          <Route exact path="/contact" component={ContactPage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/cart" component={CartPage} />
-          <Route exact path="/signin" component={SignInPage} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/product/:id" component={ProductPage} />
+        <Route path="/cart/:id?" component={CartPage} />
+        <Route exact path="/shop" component={ShopPage} />
+        <Route exact path="/contact" component={ContactPage} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/signin" component={SignInPage} />
       </main>
       <Footer />
     </Router>
