@@ -10,7 +10,7 @@ import ShopPage from "./pages/ShopPage.component";
 import ContactPage from "./pages/ContactPage.component";
 import AboutPage from "./pages/AboutPage.component";
 import CartPage from "./pages/CartPage.component";
-import SignInPage from "./pages/SignInPage.component";
+import LoginPage from "./pages/LoginPage.component";
 
 const App = () => {
   return (
@@ -20,10 +20,10 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/cart/:id?" component={CartPage} />
-        <Route exact path="/shop" component={ShopPage} />
-        <Route exact path="/contact" component={ContactPage} />
-        <Route exact path="/about" component={AboutPage} />
-        <Route exact path="/signin" component={SignInPage} />
+        <Route path="/shop" component={ShopPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/login" component={LoginPage} />
       </main>
       <Footer />
     </Router>

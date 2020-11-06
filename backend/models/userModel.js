@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 
-// user schema (we want to pass in an object.)
 const userSchema = mongoose.Schema(
   {
-    // This object is where we want to define all the fields we want for a user
     name: {
       type: String,
       required: true,
@@ -20,15 +19,26 @@ const userSchema = mongoose.Schema(
     isAdmin: {
       type: Boolean,
       required: true,
-      // isAdmin is false by default, another admin will have to make a user an admin
       default: false,
     },
   },
-  // with mongoose we can pass in second argument of options (it will show timestamps (created at, added at, and so on...))
   {
     timestamps: true,
   }
 );
+
+userSchema.methods.matchPassword = async function (enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
+    next();
+  }
+
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+});
 
 const User = mongoose.model("User", userSchema);
 

@@ -46,7 +46,7 @@ const Header = () => {
                 <Nav.Link href="/cart" className="nav-link">
                   <i className="fas fa-shopping-cart"></i>Cart
                 </Nav.Link>
-                <Nav.Link href="/signin" className="nav-link">
+                <Nav.Link href="/login" className="nav-link">
                   <i className="fas fa-user"></i>Sign In
                 </Nav.Link>
               </Nav>
