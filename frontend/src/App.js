@@ -11,6 +11,8 @@ import ContactPage from "./pages/ContactPage.component";
 import AboutPage from "./pages/AboutPage.component";
 import CartPage from "./pages/CartPage.component";
 import LoginPage from "./pages/LoginPage.component";
+import RegisterPage from "./pages/RegisterPage.component";
+import ProfilePage from "./pages/ProfilePage.component";
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
         <Route path="/contact" component={ContactPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
+        <Route path="/profile" component={ProfilePage} />
       </main>
       <Footer />
     </Router>

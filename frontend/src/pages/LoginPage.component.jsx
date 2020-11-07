@@ -11,22 +11,36 @@ import Breadcrumb from "../components/Breadcrumb.component";
 
 import "../sass/pages/LoginPage.styles.scss";
 
-const LoginPage = ({ location }) => {
+const LoginPage = ({ location, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const dispatch = useDispatch()
+
+  const userLogin = useSelector(state => state.userLogin)
+
+  const { loading, error, userInfo } = userLogin  // from user reducer
+
   const redirect = location.search ? location.search.split("=")[1] : "/";
+
+  useEffect(() => {
+    if(userInfo) {
+      history.push(redirect)
+    }
+  }, [history, userInfo, redirect])
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // DISPATCH LOGIN
+    dispatch(login(email, password))
   };
 
   return (
     <div>
       <Breadcrumb title={"Login"} />
-      <FormContainer>
+      <FormContainer className="form-container">
         <h1>Log In</h1>
+        {error && <Message variant='danger'>{error}</Message>}
+        {loading && <Spinner/>}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="email">
             <Form.Label>Email Address</Form.Label>
@@ -51,10 +65,8 @@ const LoginPage = ({ location }) => {
           <Button type="submit" variant="primary">
           Sign In
           </Button>
-          </Form>
           
-          <Row className="py-3">
-            <Col>
+            <Col className="new-customer">
               New Customer?{" "}
               <Link
                 to={redirect ? `/register?redirect=${redirect}` : "/register"}
@@ -62,7 +74,7 @@ const LoginPage = ({ location }) => {
                 Register
               </Link>
             </Col>
-          </Row>
+          </Form>
 
       </FormContainer>
       )

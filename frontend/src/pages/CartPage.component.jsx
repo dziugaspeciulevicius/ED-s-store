@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  Col,
-  Form,
-  Button,
-} from "react-bootstrap";
+import { Col, Form, Button } from "react-bootstrap";
 import Message from "../components/Message.component";
 import Breadcrumb from "../components/Breadcrumb.component";
 import { addToCart, removeFromCart } from "../actions/cartActions";
@@ -234,12 +230,14 @@ const CartPage = ({ match, location, history }) => {
                             )
                             .toFixed(2)}
                         </h2>
-                        <Link
-                          to={`${process.env.PUBLIC_URL}/checkout`}
+                        <Button
+                          type="button"
                           className="btn btn-custom-checkout-blue"
+                          disabled={cartItems.length === 0}
+                          onClick={checkoutHandler}
                         >
-                          check out
-                        </Link>
+                          Proceed To Checkout
+                        </Button>
                       </td>
                     </tr>
                   </tfoot>
