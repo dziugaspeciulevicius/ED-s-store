@@ -20,6 +20,8 @@ const Header = () => {
     dispatch(logout())
   }
 
+  const userInfoName = userInfo ? userInfo.name.split(" ")[0] : " ";
+
   return (
     <header>
       <Navbar
@@ -57,7 +59,7 @@ const Header = () => {
               </Nav.Link>
             </LinkContainer>
             {userInfo ? (
-              <NavDropdown title={userInfo.name} id="username">
+              <NavDropdown title={userInfoName} id="username">
                 <LinkContainer to="/profile">
                   <NavDropdown.Item>Profile</NavDropdown.Item>
                 </LinkContainer>

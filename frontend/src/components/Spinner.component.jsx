@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/components/Spinner.styles.scss";
 
 export default function Spinner() {
   return (

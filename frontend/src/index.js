@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import { BrowserRouter } from 'react-router-dom';
+import './sass/style.scss';
 import './bootstrap.min.css';
 import './index.css';
 import './sass/base/_base.scss';

@@ -8,11 +8,17 @@
 }
 
 // cutom boostrap css
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -155px;
-  margin-left: -155px;
+.grid-products {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 10px;
+  // display: grid;
+  // flex-wrap: wrap;
+  // justify-items: start;
+  // margin-right: -155px;
+  // margin-left: -155px;
+  // align-items: center;
 }
 
 .latest-products {

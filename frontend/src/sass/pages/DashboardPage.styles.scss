@@ -1,0 +1,169 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+// .profile {
+//   padding-top: 3rem;
+// }
+
+// @media (min-width: 768px) {
+//   .profile-column {
+//     flex: 0 0 25%;
+//     max-width: 20%;
+//   }
+
+//   .orders-column {
+//     padding-left: 8rem;
+//     flex: 0 0 75%;
+//     max-width: 50%;
+//   }
+// }
+
+/* Dashboard */
+.dashboard {
+  padding-top: 2rem;
+  @include mq("lg") {
+    // .col-lg-3 {
+    //   -ms-flex: 0 0 30%;
+    //   flex: 0 0 30%;
+    //   max-width: 30%;
+    // }
+
+    // .col-lg-9 {
+    //   -ms-flex: 0 70%;
+    //   flex: 0 0 70%;
+    //   max-width: 70%;
+    // }
+    // @media screen and (min-width: 992px) {
+    .dashboard .col-lg-3 {
+      flex: 0 0 30%;
+      max-width: 20%;
+    }
+    .dashboard .col-lg-9 {
+      flex: 0 0 70%;
+      max-width: 100%;
+    }
+    // }
+  }
+
+  @include mq("md") {
+    // @media (min-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 33.33%;
+      max-width: 23.33%;
+    }
+    .col-md-8 {
+      flex: 0 0 66.66%;
+      max-width: 66.66%;
+    }
+    // }
+  }
+  label {
+    margin-bottom: 0.2rem;
+  }
+
+  .form-control {
+    margin-bottom: 1.3rem;
+
+    & + .form-control {
+      margin-top: 2rem;
+    }
+  }
+
+  .form-control:not(:focus) {
+    background-color: #f9f9f9;
+  }
+
+  .tab-pane {
+    padding: 0;
+    border: none;
+    line-height: 2.15;
+    padding-bottom: 2rem;
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .btn {
+    min-width: 123px;
+  }
+}
+
+.nav-dashboard {
+  margin-top: -1rem;
+  .nav-link {
+    overflow: hidden;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding: 1.4rem 0;
+    color: $dark-text;
+    border-bottom: 0.1rem solid #ebebeb;
+
+    &:before {
+      font-family: 'Font Awesome\ 5 Free';
+      content: "\f061";
+      font-weight: 900;
+      color: $color-primary-dark;
+      // font-family: "molla";
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      margin-top: -7.5px;
+      transition: all 0.3s;
+      opacity: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $color-primary-dark;
+      cursor: pointer;
+    }
+
+    &.active {
+      padding-left: 2rem;
+
+      &:before {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+  .nav-item.active .nav-link {
+    padding-left: 2rem;
+    color: $primary-color;
+
+    &:before {
+      left: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.card-dashboard {
+  margin-bottom: 3rem;
+  background-color: #f9f9f9;
+  border: 0.1rem solid #ebebeb;
+
+  .card-title {
+    letter-spacing: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-body {
+    padding: 4rem 2.8rem 2rem;
+  }
+}
+
+.row-profile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}

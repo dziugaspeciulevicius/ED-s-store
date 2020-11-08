@@ -12,7 +12,8 @@ import AboutPage from "./pages/AboutPage.component";
 import CartPage from "./pages/CartPage.component";
 import LoginPage from "./pages/LoginPage.component";
 import RegisterPage from "./pages/RegisterPage.component";
-import ProfilePage from "./pages/ProfilePage.component";
+import DashboardPage from "./pages/DashboardPage.component";
+import CheckoutPage from "./pages/CheckoutPage.component";
 
 const App = () => {
   return (
@@ -27,7 +28,8 @@ const App = () => {
         <Route path="/about" component={AboutPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
-        <Route path="/profile" component={ProfilePage} />
+        <Route path="/profile" component={DashboardPage} />
+        <Route path="/shipping" component={CheckoutPage} />
       </main>
       <Footer />
     </Router>

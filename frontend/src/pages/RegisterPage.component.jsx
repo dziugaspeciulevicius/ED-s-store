@@ -9,8 +9,6 @@ import FormContainer from "../components/FormContainer.component";
 
 import Breadcrumb from "../components/Breadcrumb.component";
 
-import "../sass/pages/LoginPage.styles.scss";
-
 const RegisterPage = ({ location, history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

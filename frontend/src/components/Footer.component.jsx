@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 
 import Logo from "../assets/images/logo_bottom.svg";
 
-import "../sass/components/Footer.styles.scss";
+// import "../sass/components/Footer.styles.scss";
 
-class Footer extends Component {
-  render() {
+const Footer = (props) =>  {
     return (
+
+      
+
       <footer className="footer">
         <div className="container">
           <div className="row">
@@ -111,7 +113,6 @@ class Footer extends Component {
         </div>
       </footer>
     );
-  }
 }
 
 export default Footer;
