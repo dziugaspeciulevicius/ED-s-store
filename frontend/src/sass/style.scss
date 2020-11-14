@@ -12,6 +12,7 @@
 
 /* Components */
 @import "components/Breadcrumb.styles";
+@import "components/CheckoutSteps.styles.scss";
 @import "components/Footer.styles.scss";
 @import "components/Header.styles.scss";
 @import "components/Product.styles.scss";
@@ -22,7 +23,9 @@
 
 /* Pages */
 @import "pages/CartPage.styles.scss";
+@import "pages/DashboardPage.styles.scss";
 @import "pages/HomePage.styles.scss";
 @import "pages/LoginPage.styles.scss";
+@import "pages/PlaceOrderPage.styles.scss";
 @import "pages/ProductPage.styles.scss";
-@import "pages/DashboardPage.styles.scss";
+@import "pages/ShippingPage.styles.scss";

@@ -20,7 +20,7 @@ const orderSchema = mongoose.Schema(
         },
       },
     ],
-    billingDetails: {
+    shippingAddress: {
       firstName: { type: String, required: true },
       lastName: { type: String, required: true },
       phone: { type: Number, required: true },

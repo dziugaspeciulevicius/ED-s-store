@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
@@ -15,23 +15,31 @@ const LoginPage = ({ location, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const dispatch = useDispatch()
+  // setting up dispatch
+  const dispatch = useDispatch();
 
-  const userLogin = useSelector(state => state.userLogin)
+  // getting userLogin part of the state from the reducer
+  const userLogin = useSelector((state) => state.userLogin);
 
-  const { loading, error, userInfo } = userLogin  // from user reducer
+  // taking from user reducer
+  const { loading, error, userInfo } = userLogin; // from user reducer
 
+  // redirect to register
   const redirect = location.search ? location.search.split("=")[1] : "/";
 
+  //  we want to redirect only if we're already logged in, we don't want to go to login screen if we're already logged in
   useEffect(() => {
-    if(userInfo) {
-      history.push(redirect)
+    // check for userInfo. If it exists, take props.history and push and redirect
+    if (userInfo) {
+      history.push(redirect);
     }
-  }, [history, userInfo, redirect])
+    // pass in dependencies
+  }, [history, userInfo, redirect]);
 
+  // we want to dispatch login action here
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(login(email, password))
+    dispatch(login(email, password));
   };
 
   return (
@@ -39,8 +47,8 @@ const LoginPage = ({ location, history }) => {
       <Breadcrumb title={"Login"} />
       <FormContainer className="form-container">
         <h1>Log In</h1>
-        {error && <Message variant='danger'>{error}</Message>}
-        {loading && <Spinner/>}
+        {error && <Message variant="danger">{error}</Message>}
+        {loading && <Spinner />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="email">
             <Form.Label>Email Address</Form.Label>
@@ -62,186 +70,21 @@ const LoginPage = ({ location, history }) => {
             ></Form.Control>
           </Form.Group>
 
-          <Button type="submit" variant="primary">
-          Sign In
+          <Button type="submit" variant="primary" className="btn-custom-blue">
+            Sign In
           </Button>
-          
-            <Col className="new-customer">
-              New Customer?{" "}
-              <Link
-                to={redirect ? `/register?redirect=${redirect}` : "/register"}
-              >
-                Register
-              </Link>
-            </Col>
-          </Form>
 
+          <Col className="new-customer">
+            New Customer?{" "}
+            <Link
+              to={redirect ? `/register?redirect=${redirect}` : "/register"}
+            >
+              Register
+            </Link>
+          </Col>
+        </Form>
       </FormContainer>
       )
-      {/*<section class="sign-in">
-        <div class="container">
-          <div class="signin-content">
-            <div class="signin-image">
-              <figure>
-                <img
-                  src={require("../assets/images/signin-image.jpg")}
-                  alt="sing up image"
-                />
-              </figure>
-              <span class="signup-image-link">
-                New Customer?{" "}
-                <Link
-                  to={redirect ? `/register?redirect=${redirect}` : "/register"}
-                >
-                  Register
-                </Link>
-              </span>
-            </div>
-
-            <div class="signin-form">
-              <h2 class="form-title">Log In</h2>
-              <Form onSubmit={submitHandler} >
-                <div class="form-group">
-                  <label for="your_email">
-                    <i class="fas fa-envelope"></i>
-                  </label>
-                  <input
-                    type="email"
-                    // name="your_email"
-                    // id="your_email"
-                    // placeholder="Your Email"
-                    placeholder="Enter email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="your_pass">
-                    <i class="fas fa-key"></i>
-                  </label>
-                  <input
-                    // name="your_pass"
-                    // id="your_pass"
-                    // placeholder="Password"
-                    type="password"
-                    placeholder="Enter password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-                <div class="form-group form-button">
-                  <input
-                    type="submit"
-                    name="signin"
-                    id="signin"
-                    class="form-submit"
-                    value="Log in"
-                  />
-                </div>
-              </Form>
-              <div class="social-login">
-                <span class="social-label">Or login with</span>
-                <ul class="socials">
-                  <li>
-                    <a href="#">
-                      <i class="display-flex-center fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="display-flex-center fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="display-flex-center fab fa-google"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="social-label">
-                These login options are not implemented yet
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="signup">
-        <div class="container">
-          <div class="signup-content">
-            <div class="signup-form">
-              <h2 class="form-title">Sign up</h2>
-              <form method="POST" class="register-form" id="register-form">
-                <div class="form-group">
-                  <label for="name">
-                    <i class="fas fa-user"></i>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="email">
-                    <i class="fas fa-envelope"></i>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="pass">
-                    <i class="fas fa-key"></i>
-                  </label>
-                  <input
-                    type="password"
-                    name="pass"
-                    id="pass"
-                    placeholder="Password"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="re-pass">
-                    <i class="fas fa-key"></i>
-                  </label>
-                  <input
-                    type="password"
-                    name="re_pass"
-                    id="re_pass"
-                    placeholder="Repeat your password"
-                  />
-                </div>
-                <div class="form-group custom-button form-button">
-                  <input
-                    type="submit"
-                    name="signup"
-                    id="signup"
-                    class="form-submit"
-                    value="Register"
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="signup-image">
-              <figure>
-                <img
-                  src={require("../assets/images/signup-image.jpg")}
-                  alt="sing up image"
-                />
-              </figure>
-              <a href="#" class="signup-image-link">
-                I am already member
-              </a>
-            </div>
-          </div>
-        </div>
-  </section>*/}
     </div>
   );
 };

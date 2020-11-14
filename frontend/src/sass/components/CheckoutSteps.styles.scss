@@ -1,0 +1,10 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.nav-link-checkout {
+    font-weight:400;
+}
+
+.nav-link.disabled {
+    color: red;
+}

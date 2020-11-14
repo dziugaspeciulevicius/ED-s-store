@@ -1,0 +1,37 @@
+@media (min-width: 768px) {
+  .order-info-column {
+    flex: 0 0 66.667%;
+    max-width: 40%;
+  }
+}
+
+.place-order-page-row {
+  width: 80%;
+  // align-items: center;
+  // align-content: center;
+  // align-content: center;
+  justify-content: center;
+}
+
+.place-order-page {
+  padding-top: 2rem;
+  padding-left: 15rem;
+}
+
+.custom-btn-place-order {
+  width: 88%;
+  color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.16);
+  background-image: $color-primary;
+
+  &:hover {
+    color: $color-white;
+    box-shadow: $shadow-box-button-hover;
+  }
+
+  &:active {
+    color: $color-white;
+    box-shadow: $shadow-box-button-active;
+  }
+}

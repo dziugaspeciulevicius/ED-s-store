@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
@@ -88,7 +88,7 @@ const RegisterPage = ({ location, history }) => {
             ></Form.Control>
           </Form.Group>
 
-          <Button type="submit" variant="primary">
+          <Button type="submit" variant="primary" className="btn-custom-blue">
           Register
           </Button>
           

@@ -1,24 +1,21 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import Logo from "../assets/images/logo_top.svg";
-import {logout} from '../actions/userActions';
+import { logout } from "../actions/userActions";
 
 import "../sass/components/Header.styles.scss";
 
-// TO-DO : fix href tags and add link containers
 const Header = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
   const logoutHandler = () => {
-    dispatch(logout())
-  }
+    dispatch(logout());
+  };
 
   const userInfoName = userInfo ? userInfo.name.split(" ")[0] : " ";
 
@@ -49,13 +46,13 @@ const Header = () => {
               <Nav.Link className="nav-link">Contact</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/about">
-              <Nav.Link className="nav-link">About Us</Nav.Link>
+              <Nav.Link className="nav-link">About</Nav.Link>
             </LinkContainer>
           </Nav>
           <Nav className="ml-auto">
             <LinkContainer to="/cart">
               <Nav.Link className="nav-link">
-                <i className="fas fa-shopping-cart"></i>Cart
+                Cart
               </Nav.Link>
             </LinkContainer>
             {userInfo ? (
@@ -70,7 +67,7 @@ const Header = () => {
             ) : (
               <LinkContainer to="/login">
                 <Nav.Link className="nav-link">
-                  <i className="fas fa-user"></i>Sign In
+                  Sign In
                 </Nav.Link>
               </LinkContainer>
             )}
