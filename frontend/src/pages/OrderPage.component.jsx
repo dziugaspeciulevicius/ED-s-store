@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { PayPalButton } from "react-paypal-button-v2";
 import { Link } from "react-router-dom";
-import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
+import { Row, Col, ListGroup, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
 import { getOrderDetails, payOrder } from "../actions/orderActions";
 import { ORDER_PAY_RESET } from "../constants/orderConstants";
+// import { changePaymentMethod } from '../actions/cartActions';
 
 import Breadcrumb from "../components/Breadcrumb.component";
 
@@ -23,6 +24,12 @@ const OrderPage = ({ match }) => {
 
   const orderPay = useSelector((state) => state.orderPay);
   const { loading: loadingPay, success: successPay } = orderPay;
+
+  // const changePaymentHandler = () => {
+  //   // e.preventDefault();
+  //   dispatch(changePaymentMethod());
+  //   history.push("/payment");
+  // }
 
   if (!loading) {
     //   Calculate prices
@@ -54,10 +61,14 @@ const OrderPage = ({ match }) => {
       dispatch({ type: ORDER_PAY_RESET }); //if we dont do this, if we pay it will just keep refreshing
       dispatch(getOrderDetails(orderId));
     } else if (!order.isPaid) {
-      if (!window.paypal) {
-        addPayPalScript();
-      } else {
-        setSdkReady(true);
+      if (order.paymentMethod === "Paypal") {
+        if (!window.paypal) {
+          addPayPalScript();
+        } else {
+          setSdkReady(true);
+        }
+      } else if (order.paymentMethod === "Stripe") {
+        console.log("stripe");
       }
     }
   }, [dispatch, orderId, successPay, order]);
@@ -119,7 +130,8 @@ const OrderPage = ({ match }) => {
                       <h2>Payment Method</h2>
                       <p>
                         <strong>Method: </strong>
-                        {order.paymentMethod}
+                        {order.paymentMethod}{" "}
+                        {/*<Button onClick={changePaymentHandler} className="btn-custom-blue">Change payment method</Button>*/}
                       </p>
                       {order.isPaid ? (
                         <Message variant="success">
@@ -186,7 +198,7 @@ const OrderPage = ({ match }) => {
                           <Col>${order.totalPrice}</Col>
                         </Row>
                       </ListGroup.Item>
-                      {!order.isPaid && (
+                      {!order.isPaid && order.paymentMethod === "Paypal" ? (
                         <ListGroup.Item>
                           {loadingPay && <Spinner />}
                           {!sdkReady ? (
@@ -198,17 +210,17 @@ const OrderPage = ({ match }) => {
                             />
                           )}
                         </ListGroup.Item>
+                      ) : (
+                        <ListGroup.Item>
+                          <p>Stripe checkout to be implemented</p>
+                        </ListGroup.Item>
                       )}
-                      {/*<ListGroup.Item>
-                        <Button
-                          type="button"
-                          className="custom-btn-place-order"
-                          disabled={cart.cartItems === 0}
-                          onClick={placeOrderHandler}
-                        >
-                          Place Order
-                        </Button>
-                          </ListGroup.Item>*/}
+                      {/* IF WANTED TO ADD MORE PAYMENTS JUST ADD THIS FOR EXAMPLE
+                        ) : !order.isPaid && order.paymentMethod === "Stripe" ? (
+                            <ListGroup.Item>
+                              <Button>Stripe?</Button>
+                            </ListGroup.Item>
+                          ) : ()*/}
                     </ListGroup>
                   </Card>
                 </Col>

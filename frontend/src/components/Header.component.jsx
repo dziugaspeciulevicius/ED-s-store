@@ -51,12 +51,15 @@ const Header = () => {
           </Nav>
           <Nav className="ml-auto">
             <LinkContainer to="/cart">
-              <Nav.Link className="nav-link">
-                Cart
-              </Nav.Link>
+              <Nav.Link className="nav-link">Cart</Nav.Link>
             </LinkContainer>
             {userInfo ? (
               <NavDropdown title={userInfoName} id="username">
+              {userInfo && userInfo.isAdmin && (
+                <LinkContainer to="/admin">
+                  <NavDropdown.Item>Admin panel</NavDropdown.Item>
+                </LinkContainer>
+              )}
                 <LinkContainer to="/profile">
                   <NavDropdown.Item>Profile</NavDropdown.Item>
                 </LinkContainer>
@@ -66,11 +69,10 @@ const Header = () => {
               </NavDropdown>
             ) : (
               <LinkContainer to="/login">
-                <Nav.Link className="nav-link">
-                  Sign In
-                </Nav.Link>
+                <Nav.Link className="nav-link">Sign In</Nav.Link>
               </LinkContainer>
             )}
+            
           </Nav>
         </Navbar.Collapse>
       </Navbar>

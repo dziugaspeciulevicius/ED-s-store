@@ -1,71 +1,44 @@
 import React, { useState, useEffect } from "react";
-import { Table, Form, Button } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
-import {
-  getUserDetails,
-  updateUserProfile,
-  logout,
-} from "../actions/userActions";
-import { listMyOrders } from "../actions/orderActions";
-
+import { listUsers, deleteUser } from "../actions/userActions";
 import Breadcrumb from "../components/Breadcrumb.component";
 
-const DashboardPage = ({ location, history }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState(null);
-
+const AdminPanel = ({ location, history }) => {
+  /*==================== USERS ====================*/
   const dispatch = useDispatch();
 
-  const userDetails = useSelector((state) => state.userDetails);
-  const { loading, error, user } = userDetails;
+  const userList = useSelector((state) => state.userList);
+  const { loading, error, users } = userList;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-  const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
-  const { success } = userUpdateProfile;
+  // user delete part of the state
+  const userDelete = useSelector((state) => state.userDelete);
+  const { success: successDelete } = userDelete; // from state we get success and rename it to successDelete
 
-  const orderListMy = useSelector((state) => state.orderListMy);
-  const { loading: loadingOrders, error: errorOrders, orders } = orderListMy;
-
-  const logoutHandler = () => {
-    dispatch(logout());
-  };
-
+  // dispatch action here
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    } else {
-      if (!user.name) {
-        dispatch(getUserDetails("profile"));
-        dispatch(listMyOrders());
-      } else {
-        setName(user.name);
-        setEmail(user.email);
-      }
-    }
-  }, [dispatch, history, userInfo, user]);
+    if (userInfo && userInfo.isAdmin) {
+      dispatch(listUsers());
+    } else history.push("/login");
+  }, [dispatch, history, userInfo, successDelete]);
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    if (password !== confirmPassword) {
-      setMessage("Passwords don't match");
-    } else {
-      dispatch(updateUserProfile({ id: user._id, name, email, password }));
+  const deleteHandler = (id) => {
+    if (window.confirm(`Delete user?`)) {
+      dispatch(deleteUser(id));
     }
   };
 
   return (
     <div>
-      <Breadcrumb title={"Dashboard"} />
+      <Breadcrumb title={"Admin dashboard"} />
       <div className="main">
         <div className="page-content">
           <div className="dashboard">
@@ -78,23 +51,20 @@ const DashboardPage = ({ location, history }) => {
                   <div className="row-profile">
                     <aside className="col-md-4 col-lg-3">
                       <TabList>
+                        {/*========== USERS TAB ==========*/}
                         <Tab className="nav-item">
+                          <span className="nav-link">Users</span>
+                        </Tab>
+                        {/*========== PRODUCTS TAB ==========*/}
+                        {/*<Tab className="nav-item">
+                        <span className="nav-link">Products</span>
+                        </Tab>*/}
+
+                        {/*========== ORDERS TAB ==========*/}
+                        {/*<Tab className="nav-item">
                           <span className="nav-link">Orders</span>
                         </Tab>
-
-                        <Tab className="nav-item">
-                          <span className="nav-link">Profile</span>
-                        </Tab>
-
-                        <Tab className="nav-item">
-                          <Link
-                            onClick={logoutHandler}
-                            to="/"
-                            className="nav-link"
-                          >
-                            Sign Out
-                          </Link>
-                        </Tab>
+                        */}
                       </TabList>
                     </aside>
 
@@ -103,12 +73,13 @@ const DashboardPage = ({ location, history }) => {
                       style={{ marginTop: "1rem" }}
                     >
                       <div className="tab-pane">
+                        {/*========== USERS PANEL ==========*/}
                         <TabPanel>
-                          <h2>My Orders</h2>
-                          {loadingOrders ? (
+                          <h2>Users</h2>
+                          {loading ? (
                             <Spinner />
-                          ) : errorOrders ? (
-                            <Message variant="danger">{errorOrders}</Message>
+                          ) : error ? (
+                            <Message variant="danger">{error}</Message>
                           ) : (
                             <Table
                               striped
@@ -120,23 +91,29 @@ const DashboardPage = ({ location, history }) => {
                               <thead>
                                 <tr>
                                   <th>ID</th>
-                                  <th>DATE</th>
-                                  <th>TOTAL</th>
-                                  <th>PAID</th>
-                                  <th>DELIVERED</th>
-                                  <th></th>
+                                  <th>NAME</th>
+                                  <th>EMAIL</th>
+                                  <th>ADMIN</th>
+                                  <th>ACTION</th>
                                 </tr>
                               </thead>
 
                               <tbody>
-                                {orders.map((order) => (
-                                  <tr key={order._id}>
-                                    <td>{order._id}</td>
-                                    <td>{order.createdAt.substring(0, 10)}</td>
-                                    <td>{order.totalPrice}</td>
+                                {users.map((user) => (
+                                  <tr key={user._id}>
+                                    <td>{user._id}</td>
+                                    <td>{user.name}</td>
                                     <td>
-                                      {order.isPaid ? (
-                                        order.paidAt.substring(0, 10)
+                                      <a href={`mailto:${user.email}`}>
+                                        {user.email}
+                                      </a>
+                                    </td>
+                                    <td>
+                                      {user.isAdmin ? (
+                                        <i
+                                          className="fas fa-check"
+                                          style={{ color: "green" }}
+                                        ></i>
                                       ) : (
                                         <i
                                           className="fas fa-times"
@@ -145,24 +122,24 @@ const DashboardPage = ({ location, history }) => {
                                       )}
                                     </td>
                                     <td>
-                                      {order.isDelivered ? (
-                                        order.deliveredAt.substring(0, 10)
-                                      ) : (
-                                        <i
-                                          className="fas fa-times"
-                                          style={{ color: "red" }}
-                                        ></i>
-                                      )}
-                                    </td>
-                                    <td>
-                                      <LinkContainer to={`/order/${order._id}`}>
-                                        <Button
-                                          className="btn-sm btn-custom-blue"
-                                          variant="light"
-                                        >
-                                          Details
-                                        </Button>
-                                      </LinkContainer>
+                                      <LinkContainer
+                                        to={`/user/${user._id}/edit`}
+                                        style={{
+                                          color: " #667EEA",
+                                          cursor: "pointer",
+                                          padding: "0 1.2rem",
+                                        }}
+                                      >
+                                        <i className="fas fa-edit"></i>
+                                      </LinkContainer>{" "}
+                                      <i
+                                        className="fas fa-trash"
+                                        style={{
+                                          color: "red",
+                                          cursor: "pointer",
+                                        }}
+                                        onClick={() => deleteHandler(user._id)}
+                                      ></i>
                                     </td>
                                   </tr>
                                 ))}
@@ -170,7 +147,8 @@ const DashboardPage = ({ location, history }) => {
                             </Table>
                           )}
                         </TabPanel>
-
+                        {/*========== PRODUCTS PANEL ==========*/}
+                        {/*
                         <TabPanel>
                           <h2>Profile</h2>
                           {message && (
@@ -236,7 +214,7 @@ const DashboardPage = ({ location, history }) => {
                               </Button>
                             </Form>
                           )}
-                        </TabPanel>
+                                </TabPanel>*/}
                       </div>
                     </div>
                   </div>
@@ -250,4 +228,4 @@ const DashboardPage = ({ location, history }) => {
   );
 };
 
-export default DashboardPage;
+export default AdminPanel;

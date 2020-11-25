@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header.component";
@@ -18,6 +18,7 @@ import PaymentPage from "./pages/PaymentPage.component";
 import PlaceOrderPage from "./pages/PlaceOrderPage.component";
 import OrderPage from "./pages/OrderPage.component";
 import ScrollToTop from "./components/ScrollToTop.component";
+import AdminPanel from './pages/AdminPanel.component';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/profile" component={DashboardPage} />
+        <Route path="/admin" component={AdminPanel} />
         <Route path="/shipping" component={ShippingPage} />
         <Route path="/payment" component={PaymentPage} />
         <Route path="/place-order" component={PlaceOrderPage} />
