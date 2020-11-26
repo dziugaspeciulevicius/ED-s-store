@@ -19,6 +19,9 @@ import PlaceOrderPage from "./pages/PlaceOrderPage.component";
 import OrderPage from "./pages/OrderPage.component";
 import ScrollToTop from "./components/ScrollToTop.component";
 import AdminPanel from './pages/AdminPanel.component';
+import UserEditPage from './pages/UserEditPage.component';
+import ProductEditPage from './pages/ProductEditPage.component';
+
 
 const App = () => {
   return (
@@ -35,7 +38,9 @@ const App = () => {
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/profile" component={DashboardPage} />
-        <Route path="/admin" component={AdminPanel} />
+        <Route exact path="/admin" component={AdminPanel} />
+        <Route exact path="/admin/user/:id/edit" component={UserEditPage} />
+        <Route exact path="/admin/product/:id/edit" component={ProductEditPage} />
         <Route path="/shipping" component={ShippingPage} />
         <Route path="/payment" component={PaymentPage} />
         <Route path="/place-order" component={PlaceOrderPage} />

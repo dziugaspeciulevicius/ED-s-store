@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button } from "react-bootstrap";
+import { Table, Button, Row, Col } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import { Link } from "react-router-dom";
@@ -7,11 +7,21 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
 import { listUsers, deleteUser } from "../actions/userActions";
+import {
+  listProducts,
+  deleteProduct,
+  createProduct,
+} from "../actions/productActions";
+import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
+
 import Breadcrumb from "../components/Breadcrumb.component";
 
-const AdminPanel = ({ location, history }) => {
-  /*==================== USERS ====================*/
+const AdminPanel = ({ location, history, match }) => {
   const dispatch = useDispatch();
+
+  /*===============================================*/
+  /*==================== USERS ====================*/
+  /*===============================================*/
 
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
@@ -21,20 +31,72 @@ const AdminPanel = ({ location, history }) => {
 
   // user delete part of the state
   const userDelete = useSelector((state) => state.userDelete);
-  const { success: successDelete } = userDelete; // from state we get success and rename it to successDelete
+  const { success: successUserDelete } = userDelete; // from state we get success and rename it to successDelete
 
-  // dispatch action here
-  useEffect(() => {
-    if (userInfo && userInfo.isAdmin) {
-      dispatch(listUsers());
-    } else history.push("/login");
-  }, [dispatch, history, userInfo, successDelete]);
-
-  const deleteHandler = (id) => {
+  const deleteUserHandler = (id) => {
     if (window.confirm(`Delete user?`)) {
       dispatch(deleteUser(id));
     }
   };
+
+  useEffect(() => {
+    if (userInfo && userInfo.isAdmin) {
+      dispatch(listUsers());
+    } else history.push("/login");
+  }, [dispatch, history, userInfo, successUserDelete]);
+
+  /*==================================================*/
+  /*==================== PRODUCTS ====================*/
+  /*==================================================*/
+
+  const productList = useSelector((state) => state.productList);
+  const { products } = productList;
+
+  const productDelete = useSelector((state) => state.productDelete);
+  const {
+    loading: loadingProductDelete,
+    error: errorProductDelete,
+    success: successProductDelete,
+  } = productDelete;
+
+  const productCreate = useSelector((state) => state.productCreate);
+  const {
+    loading: loadingProductCreate,
+    error: errorProductCreate,
+    success: successProductCreate,
+    product: createdProduct,
+  } = productCreate;
+
+  const deleteProductHandler = (id) => {
+    if (window.confirm(`Delete product?`)) {
+      dispatch(deleteProduct(id));
+    }
+  };
+
+  const createProductHandler = () => {
+    dispatch(createProduct());
+  };
+
+  useEffect(() => {
+    dispatch({ type: PRODUCT_CREATE_RESET });
+
+    if (!userInfo.isAdmin) {
+      history.push("/login");
+    }
+
+    if (successProductCreate) {
+      history.push(`/admin/product/${createdProduct._id}/edit`);
+    } else {
+      dispatch(listProducts());
+    }
+  }, [
+    dispatch,
+    history,
+    userInfo,
+    successProductDelete,
+    successProductCreate,
+    createdProduct,
+  ]);
 
   return (
     <div>
@@ -56,15 +118,13 @@ const AdminPanel = ({ location, history }) => {
                           <span className="nav-link">Users</span>
                         </Tab>
                         {/*========== PRODUCTS TAB ==========*/}
-                        {/*<Tab className="nav-item">
-                        <span className="nav-link">Products</span>
-                        </Tab>*/}
-
+                        <Tab className="nav-item">
+                          <span className="nav-link">Products</span>
+                        </Tab>
                         {/*========== ORDERS TAB ==========*/}
-                        {/*<Tab className="nav-item">
+                        <Tab className="nav-item">
                           <span className="nav-link">Orders</span>
                         </Tab>
-                        */}
                       </TabList>
                     </aside>
 
@@ -75,7 +135,7 @@ const AdminPanel = ({ location, history }) => {
                       <div className="tab-pane">
                         {/*========== USERS PANEL ==========*/}
                         <TabPanel>
-                          <h2>Users</h2>
+                          <h1>Users</h1>
                           {loading ? (
                             <Spinner />
                           ) : error ? (
@@ -123,7 +183,7 @@ const AdminPanel = ({ location, history }) => {
                                     </td>
                                     <td>
                                       <LinkContainer
-                                        to={`/user/${user._id}/edit`}
+                                        to={`/admin/user/${user._id}/edit`}
                                         style={{
                                           color: " #667EEA",
                                           cursor: "pointer",
@@ -138,7 +198,9 @@ const AdminPanel = ({ location, history }) => {
                                           color: "red",
                                           cursor: "pointer",
                                         }}
-                                        onClick={() => deleteHandler(user._id)}
+                                        onClick={() =>
+                                          deleteUserHandler(user._id)
+                                        }
                                       ></i>
                                     </td>
                                   </tr>
@@ -148,73 +210,97 @@ const AdminPanel = ({ location, history }) => {
                           )}
                         </TabPanel>
                         {/*========== PRODUCTS PANEL ==========*/}
-                        {/*
                         <TabPanel>
-                          <h2>Profile</h2>
-                          {message && (
-                            <Message variant="danger">{message}</Message>
+                          <Row className="align-items-center">
+                            <Col>
+                              <h1 className="py-3">Products</h1>
+                            </Col>
+                            <Col className="text-right">
+                              <Button
+                                className="btn-custom-blue py-3"
+                                onClick={createProductHandler}
+                              >
+                                Create Product
+                              </Button>
+                            </Col>
+                          </Row>
+                          {loadingProductDelete && <Spinner />}
+                          {errorProductDelete && (
+                            <Message variant="danger">
+                              {errorProductDelete}
+                            </Message>
                           )}
-                          {success && (
-                            <Message variant="success">Profile Updated</Message>
+                          {loadingProductCreate && <Spinner />}
+                          {errorProductCreate && (
+                            <Message variant="danger">
+                              {errorProductCreate}
+                            </Message>
                           )}
                           {loading ? (
                             <Spinner />
                           ) : error ? (
                             <Message variant="danger">{error}</Message>
                           ) : (
-                            <Form onSubmit={submitHandler}>
-                              <Form.Group controlId="name">
-                                <Form.Label>Name</Form.Label>
-                                <Form.Control
-                                  type="name"
-                                  placeholder="Enter name"
-                                  value={name}
-                                  onChange={(e) => setName(e.target.value)}
-                                ></Form.Control>
-                              </Form.Group>
+                            <Table
+                              striped
+                              bordered
+                              hover
+                              responsive
+                              className="table-sm"
+                            >
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>NAME</th>
+                                  <th>PRICE</th>
+                                  <th>CATEGORY</th>
+                                  <th>GENDER</th>
+                                  <th>BRAND</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
 
-                              <Form.Group controlId="email">
-                                <Form.Label>Email Address</Form.Label>
-                                <Form.Control
-                                  type="email"
-                                  placeholder="Enter email"
-                                  value={email}
-                                  onChange={(e) => setEmail(e.target.value)}
-                                ></Form.Control>
-                              </Form.Group>
-
-                              <Form.Group controlId="password">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control
-                                  type="password"
-                                  placeholder="Enter password"
-                                  value={password}
-                                  onChange={(e) => setPassword(e.target.value)}
-                                ></Form.Control>
-                              </Form.Group>
-
-                              <Form.Group controlId="confirmPassword">
-                                <Form.Label>Confirm Password</Form.Label>
-                                <Form.Control
-                                  type="password"
-                                  placeholder="Confirm password"
-                                  value={confirmPassword}
-                                  onChange={(e) =>
-                                    setConfirmPassword(e.target.value)
-                                  }
-                                ></Form.Control>
-                              </Form.Group>
-
-                              <Button
-                                className="btn-custom-blue"
-                                type="submit"
-                                variant="primary"
-                              >
-                                Update Profile
-                              </Button>
-                            </Form>
+                              <tbody>
+                                {products.map((product) => (
+                                  <tr key={product._id}>
+                                    <td>{product._id}</td>
+                                    <td>{product.name}</td>
+                                    <td>${product.price}</td>
+                                    <td>{product.category}</td>
+                                    <td>{product.gender}</td>
+                                    <td>{product.brand}</td>
+                                    <td>
+                                      <LinkContainer
+                                        to={`/admin/product/${product._id}/edit`}
+                                        style={{
+                                          color: " #667EEA",
+                                          cursor: "pointer",
+                                          // padding: "0 .4rem",
+                                        }}
+                                      >
+                                        <i className="fas fa-edit"></i>
+                                      </LinkContainer>{" "}
+                                      <i
+                                        className="fas fa-trash"
+                                        style={{
+                                          color: "red",
+                                          cursor: "pointer",
+                                        }}
+                                        onClick={() =>
+                                          deleteProductHandler(product._id)
+                                        }
+                                      ></i>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </Table>
                           )}
-                                </TabPanel>*/}
+                        </TabPanel>
+                        {/*========== ORDERS PANEL ==========*/}
+                        <TabPanel>
+                          <h1>Orders</h1>
+                        </TabPanel>
                       </div>
                     </div>
                   </div>

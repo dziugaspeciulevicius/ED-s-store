@@ -148,9 +148,9 @@ const updateUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id)
 
   if (user) {
-    user.name = req.body.name || user.name
+    user.name = req.body.name || user.name // if user found we're going to set user name to req.body.name 
     user.email = req.body.email || user.email
-    user.isAdmin = req.body.isAdmin
+    user.isAdmin = req.body.isAdmin  // there was a bug I couldn't set a user as admin to false, left it like this
 
     const updatedUser = await user.save()
 
