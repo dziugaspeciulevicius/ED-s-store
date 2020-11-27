@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
@@ -5,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
 import FormContainer from "../components/FormContainer.component";
-import { listProductDetails,updateProduct } from "../actions/productActions";
+import { listProductDetails, updateProduct } from "../actions/productActions";
 
 import Breadcrumb from "../components/Breadcrumb.component";
 import { PRODUCT_UPDATE_RESET } from "../constants/productConstants";
@@ -21,6 +22,7 @@ const ProductEditPage = ({ match, history }) => {
   const [gender, setGender] = useState("");
   const [countInStock, setCountInStock] = useState(0);
   const [description, setDescription] = useState("");
+  const [uploading, setUploading] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -28,45 +30,73 @@ const ProductEditPage = ({ match, history }) => {
   const { loading, error, product } = productDetails;
 
   const productUpdate = useSelector((state) => state.productUpdate);
-  const { loading: loadingUpdate, error:errorUpdate, success: successUpdate } = productUpdate;
+  const {
+    loading: loadingUpdate,
+    error: errorUpdate,
+    success: successUpdate,
+  } = productUpdate;
 
   useEffect(() => {
-      if(successUpdate) {
-          dispatch({ type: PRODUCT_UPDATE_RESET})
-          history.push('/admin')
+    if (successUpdate) {
+      dispatch({ type: PRODUCT_UPDATE_RESET });
+      history.push("/admin");
+    } else {
+      // first we check if there's already a product, and check if productId matches
+      if (!product.name || product._id !== productId) {
+        // if it doesn't exist or match url we want to fetch info
+        dispatch(listProductDetails(productId));
       } else {
-          // first we check if there's already a product, and check if productId matches
-          if (!product.name || product._id !== productId) {
-            // if it doesn't exist or match url we want to fetch info
-            dispatch(listProductDetails(productId));
-          } else {
-            // set info
-            setName(product.name);
-            setPrice(product.price);
-            setImage(product.image);
-            setBrand(product.brand);
-            setCategory(product.category);
-            setGender(product.gender);
-            setCountInStock(product.countInStock);
-            setDescription(product.description);
-          }
-
+        // set info
+        setName(product.name);
+        setPrice(product.price);
+        setImage(product.image);
+        setBrand(product.brand);
+        setCategory(product.category);
+        setGender(product.gender);
+        setCountInStock(product.countInStock);
+        setDescription(product.description);
       }
+    }
   }, [dispatch, history, product, productId, successUpdate]);
+
+  const uploadFileHandler = async (e) => {
+    // when we upload file we get access to e.target.files which is an array
+    // it gives us ability to upload multiple files, so we want to make it so we target the first item in the array
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append("image", file);
+    setUploading(true);
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      };
+
+      const { data } = await axios.post("/api/upload", formData, config);
+      setImage(data);
+      setUploading(false);
+    } catch (error) {
+      console.log(error);
+      setUploading(false);
+    }
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(updateProduct({
+    dispatch(
+      updateProduct({
         _id: productId,
         name,
         price,
         image,
-        brand, 
+        brand,
         gender,
         category,
         description,
-        countInStock
-    }))
+        countInStock,
+      })
+    );
   };
 
   return (
@@ -77,7 +107,7 @@ const ProductEditPage = ({ match, history }) => {
       </Link>
       <FormContainer className="form-container">
         <h1>Edit product</h1>
-        {loadingUpdate && <Spinner/>}
+        {loadingUpdate && <Spinner />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
         {loading ? (
           <Spinner />
@@ -113,6 +143,14 @@ const ProductEditPage = ({ match, history }) => {
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
+              <Form.File
+                id="image-file"
+                label="Choose File"
+                custom
+                onChange={uploadFileHandler}
+                style={{width: "106%", paddingBottom: "1rem"}}
+              ></Form.File>
+              {uploading && <Spinner />}
             </Form.Group>
 
             <Form.Group controlId="brand">
