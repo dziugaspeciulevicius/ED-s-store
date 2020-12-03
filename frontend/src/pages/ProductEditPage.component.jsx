@@ -59,17 +59,18 @@ const ProductEditPage = ({ match, history }) => {
     }
   }, [dispatch, history, product, productId, successUpdate]);
 
+  // pass in e so we get access to file
   const uploadFileHandler = async (e) => {
     // when we upload file we get access to e.target.files which is an array
     // it gives us ability to upload multiple files, so we want to make it so we target the first item in the array
     const file = e.target.files[0];
     const formData = new FormData();
     formData.append("image", file);
-    setUploading(true);
+    setUploading(true); // setting a spinner below to true
     try {
       const config = {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "multipart/form-data",  // image has to have content type of this
         },
       };
 
