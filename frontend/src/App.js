@@ -30,6 +30,9 @@ const App = () => {
       <Header />
       <main className="pb-3">
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/page/:pageNumber" component={HomePage} />
+        <Route exact path="/search/:keyword/page/:pageNumber" component={HomePage} />
+        <Route exact path="/search/:keyword" component={HomePage} />
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/cart/:id?" component={CartPage} />
         <Route path="/shop" component={ShopPage} />

@@ -1,8 +1,10 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import Logo from "../assets/images/logo_top.svg";
+import SearchBox from "./SearchBox.component";
 import { logout } from "../actions/userActions";
 
 import "../sass/components/Header.styles.scss";
@@ -49,18 +51,18 @@ const Header = () => {
               <Nav.Link className="nav-link">About</Nav.Link>
             </LinkContainer>
           </Nav>
+          <Route render={({ history }) => <SearchBox history={history} />} />
           <Nav className="ml-auto">
             <LinkContainer to="/cart">
               <Nav.Link className="nav-link">Cart</Nav.Link>
             </LinkContainer>
             {userInfo ? (
               <NavDropdown title={userInfoName} id="username">
-              {userInfo && userInfo.isAdmin && (
-                <LinkContainer to="/admin">
-                  <NavDropdown.Item>Admin panel</NavDropdown.Item>
-                </LinkContainer>
-                
-              )}
+                {userInfo && userInfo.isAdmin && (
+                  <LinkContainer to="/admin">
+                    <NavDropdown.Item>Admin panel</NavDropdown.Item>
+                  </LinkContainer>
+                )}
                 <LinkContainer to="/profile">
                   <NavDropdown.Item>Profile</NavDropdown.Item>
                 </LinkContainer>
@@ -73,7 +75,6 @@ const Header = () => {
                 <Nav.Link className="nav-link">Sign In</Nav.Link>
               </LinkContainer>
             )}
-            
           </Nav>
         </Navbar.Collapse>
       </Navbar>

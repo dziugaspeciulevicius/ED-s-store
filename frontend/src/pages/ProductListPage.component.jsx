@@ -4,6 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
+// import Paginate from "../components/Paginate.component";
 import {
   listProducts,
   deleteProduct,
@@ -11,16 +12,16 @@ import {
 } from "../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
 
-
-const ProductListPage = ({ history}) => {
+const ProductListPage = ({ history, match }) => {
+  // const pageNumber = match.params.pageNumber || 1;
 
   const dispatch = useDispatch();
 
-  const productList = useSelector((state) => state.productList)
-  const { loading, error, products } = productList
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products, page, pages } = productList;
 
-  const userLogin = useSelector((state) => state.userLogin)
-  const { userInfo } = userLogin
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
 
   const productDelete = useSelector((state) => state.productDelete);
   const {
@@ -57,6 +58,7 @@ const ProductListPage = ({ history}) => {
     if (successProductCreate) {
       history.push(`/admin/product/${createdProduct._id}/edit`);
     } else {
+      // dispatch(listProducts("", pageNumber));
       dispatch(listProducts());
     }
   }, [
@@ -96,52 +98,55 @@ const ProductListPage = ({ history}) => {
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Table striped bordered hover responsive className="table-sm">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>PRICE</th>
-              <th>CATEGORY</th>
-              <th>GENDER</th>
-              <th>BRAND</th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {products.map((product) => (
-              <tr key={product._id}>
-                <td>{product._id}</td>
-                <td>{product.name}</td>
-                <td>${product.price}</td>
-                <td>{product.category}</td>
-                <td>{product.gender}</td>
-                <td>{product.brand}</td>
-                <td>
-                  <LinkContainer
-                    to={`/admin/product/${product._id}/edit`}
-                    style={{
-                      color: " #667EEA",
-                      cursor: "pointer",
-                      // padding: "0 .4rem",
-                    }}
-                  >
-                    <i className="fas fa-edit"></i>
-                  </LinkContainer>{" "}
-                  <i
-                    className="fas fa-trash"
-                    style={{
-                      color: "red",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => deleteProductHandler(product._id)}
-                  ></i>
-                </td>
+        <>
+          <Table striped bordered hover responsive className="table-sm">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>CATEGORY</th>
+                <th>GENDER</th>
+                <th>BRAND</th>
+                <th></th>
               </tr>
-            ))}
-          </tbody>
-        </Table>
+            </thead>
+
+            <tbody>
+              {products.map((product) => (
+                <tr key={product._id}>
+                  <td>{product._id}</td>
+                  <td>{product.name}</td>
+                  <td>${product.price}</td>
+                  <td>{product.category}</td>
+                  <td>{product.gender}</td>
+                  <td>{product.brand}</td>
+                  <td>
+                    <LinkContainer
+                      to={`/admin/product/${product._id}/edit`}
+                      style={{
+                        color: " #667EEA",
+                        cursor: "pointer",
+                        // padding: "0 .4rem",
+                      }}
+                    >
+                      <i className="fas fa-edit"></i>
+                    </LinkContainer>{" "}
+                    <i
+                      className="fas fa-trash"
+                      style={{
+                        color: "red",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => deleteProductHandler(product._id)}
+                    ></i>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          {/* <Paginate pages={pages} page={page} isAdmin={true} /> */}
+        </>
       )}
     </>
   );

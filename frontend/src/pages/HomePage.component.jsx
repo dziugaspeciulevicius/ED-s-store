@@ -3,20 +3,25 @@ import { useDispatch, useSelector } from "react-redux";
 import Product from "../components/Product.component";
 import { listProducts } from "../actions/productActions";
 
+import Paginate from "../components/Paginate.component";
 import Spinner from "../components/Spinner.component";
 import Message from "../components/Message.component";
 
 import "../sass/pages/HomePage.styles.scss";
 
-const HomePage = () => {
+const HomePage = ({ match }) => {
+  const keyword = match.params.keyword;
+
+  const pageNumber = match.params.pageNumber || 1;
+
   const dispatch = useDispatch();
 
   const productList = useSelector((state) => state.productList);
-  const { loading, error, products } = productList;
+  const { loading, error, products, page, pages } = productList;
 
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword, pageNumber));
+  }, [dispatch, keyword, pageNumber]);
 
   return (
     <>
@@ -37,15 +42,21 @@ const HomePage = () => {
         ) : error ? (
           <Message variant="danger"> {error} </Message>
         ) : (
-          <div className='grid-products'>
+          <div className="grid-products">
             {/* Looping through products to list them in our homepage. For each product we want to show column and list our Product component for each product */}
             {/* Element needs a unique key prop, because we have access to each product */}
             {products.map((product) => (
-              <div className='item'><Product product={product}/></div>
-
+              <div className="item">
+                <Product product={product} />
+              </div>
             ))}
-          </div>
-        )}
+            </div>
+            )}
+            <Paginate
+              pages={pages}
+              page={page}
+              keyword={keyword ? keyword : ""}
+            />
       </div>
     </>
   );
