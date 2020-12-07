@@ -1,4 +1,5 @@
 @import "../abstracts/mixins";
+@import "../abstracts/variables";
 // .row {
 //     justify-content: flex-start;
 // }
@@ -45,10 +46,67 @@
   width: 80%;
 
   &--title {
-    padding-top: 3rem;
+    padding-top: 6rem;
+    text-align: center;
+    color: $color-primary-dark;
   }
   // align-items: center;
   // align-self: center;
   // align-content: center;
   // text-align: center;
+}
+
+/*SLIDER */
+.slide {
+  position: relative;
+}
+
+.slick-prev:before {
+  color: $color-primary-dark;
+}
+
+.slick-next:before {
+  color: $color-primary-dark;
+}
+
+.men-intro-header-slide {
+  text-transform: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(48%, -230%);
+  transform: translate(48%, -230%);
+  color: black;
+  font-size: 1.7rem;
+}
+
+.men-header-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(30%, -50%);
+  transform: translate(30%, -50%);
+  color: black;
+  font-size: 4rem;
+}
+
+.women-intro-header-slide {
+  text-transform: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-160%, -230%);
+  transform: translate(-160%, -230%);
+  color: white;
+  font-size: 1.7rem;
+}
+
+.women-header-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-110%, -50%);
+  transform: translate(-110%, -50%);
+  color: white;
+  font-size: 4rem;
 }
