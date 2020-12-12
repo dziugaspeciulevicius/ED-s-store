@@ -23,10 +23,6 @@ if(process.env.NODE_ENV === 'development') {
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("API is running");
-});
-
 // mounting routes
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
@@ -41,6 +37,19 @@ app.get("/api/config/paypal", (req, res) =>
 // making uploads folder static so it can get loaded in the browser
 const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
+
+if(process.env.NODE_ENV === 'production') {
+  // we want to set frontend/build folder as our static folder
+  // so we can directly access it and load index.html
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+  // * - anything that isnt any of the above routes
+  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')))  
+} else {
+  app.get('/', (req, res) => {
+    res.send("API RUNNING...")
+  })
+}
 
 app.use(notFound);
 app.use(errorHandler);

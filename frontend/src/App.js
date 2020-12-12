@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/Header.component";
 import Footer from "./components/Footer.component";
@@ -18,40 +18,53 @@ import PaymentPage from "./pages/PaymentPage.component";
 import PlaceOrderPage from "./pages/PlaceOrderPage.component";
 import OrderPage from "./pages/OrderPage.component";
 import ScrollToTop from "./components/ScrollToTop.component";
-import AdminPanel from './pages/AdminPanel.component';
-import UserEditPage from './pages/UserEditPage.component';
-import ProductEditPage from './pages/ProductEditPage.component';
+import AdminPanel from "./pages/AdminPanel.component";
+import UserEditPage from "./pages/UserEditPage.component";
+import ProductEditPage from "./pages/ProductEditPage.component";
 
-
+import NotFound from "./components/NotFound.component";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const App = () => {
   return (
-    <Router>
+    <div>
       <ScrollToTop />
       <Header />
       <main className="pb-3">
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/page/:pageNumber" component={HomePage} />
-        <Route exact path="/search/:keyword/page/:pageNumber" component={HomePage} />
-        <Route exact path="/search/:keyword" component={HomePage} />
-        <Route path="/product/:id" component={ProductPage} />
-        <Route path="/cart/:id?" component={CartPage} />
-        <Route path="/shop" component={ShopPage} />
-        <Route path="/contact" component={ContactPage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/register" component={RegisterPage} />
-        <Route path="/profile" component={DashboardPage} />
-        <Route exact path="/admin" component={AdminPanel} />
-        <Route exact path="/admin/user/:id/edit" component={UserEditPage} />
-        <Route exact path="/admin/product/:id/edit" component={ProductEditPage} />
-        <Route path="/shipping" component={ShippingPage} />
-        <Route path="/payment" component={PaymentPage} />
-        <Route path="/place-order" component={PlaceOrderPage} />
-        <Route path="/order/:id" component={OrderPage} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/page/:pageNumber" component={HomePage} />
+          <Route
+            exact
+            path="/search/:keyword/page/:pageNumber"
+            component={HomePage}
+          />
+          <Route exact path="/search/:keyword" component={HomePage} />
+          <Route path="/product/:id" component={ProductPage} />
+          <Route path="/cart/:id?" component={CartPage} />
+          <Route path="/shop" component={ShopPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegisterPage} />
+          <Route path="/profile" component={DashboardPage} />
+          <Route exact path="/admin" component={AdminPanel} />
+          <Route exact path="/admin/user/:id/edit" component={UserEditPage} />
+          <Route
+            exact
+            path="/admin/product/:id/edit"
+            component={ProductEditPage}
+          />
+          <Route path="/shipping" component={ShippingPage} />
+          <Route path="/payment" component={PaymentPage} />
+          <Route path="/place-order" component={PlaceOrderPage} />
+          <Route path="/order/:id" component={OrderPage} />
+          <Route component={NotFound} />
+        </Switch>
       </main>
       <Footer />
-    </Router>
+    </div>
   );
 };
 

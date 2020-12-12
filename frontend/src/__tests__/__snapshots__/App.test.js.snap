@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> Renders <App /> component correctly 1`] = `ShallowWrapper {}`;
+
+exports[`<HomePage /> Renders <HomePage /> component correctly 1`] = `ShallowWrapper {}`;

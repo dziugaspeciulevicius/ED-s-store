@@ -110,3 +110,97 @@
   color: white;
   font-size: 4rem;
 }
+
+@include respond(tab-port) {
+
+  .men-intro-header-slide {
+    text-transform: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(30%, -150%);
+    transform: translate(30%, -150%);
+    color: black;
+    font-size: 1.7rem;
+  }
+  
+  .men-header-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(30%, 0%);
+    transform: translate(30%, 0%);
+    color: black;
+    font-size: 3rem;
+  }
+  
+  .women-intro-header-slide {
+    text-transform: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-100%, -150%);
+    transform: translate(-100%, -150%);
+    color: white;
+    font-size: 1.7rem;
+  }
+  
+  .women-header-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-90%, 0%);
+    transform: translate(-90%, 0%);
+    color: white;
+    font-size: 3rem;
+  }
+}
+
+@include respond(phone) {
+  .men-intro-header-slide {
+    text-transform: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(30%, -150%);
+    transform: translate(30%, -150%);
+    color: black;
+    font-size: 1.2rem;
+  }
+  
+  .men-header-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(30%, 0%);
+    transform: translate(30%, 0%);
+    color: black;
+    font-size: 1.5rem;
+  }
+  
+  .women-intro-header-slide {
+    text-transform: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-100%, -150%);
+    transform: translate(-100%, -150%);
+    color: white;
+    font-size: 1.7rem;
+  }
+  
+  .women-header-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-90%, 0%);
+    transform: translate(-90%, 0%);
+    color: white;
+    font-size: 3rem;
+  }
+}
+
+
+// @include respond(min-phone) {
+
+// }
