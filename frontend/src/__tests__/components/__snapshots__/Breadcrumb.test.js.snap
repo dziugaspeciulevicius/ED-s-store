@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlaceOrderPage /> Renders <PlaceOrderPage /> component correctly 1`] = `ShallowWrapper {}`;
+
+exports[`Breadcrumb tests Renders <Breadcrumb /> component correctly 1`] = `ShallowWrapper {}`;
