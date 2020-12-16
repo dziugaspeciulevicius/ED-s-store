@@ -5,11 +5,19 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import CheckoutSteps from "../components/CheckoutSteps.component";
 import { createOrder } from "../actions/orderActions";
+import { USER_DETAILS_RESET } from "../constants/userConstants";
+import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 
 const PlaceOrderPage = ({ history }) => {
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
+
+  if (!cart.shippingAddress.address) {
+    history.push('/shipping')
+  } else if (!cart.paymentMethod) {
+    history.push('/payment')
+  }
 
   // Calculate prices
   // adds to be two decimals after the number
@@ -32,6 +40,8 @@ const PlaceOrderPage = ({ history }) => {
   useEffect(() => {
     if (success) {
       history.push(`/order/${order._id}`);
+      dispatch({ type: USER_DETAILS_RESET })
+      dispatch({ type: ORDER_CREATE_RESET })
     }
     // eslint-disable-next-line
   }, [history, success]);
