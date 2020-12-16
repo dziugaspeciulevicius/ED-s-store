@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/Header.component";
 import Footer from "./components/Footer.component";
@@ -27,8 +27,9 @@ import NotFound from "./components/NotFound.component";
 const App = () => {
   return (
     <div>
-      <ScrollToTop />
-      <Header />
+    <Router>
+    <ScrollToTop />
+    <Header />
       <main className="pb-3">
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -62,7 +63,8 @@ const App = () => {
         </Switch>
       </main>
       <Footer />
-    </div>
+      </Router>
+      </div>
   );
 };
 
