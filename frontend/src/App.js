@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Route, Switch } from "react-router-dom";
 
 import Header from "./components/Header.component";
 import Footer from "./components/Footer.component";
@@ -23,8 +23,6 @@ import UserEditPage from "./pages/UserEditPage.component";
 import ProductEditPage from "./pages/ProductEditPage.component";
 
 import NotFound from "./components/NotFound.component";
-import { Provider } from "react-redux";
-import store from "./store";
 
 const App = () => {
   return (
