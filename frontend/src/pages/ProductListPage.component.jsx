@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { withRouter } from 'react-router';
+
 import { Table, Button, Row, Col } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -152,4 +154,4 @@ const ProductListPage = ({ history, match }) => {
   );
 };
 
-export default ProductListPage;
+export default withRouter(ProductListPage);
