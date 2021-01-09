@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import "../../setupTests";
 import CartPage from "../../pages/CartPage.component"
+import {useDispatch, useSelector} from '../../pages/CartPage.component';
 jest.mock("../../pages/CartPage.component");
 
 describe("<CartPage />", () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import "../../setupTests";
-import DashboardPage from "../../pages/DashboardPage.component"
+import DashboardPage from "../../pages/DashboardPage.component";
 jest.mock("../../pages/DashboardPage.component");
 
 describe("<DashboardPage />", () => {

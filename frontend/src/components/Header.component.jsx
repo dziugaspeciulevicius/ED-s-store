@@ -22,7 +22,7 @@ const Header = () => {
   const userInfoName = userInfo ? userInfo.name.split(" ")[0] : " ";
 
   return (
-    <header>
+    <header className="header">
       <Navbar
         bg="light"
         expand="lg"
