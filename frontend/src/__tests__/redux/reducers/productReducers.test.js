@@ -1,8 +1,4 @@
-import React from "react";
-import { shallow, mount, render } from "enzyme";
-import "../../setupTests";
-
-import * as actions from "../../actions/productActions";
+import "../../../setupTests";
 import {
   productListReducer,
   productDetailsReducer,
@@ -10,7 +6,7 @@ import {
   productCreateReducer,
   productUpdateReducer,
   productReviewCreateReducer,
-} from "../../reducers/productReducers";
+} from "../../../reducers/productReducers";
 import {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
@@ -33,7 +29,7 @@ import {
   PRODUCT_CREATE_REVIEW_SUCCESS,
   PRODUCT_CREATE_REVIEW_FAIL,
   PRODUCT_CREATE_REVIEW_RESET,
-} from "../../constants/productConstants";
+} from "../../../constants/productConstants";
 
 describe("productListReducer", () => {
   it("Should return default state", () => {
