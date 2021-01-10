@@ -51,22 +51,22 @@ describe("productListReducer", () => {
     });
   });
 
-  //   it("Should handle PRODUCT_LIST_SUCCESS", () => {
-  //     expect(
-  //       productListReducer(undefined, {
-  //         type: PRODUCT_LIST_SUCCESS,
-  //         loading: false,
-  //         products: [],
-  //         pages: 1,
-  //         page: 1
-  //       })
-  //     ).toEqual({
+  // it("Should handle PRODUCT_LIST_SUCCESS", () => {
+  //   expect(
+  //     productListReducer({}, {
+  //       type: PRODUCT_LIST_SUCCESS,
   //       loading: false,
-  //       products: ["tea", "chair"],
+  //       products: [],
   //       pages: 1,
-  //       page: 1,
-  //     });
+  //       page: 1
+  //     })
+  //   ).toEqual({
+  //     loading: false,
+  //     products: ["tea", "chair"],
+  //     pages: 1,
+  //     page: 1,
   //   });
+  // });
 
   it("Should handle PRODUCT_LIST_FAIL", () => {
     expect(
@@ -90,15 +90,18 @@ describe("productDetailsReducer", () => {
 
   it("Should handle PRODUCT_DETAILS_REQUEST", () => {
     expect(
-      productListReducer(
+      productDetailsReducer(
         {},
         {
           type: PRODUCT_DETAILS_REQUEST,
           payload: { reviews: [] },
+          loading: true,
         }
       )
       // expect empty object
-    ).toEqual({});
+    ).toEqual({
+      loading: true,
+    });
   });
 
   it("Should handle PRODUCT_DETAILS_SUCCESS", () => {
