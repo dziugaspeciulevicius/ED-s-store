@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow, mount, render } from "enzyme";
-import "../../setupTests";
+import "../../../setupTests";
 
-import * as actions from "../../actions/cartActions";
-import { cartReducer } from "../../reducers/cartReducers";
-import { CART_ADD_ITEM } from "../../constants/cartConstants";
+import * as actions from "../../../actions/cartActions";
+import { cartReducer } from "../../../reducers/cartReducers";
+import { CART_ADD_ITEM } from "../../../constants/cartConstants";
 
 describe("cartReducer", () => {
   it("Should return default state", () => {

@@ -25,7 +25,8 @@
   "jest": {
     "coveragePathIgnorePatterns": [
       "src/index.js",
-      "src/pages"
+      "src/pages",
+      "src/assets/utlils.js"
     ]
   },
   "scripts": {
