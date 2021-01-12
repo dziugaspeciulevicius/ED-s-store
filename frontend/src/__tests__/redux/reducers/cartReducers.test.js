@@ -1,10 +1,11 @@
-import React from "react";
-import { shallow, mount, render } from "enzyme";
 import "../../../setupTests";
-
-import * as actions from "../../../actions/cartActions";
 import { cartReducer } from "../../../reducers/cartReducers";
-import { CART_ADD_ITEM } from "../../../constants/cartConstants";
+import {
+  CART_ADD_ITEM,
+  CART_REMOVE_ITEM,
+  CART_SAVE_SHIPPING_ADDRESS,
+  CART_SAVE_PAYMENT_METHOD,
+} from "../../../constants/cartConstants";
 
 describe("cartReducer", () => {
   it("Should return default state", () => {
@@ -15,40 +16,53 @@ describe("cartReducer", () => {
     });
   });
 
-  //   it("Should handle CART_ADD_ITEM 2", () => {
-  //     expect(cartReducer({}, {
+  // it("Should handle CART_ADD_ITEM", () => {
+  //   expect(
+  //     cartReducer(
+  //       {},
+  //       {
   //         type: CART_ADD_ITEM,
-  //         cartItems: ["5fc8265158a5e98f9c5de0d5"]
-  //     })).toEqual({
-  //         cartItems: ["5fc8265158a5e98f9c5de0d5"],
-  //         shippingAddress: {}
-  //     })
-  //   });
+  //       }
+  //     )
+  //   ).toEqual({});
+  // });
 
-  //   it("Should handle CART_ADD_ITEM", () => {
-  //     expect(
-  //       cartReducer(initialState, {
-  //         type: CART_ADD_ITEM,
-  //         payload: { cartItems: ["5fc8265158a5e98f9c5de0d5", "5fc8265158a5e98f9c5de0c5"] },
-  //       })
-  //     ).toEqual({
-  //       ...initialState,
-  //       cartItems: ["5fc8265158a5e98f9c5de0d5", "5fc8265158a5e98f9c5de0c5"],
-  //     });
-  //   });
-  //   it('Should handle CART_REMOVE_ITEM');
-  //   it('Should handle CART_SAVE_SHIPPING_ADDRESS');
-  //   it('Should handle CART_SAVE_PAYMENT_METHOD');
+  // it("Should handle CART_REMOVE_ITEM", () => {
+  //   expect(
+  //     cartReducer(
+  //       {},
+  //       {
+  //         type: CART_REMOVE_ITEM,
+  //       }
+  //     )
+  //   ).toEqual({});
+  // });
 
-  //   it("Should return new state if receiving type", () => {
-  //       const item;
-  //     const newState = cartReducer(undefined, {
-  //       type: types.CART_ADD_ITEM,
-  //       payload: item
-  //     });
-  //     expect(newState).toEqual({
-  //       ...newState,
-  //       cartItems: [...newState.cartItems, item],
-  //     });
-  //   });
+  it("Should handle CART_SAVE_SHIPPING_ADDRESS", () => {
+    expect(
+      cartReducer(
+        {},
+        {
+          type: CART_SAVE_SHIPPING_ADDRESS,
+          payload: {}
+        }
+      )
+    ).toEqual({
+      shippingAddress: {}
+    });
+  });
+
+  it("Should handle CART_SAVE_PAYMENT_METHOD", () => {
+    expect(
+      cartReducer(
+        {},
+        {
+          type: CART_SAVE_PAYMENT_METHOD,
+          payload: {}
+        }
+      )
+    ).toEqual({
+      paymentMethod: {}
+    });
+  });
 });

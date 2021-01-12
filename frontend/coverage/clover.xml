@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1610326522560" clover="3.2.0">
-  <project timestamp="1610326522561" name="All files">
-    <metrics statements="438" coveredstatements="243" conditionals="255" coveredconditionals="109" methods="92" coveredmethods="25" elements="785" coveredelements="377" complexity="0" loc="438" ncloc="438" packages="5" files="27" classes="27"/>
+<coverage generated="1610444397159" clover="3.2.0">
+  <project timestamp="1610444397159" name="All files">
+    <metrics statements="425" coveredstatements="240" conditionals="245" coveredconditionals="107" methods="88" coveredmethods="24" elements="758" coveredelements="371" complexity="0" loc="425" ncloc="425" packages="5" files="26" classes="26"/>
     <package name="src">
       <metrics statements="10" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\App.js">
@@ -25,17 +25,17 @@
       <metrics statements="174" coveredstatements="24" conditionals="80" coveredconditionals="0" methods="48" coveredmethods="0"/>
       <file name="cartActions.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\cartActions.js">
         <metrics statements="13" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
-        <line num="9" count="5" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="28" count="5" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="36" count="5" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
       </file>
@@ -384,23 +384,7 @@
       </file>
     </package>
     <package name="src.reducers">
-      <metrics statements="138" coveredstatements="127" conditionals="116" coveredconditionals="104" methods="23" coveredmethods="20"/>
-      <file name="cartReducers.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\cartReducers.js">
-        <metrics statements="13" coveredstatements="3" conditionals="10" coveredconditionals="2" methods="4" coveredmethods="1"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="13" count="1" type="cond" truecount="1" falsecount="4"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-      </file>
+      <metrics statements="125" coveredstatements="124" conditionals="106" coveredconditionals="102" methods="19" coveredmethods="19"/>
       <file name="orderReducers.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\orderReducers.js">
         <metrics statements="40" coveredstatements="40" conditionals="34" coveredconditionals="31" methods="6" coveredmethods="6"/>
         <line num="26" count="1" type="cond" truecount="0" falsecount="1"/>
