@@ -1,3 +1,4 @@
+import "../../../setupTests";
 import {
   ORDER_CREATE_FAIL,
   ORDER_CREATE_REQUEST,
@@ -30,7 +31,6 @@ import {
   orderListReducer,
   orderPayReducer,
 } from "../../../reducers/orderReducers";
-import "../../../setupTests";
 
 describe("orderCreateReducer", () => {
   it("Should return default state", () => {

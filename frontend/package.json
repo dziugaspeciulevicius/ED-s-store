@@ -26,7 +26,8 @@
     "coveragePathIgnorePatterns": [
       "src/index.js",
       "src/pages",
-      "src/assets/utlils.js"
+      "src/assets/utlils.js",
+      "src/reducers/cartReducers.js"
     ]
   },
   "scripts": {
