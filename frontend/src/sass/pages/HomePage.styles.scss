@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
 @import "../abstracts/variables";
+@import "../abstracts/breakpoints";
 // .row {
 //     justify-content: flex-start;
 // }
@@ -199,8 +199,3 @@
     font-size: 3rem;
   }
 }
-
-
-// @include respond(min-phone) {
-
-// }

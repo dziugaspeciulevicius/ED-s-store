@@ -1,7 +1,14 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import Logo from "../assets/images/logo_top.svg";
 import SearchBox from "./SearchBox.component";
@@ -24,20 +31,21 @@ const Header = () => {
   return (
     <header className="header">
       <Navbar
-        bg="light"
-        expand="lg"
         collapseOnSelect
+        expand="lg"
+        bg="light"
+        variant="light"
         className="navbar-stick"
         fixed="top"
       >
         <LinkContainer to="/">
           <Navbar.Brand>
-            <img src={Logo} className="d-inline-block align-top" alt=" logo" />
+            <img src={Logo} alt="logo" />
           </Navbar.Brand>
         </LinkContainer>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="my-auto">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
             <LinkContainer to="/">
               <Nav.Link className="nav-link">Home</Nav.Link>
             </LinkContainer>
@@ -51,13 +59,14 @@ const Header = () => {
               <Nav.Link className="nav-link">About</Nav.Link>
             </LinkContainer>
           </Nav>
-          <Route render={({ history }) => <SearchBox history={history} />} />
+
           <Nav className="ml-auto">
+            <Route render={({ history }) => <SearchBox history={history} />} />
             <LinkContainer to="/cart">
               <Nav.Link className="nav-link">Cart</Nav.Link>
             </LinkContainer>
             {userInfo ? (
-              <NavDropdown title={userInfoName} id="username">
+              <NavDropdown title={userInfoName} id="collasible-nav-dropdown">
                 {userInfo && userInfo.isAdmin && (
                   <LinkContainer to="/admin">
                     <NavDropdown.Item>Admin panel</NavDropdown.Item>

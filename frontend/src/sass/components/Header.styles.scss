@@ -1,4 +1,5 @@
 @import "../../sass/abstracts/variables";
+@import "../abstracts/breakpoints";
 
 .nav-link {
   color: $color-black !important;
@@ -29,4 +30,3 @@ bg-light {
 .dropdown-item {
   width: 70%;
 }
-
