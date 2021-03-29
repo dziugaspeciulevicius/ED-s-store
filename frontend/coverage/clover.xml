@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1610444397159" clover="3.2.0">
-  <project timestamp="1610444397159" name="All files">
+<coverage generated="1617035593198" clover="3.2.0">
+  <project timestamp="1617035593199" name="All files">
     <metrics statements="425" coveredstatements="240" conditionals="245" coveredconditionals="107" methods="88" coveredmethods="24" elements="758" coveredelements="371" complexity="0" loc="425" ncloc="425" packages="5" files="26" classes="26"/>
     <package name="src">
       <metrics statements="10" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -222,10 +222,10 @@
         <line num="5" count="5" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="Footer.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Footer.component.jsx">
+      <file name="Footer.component.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Footer.component.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
       </file>
       <file name="FormContainer.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\FormContainer.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -234,15 +234,15 @@
       </file>
       <file name="Header.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Header.component.jsx">
         <metrics statements="9" coveredstatements="1" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
       </file>
       <file name="Message.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Message.component.jsx">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
