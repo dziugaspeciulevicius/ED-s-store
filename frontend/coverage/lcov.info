@@ -1,5 +1,5 @@
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\App.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\App.js
 FN:27,(anonymous_0)
 FNF:1
 FNH:1
@@ -12,7 +12,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\store.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\store.js
 FNF:0
 FNH:0
 DA:31,0
@@ -37,7 +37,7 @@ BRF:8
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\cartActions.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\cartActions.js
 FN:9,(anonymous_0)
 FN:9,(anonymous_1)
 FN:28,(anonymous_2)
@@ -75,7 +75,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\orderActions.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\orderActions.js
 FN:24,(anonymous_0)
 FN:24,(anonymous_1)
 FN:58,(anonymous_2)
@@ -185,7 +185,7 @@ BRF:26
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\productActions.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\productActions.js
 FN:23,(anonymous_0)
 FN:23,(anonymous_1)
 FN:48,(anonymous_2)
@@ -289,7 +289,7 @@ BRF:26
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\userActions.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\userActions.js
 FN:29,(anonymous_0)
 FN:29,(anonymous_1)
 FN:64,(anonymous_2)
@@ -423,7 +423,7 @@ BRF:28
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Breadcrumb.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Breadcrumb.component.jsx
 FN:7,(anonymous_0)
 FNF:1
 FNH:1
@@ -438,7 +438,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\CheckoutSteps.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\CheckoutSteps.component.jsx
 FN:5,(anonymous_0)
 FNF:1
 FNH:1
@@ -459,7 +459,7 @@ BRF:8
 BRH:4
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Footer.component.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Footer.component.js
 FN:4,(anonymous_0)
 FNF:1
 FNH:1
@@ -472,7 +472,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\FormContainer.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\FormContainer.component.jsx
 FN:4,(anonymous_0)
 FNF:1
 FNH:1
@@ -485,7 +485,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Header.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Header.component.jsx
 FN:19,(anonymous_0)
 FN:22,(anonymous_1)
 FN:25,(anonymous_2)
@@ -518,7 +518,7 @@ BRF:7
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Message.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Message.component.jsx
 FN:4,(anonymous_0)
 FNF:1
 FNH:0
@@ -532,7 +532,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\NotFound.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\NotFound.component.jsx
 FN:3,(anonymous_0)
 FNF:1
 FNH:0
@@ -545,7 +545,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Paginate.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Paginate.component.jsx
 FN:5,(anonymous_0)
 FN:9,(anonymous_1)
 FNF:2
@@ -569,7 +569,7 @@ BRF:8
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Product.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Product.component.jsx
 FN:9,(anonymous_0)
 FNF:1
 FNH:0
@@ -582,7 +582,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Rating.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Rating.component.jsx
 FN:6,(anonymous_0)
 FNF:1
 FNH:0
@@ -618,7 +618,7 @@ BRF:22
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\ScrollToTop.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\ScrollToTop.component.jsx
 FN:5,(anonymous_0)
 FN:11,(anonymous_1)
 FNF:2
@@ -636,7 +636,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\SearchBox.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\SearchBox.component.jsx
 FN:4,(anonymous_0)
 FN:7,(anonymous_1)
 FN:20,(anonymous_2)
@@ -662,7 +662,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Spinner.component.jsx
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Spinner.component.jsx
 FN:3,Spinner
 FNF:1
 FNH:0
@@ -674,7 +674,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\cartConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\cartConstants.js
 FNF:0
 FNH:0
 DA:1,5
@@ -687,7 +687,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\orderConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\orderConstants.js
 FNF:0
 FNH:0
 DA:1,11
@@ -718,7 +718,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\productConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\productConstants.js
 FNF:0
 FNH:0
 DA:1,8
@@ -748,7 +748,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\userConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\userConstants.js
 FNF:0
 FNH:0
 DA:1,11
@@ -783,7 +783,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\orderReducers.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\orderReducers.js
 FN:26,(anonymous_0)
 FN:50,(anonymous_1)
 FN:76,(anonymous_2)
@@ -878,7 +878,7 @@ BRF:34
 BRH:31
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\productReducers.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\productReducers.js
 FN:26,(anonymous_0)
 FN:45,(anonymous_1)
 FN:61,(anonymous_2)
@@ -971,7 +971,7 @@ BRF:33
 BRH:32
 end_of_record
 TN:
-SF:D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\userReducers.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\userReducers.js
 FN:29,(anonymous_0)
 FN:44,(anonymous_1)
 FN:57,(anonymous_2)

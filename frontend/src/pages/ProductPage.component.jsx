@@ -38,10 +38,8 @@ const ProductPage = ({ history, match }) => {
   const { userInfo } = userLogin;
 
   const productReviewCreate = useSelector((state) => state.productReviewCreate);
-  const {
-    success: successProductReview,
-    error: errorProductReview,
-  } = productReviewCreate;
+  const { success: successProductReview, error: errorProductReview } =
+    productReviewCreate;
 
   useEffect(() => {
     if (successProductReview) {
@@ -195,7 +193,9 @@ const ProductPage = ({ history, match }) => {
                       type="button"
                       disabled={product.countInStock === 0 || qty <= 0}
                     >
-                      Add to cart
+                      {product.countInStock > 0
+                        ? "Add to cart"
+                        : "Out of stock"}
                     </Button>
                   </ListGroupItem>
                 </ListGroup>
