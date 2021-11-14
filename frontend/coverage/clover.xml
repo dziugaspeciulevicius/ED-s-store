@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617035593198" clover="3.2.0">
-  <project timestamp="1617035593199" name="All files">
+<coverage generated="1636905457553" clover="3.2.0">
+  <project timestamp="1636905457553" name="All files">
     <metrics statements="425" coveredstatements="240" conditionals="245" coveredconditionals="107" methods="88" coveredmethods="24" elements="758" coveredelements="371" complexity="0" loc="425" ncloc="425" packages="5" files="26" classes="26"/>
     <package name="src">
       <metrics statements="10" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="App.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\App.js">
+      <file name="App.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\App.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
-      <file name="store.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\store.js">
+      <file name="store.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\store.js">
         <metrics statements="8" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="31" count="0" type="stmt"/>
         <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -23,7 +23,7 @@
     </package>
     <package name="src.actions">
       <metrics statements="174" coveredstatements="24" conditionals="80" coveredconditionals="0" methods="48" coveredmethods="0"/>
-      <file name="cartActions.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\cartActions.js">
+      <file name="cartActions.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\cartActions.js">
         <metrics statements="13" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="9" count="4" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -39,7 +39,7 @@
         <line num="45" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
       </file>
-      <file name="orderActions.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\orderActions.js">
+      <file name="orderActions.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\orderActions.js">
         <metrics statements="51" coveredstatements="6" conditionals="26" coveredconditionals="0" methods="12" coveredmethods="0"/>
         <line num="24" count="6" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
@@ -93,7 +93,7 @@
         <line num="224" count="0" type="stmt"/>
         <line num="229" count="0" type="stmt"/>
       </file>
-      <file name="productActions.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\productActions.js">
+      <file name="productActions.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\productActions.js">
         <metrics statements="45" coveredstatements="6" conditionals="26" coveredconditionals="0" methods="12" coveredmethods="0"/>
         <line num="23" count="7" type="cond" truecount="0" falsecount="2"/>
         <line num="26" count="0" type="stmt"/>
@@ -141,7 +141,7 @@
         <line num="197" count="0" type="stmt"/>
         <line num="201" count="0" type="stmt"/>
       </file>
-      <file name="userActions.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\actions\userActions.js">
+      <file name="userActions.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\actions\userActions.js">
         <metrics statements="65" coveredstatements="8" conditionals="28" coveredconditionals="0" methods="16" coveredmethods="0"/>
         <line num="29" count="10" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
@@ -212,27 +212,27 @@
     </package>
     <package name="src.components">
       <metrics statements="43" coveredstatements="17" conditionals="51" coveredconditionals="5" methods="20" coveredmethods="4"/>
-      <file name="Breadcrumb.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Breadcrumb.component.jsx">
+      <file name="Breadcrumb.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Breadcrumb.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
-      <file name="CheckoutSteps.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\CheckoutSteps.component.jsx">
+      <file name="CheckoutSteps.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\CheckoutSteps.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="5" count="5" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="Footer.component.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Footer.component.js">
+      <file name="Footer.component.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Footer.component.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
-      <file name="FormContainer.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\FormContainer.component.jsx">
+      <file name="FormContainer.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\FormContainer.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="8" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
-      <file name="Header.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Header.component.jsx">
+      <file name="Header.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Header.component.jsx">
         <metrics statements="9" coveredstatements="1" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
@@ -244,41 +244,41 @@
         <line num="31" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
       </file>
-      <file name="Message.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Message.component.jsx">
+      <file name="Message.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Message.component.jsx">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="17" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="8" count="17" type="stmt"/>
       </file>
-      <file name="NotFound.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\NotFound.component.jsx">
+      <file name="NotFound.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\NotFound.component.jsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
-      <file name="Paginate.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Paginate.component.jsx">
+      <file name="Paginate.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Paginate.component.jsx">
         <metrics statements="3" coveredstatements="1" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="5" count="3" type="cond" truecount="0" falsecount="2"/>
         <line num="6" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="Product.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Product.component.jsx">
+      <file name="Product.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Product.component.jsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="9" count="3" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="Rating.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Rating.component.jsx">
+      <file name="Rating.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Rating.component.jsx">
         <metrics statements="3" coveredstatements="2" conditionals="22" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="6" count="6" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="82" count="6" type="stmt"/>
       </file>
-      <file name="ScrollToTop.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\ScrollToTop.component.jsx">
+      <file name="ScrollToTop.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\ScrollToTop.component.jsx">
         <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="7" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
-      <file name="SearchBox.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\SearchBox.component.jsx">
+      <file name="SearchBox.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\SearchBox.component.jsx">
         <metrics statements="9" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -290,21 +290,21 @@
         <line num="15" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
       </file>
-      <file name="Spinner.component.jsx" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\components\Spinner.component.jsx">
+      <file name="Spinner.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Spinner.component.jsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.constants">
       <metrics statements="73" coveredstatements="73" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="cartConstants.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\cartConstants.js">
+      <file name="cartConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\cartConstants.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
       </file>
-      <file name="orderConstants.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\orderConstants.js">
+      <file name="orderConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\orderConstants.js">
         <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
@@ -329,7 +329,7 @@
         <line num="26" count="11" type="stmt"/>
         <line num="27" count="11" type="stmt"/>
       </file>
-      <file name="productConstants.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\productConstants.js">
+      <file name="productConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\productConstants.js">
         <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="8" type="stmt"/>
         <line num="2" count="8" type="stmt"/>
@@ -353,7 +353,7 @@
         <line num="25" count="8" type="stmt"/>
         <line num="26" count="8" type="stmt"/>
       </file>
-      <file name="userConstants.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\constants\userConstants.js">
+      <file name="userConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\userConstants.js">
         <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
@@ -385,7 +385,7 @@
     </package>
     <package name="src.reducers">
       <metrics statements="125" coveredstatements="124" conditionals="106" coveredconditionals="102" methods="19" coveredmethods="19"/>
-      <file name="orderReducers.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\orderReducers.js">
+      <file name="orderReducers.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\orderReducers.js">
         <metrics statements="40" coveredstatements="40" conditionals="34" coveredconditionals="31" methods="6" coveredmethods="6"/>
         <line num="26" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="27" count="5" type="cond" truecount="5" falsecount="0"/>
@@ -428,7 +428,7 @@
         <line num="157" count="1" type="stmt"/>
         <line num="162" count="1" type="stmt"/>
       </file>
-      <file name="productReducers.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\productReducers.js">
+      <file name="productReducers.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\productReducers.js">
         <metrics statements="39" coveredstatements="38" conditionals="33" coveredconditionals="32" methods="6" coveredmethods="6"/>
         <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="28" count="3" type="cond" truecount="3" falsecount="1"/>
@@ -470,7 +470,7 @@
         <line num="113" count="1" type="stmt"/>
         <line num="115" count="1" type="stmt"/>
       </file>
-      <file name="userReducers.js" path="D:\MY FILES\Studies\5 SEMESTER\Software engineering\eds-store\frontend\src\reducers\userReducers.js">
+      <file name="userReducers.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\userReducers.js">
         <metrics statements="46" coveredstatements="46" conditionals="39" coveredconditionals="39" methods="7" coveredmethods="7"/>
         <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="30" count="5" type="cond" truecount="5" falsecount="0"/>

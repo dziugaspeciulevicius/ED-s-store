@@ -38,10 +38,8 @@ const ProductPage = ({ history, match }) => {
   const { userInfo } = userLogin;
 
   const productReviewCreate = useSelector((state) => state.productReviewCreate);
-  const {
-    success: successProductReview,
-    error: errorProductReview,
-  } = productReviewCreate;
+  const { success: successProductReview, error: errorProductReview } =
+    productReviewCreate;
 
   useEffect(() => {
     if (successProductReview) {

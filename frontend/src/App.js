@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/Header.component";
 import Footer from "./components/Footer.component";
-
 import HomePage from "./pages/HomePage.component";
 import ProductPage from "./pages/ProductPage.component";
 import ShopPage from "./pages/ShopPage.component";
