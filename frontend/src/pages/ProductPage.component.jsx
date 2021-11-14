@@ -195,7 +195,9 @@ const ProductPage = ({ history, match }) => {
                       type="button"
                       disabled={product.countInStock === 0 || qty <= 0}
                     >
-                      Add to cart
+                      {product.countInStock > 0
+                        ? "Add to cart"
+                        : "Out of stock"}
                     </Button>
                   </ListGroupItem>
                 </ListGroup>
