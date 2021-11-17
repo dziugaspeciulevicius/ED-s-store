@@ -2,12 +2,7 @@
     <img src="./logo.png">
 </p>
 
-## Introduction
-
-This ecommerce application was build for a software engineering module. The documentation includes everything from installation process to deployment. You can also find and see how development went from A to Z in the `Development` tab.
-
-<b>Documentation itself for this ecommerce app can be found [here](https://dziugaspeciulevicius.github.io/eds-store-docs/).</b>
-
+## e-Commerce MERN stack application
 
 ---
 ## Env Variables
@@ -52,7 +47,7 @@ npm run build
 ## How to run tests?
 To run tests, clone the project and install the dependencies. Now to run the tests we want to go into the `frontend` directory of the project and run the command: `npm run test` or `npm run test:coverage` to run our testing coverage.*
 
-**The app is not fully tested, so if you would like to test this application and contribute, just make a pull request :)*
+**The app is not fully tested, so if you would like to test this application and contribute, just fork the project, make your changes and open a pull request :)*
 
 <p align="center">
     <img src="./tests.png">
