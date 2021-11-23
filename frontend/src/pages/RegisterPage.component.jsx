@@ -54,7 +54,7 @@ const RegisterPage = ({ location, history }) => {
               placeholder="Enter name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
 
           <Form.Group controlId="email">
@@ -64,7 +64,7 @@ const RegisterPage = ({ location, history }) => {
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
 
           <Form.Group controlId="password">
@@ -74,7 +74,7 @@ const RegisterPage = ({ location, history }) => {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           
           <Form.Group controlId="confirmPassword">
@@ -84,7 +84,7 @@ const RegisterPage = ({ location, history }) => {
               placeholder="Confirm password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
 
           <Button type="submit" variant="primary" className="btn-custom-blue">

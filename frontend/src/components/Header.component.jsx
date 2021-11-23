@@ -45,21 +45,6 @@ const Header = () => {
         </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <LinkContainer to="/">
-              <Nav.Link className="nav-link">Home</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/shop">
-              <Nav.Link className="nav-link">Shop</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/contact">
-              <Nav.Link className="nav-link">Contact</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/about">
-              <Nav.Link className="nav-link">About</Nav.Link>
-            </LinkContainer>
-          </Nav>
-
           <Nav className="ml-auto">
             <Route render={({ history }) => <SearchBox history={history} />} />
             <LinkContainer to="/cart">
