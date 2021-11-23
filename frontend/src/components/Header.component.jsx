@@ -1,11 +1,11 @@
 import React from "react";
-import {Route} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {Nav, Navbar, NavDropdown,} from "react-bootstrap";
-import {LinkContainer} from "react-router-bootstrap";
+import { Route } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import Logo from "../assets/images/logo_top.svg";
 import SearchBox from "./SearchBox.component";
-import {logout} from "../actions/userActions";
+import { logout } from "../actions/userActions";
 
 import "../sass/components/Header.styles.scss";
 

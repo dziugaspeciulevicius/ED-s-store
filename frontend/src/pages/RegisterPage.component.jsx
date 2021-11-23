@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Form, Button, Col } from "react-bootstrap";
+import { Button, Col, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
@@ -16,36 +16,36 @@ const RegisterPage = ({ location, history }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState(null);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const userRegister = useSelector(state => state.userRegister)
-  const { loading, error, userInfo } = userRegister  // from user reducer
+  const userRegister = useSelector((state) => state.userRegister);
+  const { loading, error, userInfo } = userRegister; // from user reducer
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
 
   useEffect(() => {
-    if(userInfo) {
-      history.push(redirect)
+    if (userInfo) {
+      history.push(redirect);
     }
-  }, [history, userInfo, redirect])
+  }, [history, userInfo, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if(password !== confirmPassword) {
-        setMessage("Passwords don't match")
+    if (password !== confirmPassword) {
+      setMessage("Passwords don't match");
     } else {
-        dispatch(register(name, email, password))
+      dispatch(register(name, email, password));
     }
-};
+  };
 
   return (
     <div>
       <Breadcrumb title={"Register"} />
       <FormContainer className="form-container">
         <h1>Register</h1>
-        {message && <Message variant='danger'>{message}</Message>}
-        {error && <Message variant='danger'>{error}</Message>}
-        {loading && <Spinner/>}
+        {message && <Message variant="danger">{message}</Message>}
+        {error && <Message variant="danger">{error}</Message>}
+        {loading && <Spinner />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="name">
             <Form.Label>Name</Form.Label>
@@ -76,7 +76,7 @@ const RegisterPage = ({ location, history }) => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-          
+
           <Form.Group controlId="confirmPassword">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control
@@ -88,19 +88,16 @@ const RegisterPage = ({ location, history }) => {
           </Form.Group>
 
           <Button type="submit" variant="primary" className="btn-custom-blue">
-          Register
+            Register
           </Button>
-          
-            <Col className="new-customer">
-              Have an Account?{" "}
-              <Link
-                to={redirect ? `/login?redirect=${redirect}` : "/login"}
-              >
-                Login
-              </Link>
-            </Col>
-          </Form>
 
+          <Col className="new-customer">
+            Have an Account?{" "}
+            <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
+              Login
+            </Link>
+          </Col>
+        </Form>
       </FormContainer>
       )
     </div>

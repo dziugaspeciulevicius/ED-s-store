@@ -112,7 +112,6 @@
 }
 
 @include respond(tab-port) {
-
   .men-intro-header-slide {
     text-transform: none;
     position: absolute;
@@ -123,7 +122,7 @@
     color: black;
     font-size: 1.7rem;
   }
-  
+
   .men-header-slide {
     position: absolute;
     top: 50%;
@@ -133,7 +132,7 @@
     color: black;
     font-size: 3rem;
   }
-  
+
   .women-intro-header-slide {
     text-transform: none;
     position: absolute;
@@ -144,7 +143,7 @@
     color: white;
     font-size: 1.7rem;
   }
-  
+
   .women-header-slide {
     position: absolute;
     top: 50%;
@@ -167,7 +166,7 @@
     color: black;
     font-size: 1.2rem;
   }
-  
+
   .men-header-slide {
     position: absolute;
     top: 50%;
@@ -177,7 +176,7 @@
     color: black;
     font-size: 1.5rem;
   }
-  
+
   .women-intro-header-slide {
     text-transform: none;
     position: absolute;
@@ -188,7 +187,7 @@
     color: white;
     font-size: 1.7rem;
   }
-  
+
   .women-header-slide {
     position: absolute;
     top: 50%;

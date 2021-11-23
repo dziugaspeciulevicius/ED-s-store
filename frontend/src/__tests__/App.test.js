@@ -1,14 +1,10 @@
 import React from "react";
 import App from "../App";
-import { shallow, mount, render } from "enzyme";
+import { shallow } from "enzyme";
 import "../setupTests";
-import { MemoryRouter } from "react-router-dom";
-
 import HomePage from "../pages/HomePage.component";
-import NotFound from "../components/NotFound.component";
 jest.mock("../pages/HomePage.component.jsx");
 jest.mock("../components/NotFound.component.jsx");
-
 
 describe("<App />", () => {
   it("Renders <App /> component correctly", () => {

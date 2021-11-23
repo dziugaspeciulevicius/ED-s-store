@@ -127,13 +127,12 @@ const deleteUser = asyncHandler(async (req, res) => {
   }
 });
 
-
 // @desc Get user by ID
 // @route GET /api/users/:id
 // @access Private/Admin
 const getUserById = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id).select('-password') // sending user back but selecting to not send password back
-  if(user) {
+  const user = await User.findById(req.params.id).select("-password"); // sending user back but selecting to not send password back
+  if (user) {
     res.json(user);
   } else {
     res.status(404);
@@ -145,27 +144,26 @@ const getUserById = asyncHandler(async (req, res) => {
 // @route   PUT /api/users/:id
 // @access  Private/Admin
 const updateUser = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id)
+  const user = await User.findById(req.params.id);
 
   if (user) {
-    user.name = req.body.name || user.name // if user found we're going to set user name to req.body.name 
-    user.email = req.body.email || user.email
-    user.isAdmin = req.body.isAdmin  // there was a bug I couldn't set a user as admin to false, left it like this
+    user.name = req.body.name || user.name; // if user found we're going to set user name to req.body.name
+    user.email = req.body.email || user.email;
+    user.isAdmin = req.body.isAdmin; // there was a bug I couldn't set a user as admin to false, left it like this
 
-    const updatedUser = await user.save()
+    const updatedUser = await user.save();
 
     res.json({
       _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
-    })
+    });
   } else {
-    res.status(404)
-    throw new Error('User not found')
+    res.status(404);
+    throw new Error("User not found");
   }
-})
-
+});
 
 export {
   authUser,
@@ -175,5 +173,5 @@ export {
   getUsers,
   deleteUser,
   getUserById,
-  updateUser
+  updateUser,
 };
