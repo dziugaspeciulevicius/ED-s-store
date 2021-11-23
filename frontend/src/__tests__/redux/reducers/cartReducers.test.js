@@ -44,11 +44,11 @@ describe("cartReducer", () => {
         {},
         {
           type: CART_SAVE_SHIPPING_ADDRESS,
-          payload: {}
+          payload: {},
         }
       )
     ).toEqual({
-      shippingAddress: {}
+      shippingAddress: {},
     });
   });
 
@@ -58,11 +58,11 @@ describe("cartReducer", () => {
         {},
         {
           type: CART_SAVE_PAYMENT_METHOD,
-          payload: {}
+          payload: {},
         }
       )
     ).toEqual({
-      paymentMethod: {}
+      paymentMethod: {},
     });
   });
 });

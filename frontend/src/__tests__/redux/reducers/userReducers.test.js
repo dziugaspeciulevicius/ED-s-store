@@ -477,7 +477,7 @@ describe("userUpdateReducer", () => {
 
   it("Should handle USER_UPDATE_REQUEST", () => {
     expect(
-        userUpdateReducer(
+      userUpdateReducer(
         {},
         {
           type: USER_UPDATE_REQUEST,
@@ -491,7 +491,7 @@ describe("userUpdateReducer", () => {
 
   it("Should handle USER_UPDATE_SUCCESS", () => {
     expect(
-        userUpdateReducer(
+      userUpdateReducer(
         {},
         {
           type: USER_UPDATE_SUCCESS,
@@ -507,7 +507,7 @@ describe("userUpdateReducer", () => {
 
   it("Should handle USER_UPDATE_FAIL", () => {
     expect(
-        userUpdateReducer(
+      userUpdateReducer(
         {},
         {
           type: USER_UPDATE_FAIL,
@@ -523,7 +523,7 @@ describe("userUpdateReducer", () => {
 
   it("Should handle USER_UPDATE_RESET", () => {
     expect(
-        userUpdateReducer(
+      userUpdateReducer(
         {},
         {
           type: USER_UPDATE_RESET,

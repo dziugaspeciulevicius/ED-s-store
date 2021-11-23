@@ -38,12 +38,14 @@
 }
 
 .input-number {
- text-align: center;
+  text-align: center;
 }
 
-.quantity-left-minus, .quantity-right-plus, .input-number {
+.quantity-left-minus,
+.quantity-right-plus,
+.input-number {
   margin-top: 1rem;
-  border: 1px solid $color-grey-dark-4
+  border: 1px solid $color-grey-dark-4;
 }
 
 // Add to cart button styles
@@ -67,7 +69,6 @@ col-lg-12 {
   // max-width: 1140px;
   max-width: 100%;
 }
-
 
 .container {
   width: 100%;
@@ -101,5 +102,3 @@ col-lg-12 {
 
 //     }
 // }
-
-

@@ -58,8 +58,8 @@ const OrderPage = ({ match, history }) => {
   //   let orderSliced = orderId.slice(-5);
 
   useEffect(() => {
-    if(!userInfo) {
-      history.push('/login')
+    if (!userInfo) {
+      history.push("/login");
     }
 
     const addPayPalScript = async () => {
@@ -249,16 +249,19 @@ const OrderPage = ({ match, history }) => {
                             </ListGroup.Item>
                           ) : ()*/}
                       {loadingDeliver && <Spinner />}
-                      {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered && (
-                        <ListGroup.Item>
-                          <Button
-                            className="btn-custom-blue btn-block py-3"
-                            onClick={deliverHandler}
-                          >
-                            Mark as delivered
-                          </Button>
-                        </ListGroup.Item>
-                      )}
+                      {userInfo &&
+                        userInfo.isAdmin &&
+                        order.isPaid &&
+                        !order.isDelivered && (
+                          <ListGroup.Item>
+                            <Button
+                              className="btn-custom-blue btn-block py-3"
+                              onClick={deliverHandler}
+                            >
+                              Mark as delivered
+                            </Button>
+                          </ListGroup.Item>
+                        )}
                     </ListGroup>
                   </Card>
                 </Col>

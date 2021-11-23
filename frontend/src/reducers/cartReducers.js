@@ -17,7 +17,7 @@ export const cartReducer = (
       // if item exists in the cart (we find for each items in currentState items, if they are equal to the currentItem.product)
       const existItem = state.cartItems.find((x) => x.product === item.product);
 
-      // if it exists, we return our state, and then we map through current cart items, and if the current item id is equal to existing item product, 
+      // if it exists, we return our state, and then we map through current cart items, and if the current item id is equal to existing item product,
       // then we're going to return item for this iteration else its going to stay the same
       if (existItem) {
         return {
@@ -26,7 +26,7 @@ export const cartReducer = (
             x.product === existItem.product ? item : x
           ),
         };
-        // so if it doesn't exists, we just push it to the array, so we will return our state (whatever there is in our state) and for cart items we're 
+        // so if it doesn't exists, we just push it to the array, so we will return our state (whatever there is in our state) and for cart items we're
         // going to set it to an array with our current items and we're going to add new item.
       } else {
         return {

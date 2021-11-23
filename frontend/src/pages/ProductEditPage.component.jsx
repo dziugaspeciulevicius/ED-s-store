@@ -70,7 +70,7 @@ const ProductEditPage = ({ match, history }) => {
     try {
       const config = {
         headers: {
-          "Content-Type": "multipart/form-data",  // image has to have content type of this
+          "Content-Type": "multipart/form-data", // image has to have content type of this
         },
       };
 
@@ -149,7 +149,7 @@ const ProductEditPage = ({ match, history }) => {
                 label="Choose File"
                 custom
                 onChange={uploadFileHandler}
-                style={{width: "106%", paddingBottom: "1rem"}}
+                style={{ width: "106%", paddingBottom: "1rem" }}
               ></Form.File>
               {uploading && <Spinner />}
             </Form.Group>

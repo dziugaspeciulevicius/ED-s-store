@@ -14,9 +14,9 @@ const PlaceOrderPage = ({ history }) => {
   const cart = useSelector((state) => state.cart);
 
   if (!cart.shippingAddress.address) {
-    history.push('/shipping')
+    history.push("/shipping");
   } else if (!cart.paymentMethod) {
-    history.push('/payment')
+    history.push("/payment");
   }
 
   // Calculate prices
@@ -40,8 +40,8 @@ const PlaceOrderPage = ({ history }) => {
   useEffect(() => {
     if (success) {
       history.push(`/order/${order._id}`);
-      dispatch({ type: USER_DETAILS_RESET })
-      dispatch({ type: ORDER_CREATE_RESET })
+      dispatch({ type: USER_DETAILS_RESET });
+      dispatch({ type: ORDER_CREATE_RESET });
     }
     // eslint-disable-next-line
   }, [history, success]);
@@ -70,20 +70,20 @@ const PlaceOrderPage = ({ history }) => {
               <Row className="place-order-page-row">
                 <Col className="order-info-column">
                   <ListGroup variant="flush">
-                  <ListGroup.Item>
+                    <ListGroup.Item>
                       <h2>Shipping</h2>
                       <strong>Name: </strong>
                       {cart.shippingAddress.firstName}
-                      <br/>
+                      <br />
                       <strong>Surname: </strong>
                       {cart.shippingAddress.lastName}
-                      <br/>
+                      <br />
                       <strong>Phone: </strong>
                       {cart.shippingAddress.phone}
-                      <br/>
+                      <br />
                       <strong>Email: </strong>
                       {cart.shippingAddress.email}
-                      <br/>
+                      <br />
                       <strong>Shipping address: </strong>
                       {cart.shippingAddress.country},{" "}
                       {cart.shippingAddress.city},{" "}
@@ -153,7 +153,7 @@ const PlaceOrderPage = ({ history }) => {
                         </Row>
                       </ListGroup.Item>
                       <ListGroup.Item>
-                            {error && <Message variant='danger'>{error}</Message>}
+                        {error && <Message variant="danger">{error}</Message>}
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <Button

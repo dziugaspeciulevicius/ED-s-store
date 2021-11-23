@@ -1,20 +1,24 @@
 //PRIMARY COLORS
-$color-primary: linear-gradient(180deg, rgba(102,126,234,1) 0%, rgba(100,182,255,1) 100%);
-$color-primary-light: #64B6FF;
-$color-primary-dark: #667EEA;
+$color-primary: linear-gradient(
+  180deg,
+  rgba(102, 126, 234, 1) 0%,
+  rgba(100, 182, 255, 1) 100%
+);
+$color-primary-light: #64b6ff;
+$color-primary-dark: #667eea;
 
 //OTHER COLORS
 $color-black: #171515;
-$color-grey-light-1: #F1F1F1;
-$color-grey-light-2: #E1E1E1;
+$color-grey-light-1: #f1f1f1;
+$color-grey-light-2: #e1e1e1;
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 $color-grey-dark-4: #ccc;
-$color-white: #FFF;
+$color-white: #fff;
 
-$black-color : #222;
-$blue-color : #6dabe4;
+$black-color: #222;
+$blue-color: #6dabe4;
 $grey-light: #999;
 
 //BLOCK SHADOWS
@@ -43,14 +47,13 @@ $border-radius-10: 10px;
 //FONT
 $default-font-size: 1.6rem;
 
-
 $font-size: 1.4rem !default;
 $sidebar-font-size: 1.4rem !default;
 $footer-font-size: 1.3rem !default;
 $input-font-size: 1.4rem !default;
 $button-font-size: 1.4rem !default;
 
-$primary-color: #cc6666  !default;
+$primary-color: #cc6666 !default;
 $primary-color-dark: #006699 !default;
 
 $secondary-color: #c15454 !default;
@@ -66,24 +69,24 @@ $light-text: #999999 !default;
 $dark-text: #333333 !default;
 $headings-text: $dark-text !default;
 
-$font-family: 'Poppins', sans-serif !default;
-$second-font-family: 'Poppins', sans-serif !default;
+$font-family: "Poppins", sans-serif !default;
+$second-font-family: "Poppins", sans-serif !default;
 
 $breakpoints: (
-	xs: 480px,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px,
-	xxl: 1600px,
-	xlst: 1920px
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+  xlst: 1920px,
 );
 
 $max-breakpoints: (
-	xs: 479px,
-	sm: 575px,
-	md: 767px,
-	lg: 991px,
-	xl: 1199px,
-	xxl: 1599px
+  xs: 479px,
+  sm: 575px,
+  md: 767px,
+  lg: 991px,
+  xl: 1199px,
+  xxl: 1599px,
 );

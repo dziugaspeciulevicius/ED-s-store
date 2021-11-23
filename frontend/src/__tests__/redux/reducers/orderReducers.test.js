@@ -387,7 +387,6 @@ describe("orderListMyReducer", () => {
   });
 });
 
-
 describe("orderListReducer", () => {
   it("Should return default state", () => {
     expect(orderListReducer(undefined, {})).toEqual({ orders: [] });
