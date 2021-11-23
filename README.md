@@ -7,6 +7,8 @@
 ---
 ## Env Variables
 
+*__PORT note__: if you're using an apple device, you might want to use PORT = 4000, since Apple uses PORT 5000 by default for Apple Airplay receiver by default*
+
 Create a .env file in the root directory and add the following:
 ```
 NODE_ENV = development
@@ -27,7 +29,9 @@ npm install
 
 ---
 ## Running development server
+*__PORT note__: you might want to change this backend port on Apple devices as well*
 ```
+
 # Run frontend (:3000) & backend (:5000)
 npm run dev
 
