@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="prettier .idea files" />
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="merge prettier changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +201,8 @@
       <workItem from="1637702163401" duration="3099000" />
       <workItem from="1637705288979" duration="88000" />
       <workItem from="1637705391806" duration="311000" />
-      <workItem from="1637766889924" duration="609000" />
+      <workItem from="1637766889924" duration="1222000" />
+      <workItem from="1637780310236" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -283,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637704592056</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="prettier .idea files">
+      <created>1637779728877</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1637779728877</updated>
+    </task>
+    <task id="LOCAL-00014" summary="merge prettier changes">
+      <created>1637779908312</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1637779908312</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +333,8 @@
     <MESSAGE value="add prettier to the project" />
     <MESSAGE value="run prettier through the project files" />
     <MESSAGE value="prettier .idea files" />
-    <option name="LAST_COMMIT_MESSAGE" value="prettier .idea files" />
+    <MESSAGE value="merge prettier changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge prettier changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
