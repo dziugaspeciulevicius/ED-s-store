@@ -1,0 +1,17 @@
+Index: .idea/watcherTasks.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectTasksOptions\">\n    <TaskOptions isEnabled=\"true\">\n      <option name=\"arguments\" value=\"--write $FilePath$\" />\n      <option name=\"checkSyntaxErrors\" value=\"true\" />\n      <option name=\"description\" />\n      <option name=\"exitCodeBehavior\" value=\"ERROR\" />\n      <option name=\"fileExtension\" value=\"*\" />\n      <option name=\"immediateSync\" value=\"true\" />\n      <option name=\"name\" value=\"Prettier\" />\n      <option name=\"output\" value=\"$FilePathRelativeToProjectRoot$\" />\n      <option name=\"outputFilters\">\n        <array />\n      </option>\n      <option name=\"outputFromStdout\" value=\"false\" />\n      <option name=\"program\" value=\"$PROJECT_DIR$/node_modules/prettier\" />\n      <option name=\"runOnExternalChanges\" value=\"true\" />\n      <option name=\"scopeName\" value=\"Project Files\" />\n      <option name=\"trackOnlyRoot\" value=\"false\" />\n      <option name=\"workingDir\" value=\"$ProjectFileDir$\" />\n      <envs>\n        <env name=\"COMPILE_PARTIAL\" value=\"true\" />\n      </envs>\n    </TaskOptions>\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/watcherTasks.xml b/.idea/watcherTasks.xml
+--- a/.idea/watcherTasks.xml	
++++ b/.idea/watcherTasks.xml	
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ProjectTasksOptions">
+-    <TaskOptions isEnabled="true">
++    <TaskOptions isEnabled="false">
+       <option name="arguments" value="--write $FilePath$" />
+       <option name="checkSyntaxErrors" value="true" />
+       <option name="description" />

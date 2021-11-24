@@ -1,0 +1,20 @@
+Index: frontend/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"frontend\",\n  \"proxy\": \"http://127.0.0.1:5000\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n    \"@testing-library/user-event\": \"^7.2.1\",\n    \"axios\": \"^0.21.0\",\n    \"history\": \"^4.10.1\",\n    \"react\": \"^16.13.1\",\n    \"react-bootstrap\": \"^1.3.0\",\n    \"react-dom\": \"^16.13.1\",\n    \"react-paypal-button-v2\": \"^2.6.2\",\n    \"react-redux\": \"^7.2.2\",\n    \"react-router-bootstrap\": \"^0.25.0\",\n    \"react-router-dom\": \"^5.2.0\",\n    \"react-scripts\": \"3.4.3\",\n    \"react-slick\": \"^0.27.13\",\n    \"react-tabs\": \"^3.1.1\",\n    \"redux\": \"^4.0.5\",\n    \"redux-devtools-extension\": \"^2.13.8\",\n    \"redux-thunk\": \"^2.3.0\",\n    \"slick-carousel\": \"^1.8.1\"\n  },\n  \"jest\": {\n    \"coveragePathIgnorePatterns\": [\n      \"src/index.js\",\n      \"src/pages\",\n      \"src/assets/utlils.js\",\n      \"src/reducers/cartReducers.js\"\n    ]\n  },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"eject\": \"react-scripts eject\",\n    \"test\": \"react-scripts test --env=jsdom --watchAll=true\",\n    \"test:coverage\": \"npm test --env=jsdom -- --coverage --watchAll=true\"\n  },\n  \"eslintConfig\": {\n    \"extends\": \"react-app\"\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  },\n  \"devDependencies\": {\n    \"@testing-library/jest-dom\": \"^4.2.4\",\n    \"@testing-library/react\": \"^9.5.0\",\n    \"enzyme\": \"^3.11.0\",\n    \"enzyme-adapter-react-16\": \"^1.15.5\",\n    \"redux-mock-store\": \"^1.5.4\"\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/package.json b/frontend/package.json
+--- a/frontend/package.json	(revision e2824c0bb17b42e1dea492c4bc1d35653dec1044)
++++ b/frontend/package.json	(date 1637705332181)
+@@ -4,6 +4,9 @@
+   "version": "0.1.0",
+   "private": true,
+   "dependencies": {
++    "@emotion/react": "^11.6.0",
++    "@emotion/styled": "^11.6.0",
++    "@mui/material": "^5.1.1",
+     "@testing-library/user-event": "^7.2.1",
+     "axios": "^0.21.0",
+     "history": "^4.10.1",
