@@ -4,8 +4,8 @@ import "../../setupTests";
 import FormContainer from "../../components/FormContainer.component";
 
 describe("Form container tests", () => {
-    it("Renders <FormContainer /> component correctly", () => {
-      // shallow creates instance of a component
-      expect(shallow(<FormContainer />)).toMatchSnapshot();
-    });
+  it("Renders <FormContainer /> component correctly", () => {
+    // shallow creates instance of a component
+    expect(shallow(<FormContainer />)).toMatchSnapshot();
+  });
 });

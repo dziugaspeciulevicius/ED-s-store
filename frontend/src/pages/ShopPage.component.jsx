@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ShopPage = () => {
-    return (
-        <div>
-            SHOP
-        </div>
-    )
-}
+  return <div>SHOP</div>;
+};
 
-export default ShopPage
+export default ShopPage;

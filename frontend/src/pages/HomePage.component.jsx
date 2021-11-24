@@ -40,21 +40,23 @@ const HomePage = ({ match }) => {
 
   return (
     <>
-    <div className="latest-products">
-    <div style={{ paddingTop: "48px" }}>
-      <Slider {...settings}>
-        <div className="slide">
-          <img src={Image1} alt="image1" width="100%" />
-          <h2 className="men-intro-header-slide">Welcome to ED's closet</h2>
-          <h1 className="men-header-slide">MENs FASHION</h1>
-          </div>
-          <div className="slide">
-          <img src={Image2} alt="image2" width="100%" />
-          <h2 className="women-intro-header-slide">Welcome to ED's closet</h2>
-          <h1 className="women-header-slide">WOMENs FASHION</h1>
+      <div className="latest-products">
+        <div style={{ paddingTop: "48px" }}>
+          <Slider {...settings}>
+            <div className="slide">
+              <img src={Image1} alt="image1" width="100%" />
+              <h2 className="men-intro-header-slide">Welcome to ED's closet</h2>
+              <h1 className="men-header-slide">MENs FASHION</h1>
+            </div>
+            <div className="slide">
+              <img src={Image2} alt="image2" width="100%" />
+              <h2 className="women-intro-header-slide">
+                Welcome to ED's closet
+              </h2>
+              <h1 className="women-header-slide">WOMENs FASHION</h1>
+            </div>
+          </Slider>
         </div>
-      </Slider>
-    </div>
         <h1 className="latest-products--title">Latest products</h1>
         {/*if loading we write loading, else if there's an error, we want to show error, else we want to show row with data*/}
         {loading ? (

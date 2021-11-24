@@ -7,7 +7,6 @@ import OrderListPage from "../pages/OrderListPage.component";
 import Breadcrumb from "../components/Breadcrumb.component";
 
 const AdminPanel = ({ location, history, match }) => {
-
   return (
     <div>
       <Breadcrumb title={"Admin dashboard"} />
@@ -49,7 +48,7 @@ const AdminPanel = ({ location, history, match }) => {
                         </TabPanel>
                         {/*========== PRODUCTS PANEL ==========*/}
                         <TabPanel>
-                          <ProductListPage/>
+                          <ProductListPage />
                         </TabPanel>
                         {/* try fixing this later so it doesn't reload everytime */}
                         {/*========== ORDERS PANEL ==========*/}

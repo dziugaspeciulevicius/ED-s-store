@@ -4,8 +4,8 @@ import "../../setupTests";
 import Footer from "../../components/Footer.component";
 
 describe("Footer tests", () => {
-    it("Renders <Footer /> component correctly", () => {
-      // shallow creates instance of a component
-      expect(shallow(<Footer />)).toMatchSnapshot();
-    });
+  it("Renders <Footer /> component correctly", () => {
+    // shallow creates instance of a component
+    expect(shallow(<Footer />)).toMatchSnapshot();
+  });
 });
