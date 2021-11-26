@@ -5,6 +5,7 @@
   "main": "server.js",
   "type": "module",
   "dependencies": {
+    "@fontsource/roboto": "^4.5.1",
     "@mui/icons-material": "^5.2.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
@@ -20,14 +21,16 @@
     "sass": "^1.43.4"
   },
   "devDependencies": {
-    "concurrently": "^5.3.0",
+    "concurrently": "^6.4.0",
     "nodemon": "^2.0.6"
   },
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
+    "clientMUI": "npm start --prefix frontend-mui",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "devMUI": "concurrently \"npm run server\" \"npm run clientMUI\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
