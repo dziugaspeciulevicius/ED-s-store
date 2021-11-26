@@ -4,20 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="merge prettier changes">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add mui palette and wrap content into ThemeProvider">
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/cartActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/orderActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/productActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/userActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/icon-empty-cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/icon-page-not-found.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/logo_bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/logo_top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/signin-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/signup-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/slide01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/slide02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/utlils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/Header.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/cartConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/orderConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/productConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/userConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/pages/HomePage.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/cartReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/orderReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/productReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/userReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +91,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend-mui/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -66,15 +99,22 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend-mui/src" />
+      <recent name="$PROJECT_DIR$/frontend-mui" />
       <recent name="$PROJECT_DIR$/backend" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend-mui/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="RunManager" selected="npm.heroku-postbuild">
+  <component name="RunManager" selected="npm.devMUI">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -105,6 +145,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="clientMUI" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="clientMUI" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="data:destroy" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -130,6 +180,16 @@
       <command value="run" />
       <scripts>
         <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="devMUI" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="devMUI" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -170,6 +230,8 @@
       <item itemvalue="Jest.Test Coverage" />
       <item itemvalue="npm.data:destroy" />
       <item itemvalue="npm.heroku-postbuild" />
+      <item itemvalue="npm.clientMUI" />
+      <item itemvalue="npm.devMUI" />
       <item itemvalue="npm.server" />
       <item itemvalue="npm.client" />
       <item itemvalue="npm.dev" />
@@ -203,6 +265,7 @@
       <workItem from="1637705391806" duration="311000" />
       <workItem from="1637766889924" duration="1222000" />
       <workItem from="1637780310236" duration="2161000" />
+      <workItem from="1637959433607" duration="1389000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
