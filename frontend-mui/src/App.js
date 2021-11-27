@@ -1,5 +1,4 @@
 import "./App.css";
-import { createTheme } from "@mui/material";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage.component";
 import { ThemeProvider } from "@emotion/react";

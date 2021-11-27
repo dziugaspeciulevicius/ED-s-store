@@ -232,7 +232,7 @@
         <line num="4" count="8" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
-      <file name="Header.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Header.component.jsx">
+      <file name="Navbar.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Navbar.jsx">
         <metrics statements="9" coveredstatements="1" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="0" type="stmt"/>

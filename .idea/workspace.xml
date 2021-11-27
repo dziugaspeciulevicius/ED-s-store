@@ -4,36 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add mui palette and wrap content into ThemeProvider">
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/cartActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/orderActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/productActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/actions/userActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/icon-empty-cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/icon-page-not-found.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/logo_bottom.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/logo_top.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/signin-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/signup-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/slide01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/images/slide02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/assets/utlils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/Header.component.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/cartConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/orderConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/productConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/constants/userConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/pages/HomePage.component.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/cartReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/orderReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/productReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/reducers/userReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add homepage and header components">
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/_mocks_/account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/AccountPopover.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/MenuPopover.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/Navbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/src/theme/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui/src/components/Header.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/clover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Header.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Header.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +248,7 @@
       <workItem from="1637705391806" duration="311000" />
       <workItem from="1637766889924" duration="1222000" />
       <workItem from="1637780310236" duration="2161000" />
-      <workItem from="1637959433607" duration="1389000" />
+      <workItem from="1637959433607" duration="3909000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -365,7 +348,49 @@
       <option name="project" value="LOCAL" />
       <updated>1637779908312</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="initial new react mui app setup">
+      <created>1637960929616</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1637960929616</updated>
+    </task>
+    <task id="LOCAL-00016" summary="move redux constants to new react project">
+      <created>1637960964599</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1637960964599</updated>
+    </task>
+    <task id="LOCAL-00017" summary="move redux actions to new react project">
+      <created>1637960978424</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1637960978424</updated>
+    </task>
+    <task id="LOCAL-00018" summary="move redux reducers and store to new react project">
+      <created>1637960996870</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1637960996870</updated>
+    </task>
+    <task id="LOCAL-00019" summary="move utils file to new react project">
+      <created>1637961024443</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1637961024443</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add homepage and header components">
+      <created>1637961092368</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1637961092368</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +422,13 @@
     <MESSAGE value="run prettier through the project files" />
     <MESSAGE value="prettier .idea files" />
     <MESSAGE value="merge prettier changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge prettier changes" />
+    <MESSAGE value="initial new react mui app setup" />
+    <MESSAGE value="move redux constants to new react project" />
+    <MESSAGE value="move redux actions to new react project" />
+    <MESSAGE value="move redux reducers and store to new react project" />
+    <MESSAGE value="move utils file to new react project" />
+    <MESSAGE value="add homepage and header components" />
+    <option name="LAST_COMMIT_MESSAGE" value="add homepage and header components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
