@@ -4,38 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add homepage and header components">
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/cartActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/orderActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/productActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/userActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/cartConstants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/orderConstants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/productConstants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/userConstants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/cartReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/orderReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/productReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/userReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/tsconfig.json" afterDir="false" />
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="refactor fe-mui-ts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-mui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-mui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/productActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/productActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/cartReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/cartReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/orderReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/orderReducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/productReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/productReducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/userReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/userReducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/clover.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/orderActions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/orderActions.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/cartConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/cartConstants.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/orderConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/orderConstants.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/productConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/productConstants.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/userConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/userConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/orderReducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/orderReducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/productReducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/productReducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/userReducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/userReducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/store.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/store.js.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637961092368</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="refactor fe-mui-ts">
+      <created>1638035940069</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1638035940069</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +441,8 @@
     <MESSAGE value="move redux reducers and store to new react project" />
     <MESSAGE value="move utils file to new react project" />
     <MESSAGE value="add homepage and header components" />
-    <option name="LAST_COMMIT_MESSAGE" value="add homepage and header components" />
+    <MESSAGE value="refactor fe-mui-ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor fe-mui-ts" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

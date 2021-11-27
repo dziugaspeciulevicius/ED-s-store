@@ -9,7 +9,7 @@
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
-      <file name="store.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\store.js">
+      <file name="store.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\store.ts">
         <metrics statements="8" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="31" count="0" type="stmt"/>
         <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -385,7 +385,7 @@
     </package>
     <package name="src.reducers">
       <metrics statements="125" coveredstatements="124" conditionals="106" coveredconditionals="102" methods="19" coveredmethods="19"/>
-      <file name="orderReducers.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\orderReducers.js">
+      <file name="orderReducers.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\orderReducers.ts">
         <metrics statements="40" coveredstatements="40" conditionals="34" coveredconditionals="31" methods="6" coveredmethods="6"/>
         <line num="26" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="27" count="5" type="cond" truecount="5" falsecount="0"/>
@@ -428,7 +428,7 @@
         <line num="157" count="1" type="stmt"/>
         <line num="162" count="1" type="stmt"/>
       </file>
-      <file name="productReducers.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\productReducers.js">
+      <file name="productReducers.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\productReducers.ts">
         <metrics statements="39" coveredstatements="38" conditionals="33" coveredconditionals="32" methods="6" coveredmethods="6"/>
         <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="28" count="3" type="cond" truecount="3" falsecount="1"/>
@@ -470,7 +470,7 @@
         <line num="113" count="1" type="stmt"/>
         <line num="115" count="1" type="stmt"/>
       </file>
-      <file name="userReducers.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\userReducers.js">
+      <file name="userReducers.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\reducers\userReducers.ts">
         <metrics statements="46" coveredstatements="46" conditionals="39" coveredconditionals="39" methods="7" coveredmethods="7"/>
         <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="30" count="5" type="cond" truecount="5" falsecount="0"/>
