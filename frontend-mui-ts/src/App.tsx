@@ -1,32 +1,32 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import ProTip from './ProTip';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
+import { ThemeProvider } from "@emotion/react";
+// import Navbar from "./components/Navbar";
+import theme from "./theme";
+// import * as RoutingConstants from "./core/constants/routing";
+import RoutingConstants from "./core/constants/routing";
 
-function Copyright() {
+const App = () => {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}.
-    </Typography>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Router>
+          {/*<Navbar />*/}
+          <main>
+            <Routes>
+              <Route path={RoutingConstants.homepage} element={<HomePage />} />
+              <Route
+                path={RoutingConstants.product}
+                element={<ProductPage />}
+              />
+            </Routes>
+          </main>
+          {/*<Footer />*/}
+        </Router>
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
-export default function App() {
-  return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Create React App v5 example with TypeScript
-        </Typography>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
-  );
-}
+export default App;
