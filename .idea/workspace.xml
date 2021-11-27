@@ -5,18 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add homepage and header components">
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/_mocks_/account.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/AccountPopover.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/MenuPopover.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/components/Navbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui/src/theme/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/cartActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/orderActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/productActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/actions/userActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/cartConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/orderConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/productConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/constants/userConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/cartReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/orderReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/productReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/reducers/userReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-mui/src/components/Header.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/clover.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Header.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Header.component.jsx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/orderActions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/orderActions.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/cartConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/cartConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/orderConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/orderConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/productConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/productConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/userConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/userConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/orderReducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/orderReducers.js.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +93,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend-mui/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend-mui-ts/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -83,18 +102,20 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend-mui/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend-mui-ts/src" />
       <recent name="$PROJECT_DIR$/frontend-mui/src" />
       <recent name="$PROJECT_DIR$/frontend-mui" />
       <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend-mui/src" />
+      <recent name="$PROJECT_DIR$/frontend-mui" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/frontend-mui/src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.devMUI">

@@ -674,7 +674,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\cartConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\cartConstants.ts
 FNF:0
 FNH:0
 DA:1,5
@@ -687,7 +687,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\orderConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\orderConstants.ts
 FNF:0
 FNH:0
 DA:1,11
@@ -718,7 +718,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\productConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\productConstants.ts
 FNF:0
 FNH:0
 DA:1,8
@@ -748,7 +748,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\userConstants.js
+SF:D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\userConstants.ts
 FNF:0
 FNH:0
 DA:1,11

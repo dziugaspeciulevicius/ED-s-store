@@ -297,14 +297,14 @@
     </package>
     <package name="src.constants">
       <metrics statements="73" coveredstatements="73" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="cartConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\cartConstants.js">
+      <file name="cartConstants.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\cartConstants.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
       </file>
-      <file name="orderConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\orderConstants.js">
+      <file name="orderConstants.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\orderConstants.ts">
         <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
@@ -329,7 +329,7 @@
         <line num="26" count="11" type="stmt"/>
         <line num="27" count="11" type="stmt"/>
       </file>
-      <file name="productConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\productConstants.js">
+      <file name="productConstants.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\productConstants.ts">
         <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="8" type="stmt"/>
         <line num="2" count="8" type="stmt"/>
@@ -353,7 +353,7 @@
         <line num="25" count="8" type="stmt"/>
         <line num="26" count="8" type="stmt"/>
       </file>
-      <file name="userConstants.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\userConstants.js">
+      <file name="userConstants.ts" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\constants\userConstants.ts">
         <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
