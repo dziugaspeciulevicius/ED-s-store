@@ -15,6 +15,7 @@ import Spinner from "../components/Spinner.component";
 import Message from "../components/Message.component";
 
 import "../sass/pages/HomePage.styles.scss";
+import { Pagination } from "@mui/material";
 
 const HomePage = ({ match }) => {
   const keyword = match.params.keyword;

@@ -3,22 +3,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
-import ProTip from "../ProTip";
 import { Button } from "@mui/material";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}.
-    </Typography>
-  );
-}
-
-const id = "adsfadsf";
 
 export default function HomePage() {
   return (
@@ -27,12 +12,6 @@ export default function HomePage() {
         <Typography variant="h4" component="h1" gutterBottom>
           Create React App v5 example with TypeScript
         </Typography>
-        <Button href={`/product/${id}`}>
-          <Link>fdasfasdfdasfasdfdasfadsfdas</Link>
-        </Button>
-
-        <ProTip />
-        <Copyright />
       </Box>
     </Container>
   );

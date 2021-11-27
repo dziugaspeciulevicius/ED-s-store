@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="update redux reducers to ts and improve imports">
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/core/constants/routing.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/pages/HomePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/pages/ProductPage.tsx" afterDir="false" />
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add routing">
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-mui-ts/src/components/ResponsiveAppBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-mui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/ProTip.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/pages/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-mui-ts/src/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-mui-ts/src/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.component.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -70,7 +73,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend-mui-ts/src/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend-mui-ts/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -84,11 +87,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend-mui-ts/src/assets" />
       <recent name="$PROJECT_DIR$/frontend-mui-ts/src/pages" />
       <recent name="$PROJECT_DIR$/frontend-mui-ts/src" />
       <recent name="$PROJECT_DIR$/frontend-mui/src" />
       <recent name="$PROJECT_DIR$/frontend-mui" />
-      <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend-mui" />
@@ -403,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638037346154</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add routing">
+      <created>1638045486009</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1638045486009</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +453,8 @@
     <MESSAGE value="add homepage and header components" />
     <MESSAGE value="refactor fe-mui-ts" />
     <MESSAGE value="update redux reducers to ts and improve imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="update redux reducers to ts and improve imports" />
+    <MESSAGE value="add routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add routing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
