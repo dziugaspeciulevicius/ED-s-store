@@ -168,13 +168,13 @@
     <list>
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Test Coverage" />
-      <item itemvalue="npm.data:destroy" />
-      <item itemvalue="npm.heroku-postbuild" />
-      <item itemvalue="npm.server" />
       <item itemvalue="npm.client" />
-      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.data:destroy" />
       <item itemvalue="npm.data:import" />
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.heroku-postbuild" />
       <item itemvalue="npm.prettier-run" />
+      <item itemvalue="npm.server" />
     </list>
     <recent_temporary>
       <list>
