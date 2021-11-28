@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="merge prettier changes">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add loyalty pts in the backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/generateToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/generateToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="frontend-mui-ts" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,7 +81,7 @@
       <recent name="$PROJECT_DIR$/backend" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.heroku-postbuild">
+  <component name="RunManager" selected="npm.data:import">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -168,21 +175,21 @@
     <list>
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Test Coverage" />
-      <item itemvalue="npm.client" />
       <item itemvalue="npm.data:destroy" />
+      <item itemvalue="npm.heroku-postbuild" />
+      <item itemvalue="npm.client" />
       <item itemvalue="npm.data:import" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="npm.heroku-postbuild" />
       <item itemvalue="npm.prettier-run" />
       <item itemvalue="npm.server" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.data:import" />
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.prettier-run" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.client" />
-        <item itemvalue="npm.server" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637779908312</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add loyalty pts in the backend">
+      <created>1638097939861</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1638097939861</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +348,8 @@
     <MESSAGE value="run prettier through the project files" />
     <MESSAGE value="prettier .idea files" />
     <MESSAGE value="merge prettier changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge prettier changes" />
+    <MESSAGE value="add loyalty pts in the backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loyalty pts in the backend" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
