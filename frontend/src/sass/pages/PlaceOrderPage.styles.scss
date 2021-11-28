@@ -35,3 +35,11 @@
     box-shadow: $shadow-box-button-active;
   }
 }
+
+.loyalty-pts-row {
+  text-align: center;
+
+  &--value {
+    font-weight: bold;
+  }
+}

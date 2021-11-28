@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Col } from "react-bootstrap";
+import { Button, Col, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer.component";
 import CheckoutSteps from "../components/CheckoutSteps.component";
@@ -40,7 +40,7 @@ const PaymentPage = ({ history }) => {
                 value="PayPal"
                 checked
                 onChange={(e) => setPaymentMethod(e.target.value)}
-              ></Form.Check>
+              />
               <Form.Check
                 type="radio"
                 label="Stripe"
@@ -48,7 +48,7 @@ const PaymentPage = ({ history }) => {
                 name="paymentMethod"
                 value="Stripe"
                 onChange={(e) => setPaymentMethod(e.target.value)}
-              ></Form.Check>
+              />
             </Col>
           </Form.Group>
           <Button type="submit" variant="primary" className="btn-custom-blue">

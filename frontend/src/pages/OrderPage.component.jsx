@@ -53,6 +53,11 @@ const OrderPage = ({ match, history }) => {
     order.itemsPrice = addDecimals(
       order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     );
+
+    // for each 100 euros spent, user will get 5 pts
+    // 1pt = 1euro
+    order.loyaltyPoints = Math.round(order.totalPrice / 20).toFixed(0);
+    // order.loyaltyPoints = Math.round(cart.totalPrice / 20).toFixed(0);
   }
 
   //   let orderSliced = orderId.slice(-5);
@@ -225,6 +230,25 @@ const OrderPage = ({ match, history }) => {
                           <Col>${order.totalPrice}</Col>
                         </Row>
                       </ListGroup.Item>
+                      <ListGroup.Item>
+                        <Row>
+                          {order.isPaid ? (
+                            <Col className={"loyalty-pts-row"}>
+                              You have earned{" "}
+                              <span className={"loyalty-pts-row--value"}>
+                                {order.loyaltyPoints} loyalty points
+                              </span>
+                            </Col>
+                          ) : (
+                            <Col className={"loyalty-pts-row"}>
+                              You will earn{" "}
+                              <span className={"loyalty-pts-row--value"}>
+                                {order.loyaltyPoints} loyalty points
+                              </span>
+                            </Col>
+                          )}
+                        </Row>
+                      </ListGroup.Item>
                       {!order.isPaid && order.paymentMethod === "Paypal" ? (
                         <ListGroup.Item>
                           {loadingPay && <Spinner />}
@@ -239,7 +263,7 @@ const OrderPage = ({ match, history }) => {
                         </ListGroup.Item>
                       ) : (
                         <ListGroup.Item>
-                          <p>Stripe checkout to be implemented</p>
+                          <p>Stripe checkout yet to be implemented</p>
                         </ListGroup.Item>
                       )}
                       {/* IF WANTED TO ADD MORE PAYMENTS JUST ADD THIS FOR EXAMPLE
@@ -255,7 +279,7 @@ const OrderPage = ({ match, history }) => {
                         !order.isDelivered && (
                           <ListGroup.Item>
                             <Button
-                              className="btn-custom-blue btn-block py-3"
+                              className="custom-btn-place-order btn-custom-blue"
                               onClick={deliverHandler}
                             >
                               Mark as delivered

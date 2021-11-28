@@ -33,6 +33,9 @@ const PlaceOrderPage = ({ history }) => {
   cart.totalPrice = addDecimals(
     Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice)
   );
+  // for each 100 euros spent, user will get 5 pts
+  // 1pt = 1euro
+  cart.loyaltyPoints = Math.round(cart.totalPrice / 20).toFixed(0);
 
   const orderCreate = useSelector((state) => state.orderCreate);
   const { order, success, error } = orderCreate;
@@ -56,6 +59,7 @@ const PlaceOrderPage = ({ history }) => {
         shippingPrice: cart.shippingPrice,
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
+        loyaltyPoints: cart.loyaltyPoints,
       })
     );
   };
@@ -153,8 +157,21 @@ const PlaceOrderPage = ({ history }) => {
                         </Row>
                       </ListGroup.Item>
                       <ListGroup.Item>
-                        {error && <Message variant="danger">{error}</Message>}
+                        <Row>
+                          <Col className={"loyalty-pts-row"}>
+                            You will earn{" "}
+                            <span className={"loyalty-pts-row--value"}>
+                              {cart.loyaltyPoints} loyalty points
+                            </span>
+                          </Col>
+                        </Row>
                       </ListGroup.Item>
+                      {error && (
+                        <ListGroup.Item>
+                          <Message variant="danger">{error}</Message>
+                        </ListGroup.Item>
+                      )}
+
                       <ListGroup.Item>
                         <Button
                           type="button"

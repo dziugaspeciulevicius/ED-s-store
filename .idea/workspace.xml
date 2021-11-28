@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add loyalty pts in the backend">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="display loyalty pts before placing the order">
+      <change afterPath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/generateToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/generateToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/orderModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/orderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/orderRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserListPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
@@ -20,6 +24,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -66,6 +77,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -210,6 +222,7 @@
       <workItem from="1637705391806" duration="311000" />
       <workItem from="1637766889924" duration="1222000" />
       <workItem from="1637780310236" duration="2161000" />
+      <workItem from="1638112135626" duration="8227000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -316,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638097939861</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="change jwt to expire in 2 hours">
+      <created>1638104568549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1638104568549</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update redux to update order">
+      <created>1638104623434</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1638104623434</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +376,10 @@
     <MESSAGE value="prettier .idea files" />
     <MESSAGE value="merge prettier changes" />
     <MESSAGE value="add loyalty pts in the backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loyalty pts in the backend" />
+    <MESSAGE value="change jwt to expire in 2 hours" />
+    <MESSAGE value="update redux to update order" />
+    <MESSAGE value="display loyalty pts before placing the order" />
+    <option name="LAST_COMMIT_MESSAGE" value="display loyalty pts before placing the order" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
