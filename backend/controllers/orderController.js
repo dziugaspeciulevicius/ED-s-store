@@ -13,6 +13,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
     taxPrice,
     shippingPrice,
     totalPrice,
+    loyaltyPointsAwarded,
   } = req.body;
 
   if (orderItems && orderItems === 0) {
@@ -29,6 +30,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
       taxPrice,
       shippingPrice,
       totalPrice,
+      loyaltyPointsAwarded,
     });
 
     const createdOrder = await order.save();
@@ -64,7 +66,7 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     order.isPaid = true;
     order.paidAt = Date.now();
     order.paymentResult = {
-      //stuff added from PAYPAL
+      //data added from PAYPAL
       id: req.body.id,
       status: req.body.status,
       update_time: req.body.update_time,
