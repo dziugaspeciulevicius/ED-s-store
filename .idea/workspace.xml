@@ -7,18 +7,24 @@
     <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="display loyalty pts before placing the order">
       <change afterPath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/orderModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/orderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/orderRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AboutPage.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPanel.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPanel.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ContactPage.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DashboardPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/DashboardPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderListPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProductListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProductListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShippingPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShippingPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShopPage.component.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserListPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -86,6 +93,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -222,7 +230,7 @@
       <workItem from="1637705391806" duration="311000" />
       <workItem from="1637766889924" duration="1222000" />
       <workItem from="1637780310236" duration="2161000" />
-      <workItem from="1638112135626" duration="8227000" />
+      <workItem from="1638112135626" duration="11665000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -343,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638104623434</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="display loyalty pts before placing the order">
+      <created>1638122465571</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1638122465571</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

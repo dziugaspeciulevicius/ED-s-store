@@ -15,9 +15,10 @@ const PlaceOrderPage = ({ history }) => {
 
   if (!cart.shippingAddress.address) {
     history.push("/shipping");
-  } else if (!cart.paymentMethod) {
-    history.push("/payment");
   }
+  // else if (!cart.paymentMethod) {
+  //   history.push("/payment");
+  // }
 
   // Calculate prices
   // adds to be two decimals after the number
@@ -66,7 +67,7 @@ const PlaceOrderPage = ({ history }) => {
 
   return (
     <>
-      <CheckoutSteps step1 step2 step3 step4 />
+      <CheckoutSteps step1 step2 step3 />
       <div className="main">
         <div className="page-content">
           <div className="place-order-page">

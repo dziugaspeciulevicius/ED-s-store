@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer.component";
 import CheckoutSteps from "../components/CheckoutSteps.component";
@@ -34,7 +34,8 @@ const ShippingPage = ({ history }) => {
         postalCode,
       })
     );
-    history.push("/payment");
+    // history.push(`/order/${order._id}`);
+    history.push("/place-order");
   };
 
   return (
@@ -51,7 +52,7 @@ const ShippingPage = ({ history }) => {
               value={firstName}
               required
               onChange={(e) => setFirstName(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Form.Group controlId="lastName">
             <Form.Label>Last name</Form.Label>
@@ -61,7 +62,7 @@ const ShippingPage = ({ history }) => {
               value={lastName}
               required
               onChange={(e) => setLastName(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Form.Group controlId="phone">
             <Form.Label>Phone</Form.Label>
@@ -71,7 +72,7 @@ const ShippingPage = ({ history }) => {
               value={phone}
               required
               onChange={(e) => setPhone(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Form.Group controlId="email">
             <Form.Label>Email Address</Form.Label>
@@ -81,7 +82,7 @@ const ShippingPage = ({ history }) => {
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Form.Group controlId="country">
             <Form.Label>Country</Form.Label>
@@ -91,7 +92,7 @@ const ShippingPage = ({ history }) => {
               value={country}
               required
               onChange={(e) => setCountry(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Form.Group controlId="address">
             <Form.Label>Address</Form.Label>
@@ -101,7 +102,7 @@ const ShippingPage = ({ history }) => {
               value={address}
               required
               onChange={(e) => setAddress(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Form.Group controlId="city">
             <Form.Label>City</Form.Label>
@@ -111,7 +112,7 @@ const ShippingPage = ({ history }) => {
               value={city}
               required
               onChange={(e) => setCity(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Form.Group controlId="postalCode">
             <Form.Label>Postal code</Form.Label>
@@ -121,7 +122,7 @@ const ShippingPage = ({ history }) => {
               value={postalCode}
               required
               onChange={(e) => setPostalCode(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           <Button type="submit" variant="primary" className="btn-custom-blue">
             Continue

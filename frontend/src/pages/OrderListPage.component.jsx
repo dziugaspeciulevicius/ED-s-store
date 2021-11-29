@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
 import { listOrders } from "../actions/orderActions";
+import { useHistory } from "react-router-dom";
 
-const OrderListPage = ({ history }) => {
+const OrderListPage = () => {
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const orderList = useSelector((state) => state.orderList);
   const { loading, error, orders } = orderList;

@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { PayPalButton } from "react-paypal-button-v2";
-import { Link } from "react-router-dom";
-import { Row, Col, ListGroup, Card, Button } from "react-bootstrap";
+import { Link, useHistory } from "react-router-dom";
+import { Button, Card, Col, ListGroup, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
 import {
+  deliverOrder,
   getOrderDetails,
   payOrder,
-  deliverOrder,
 } from "../actions/orderActions";
 import {
-  ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
+  ORDER_PAY_RESET,
 } from "../constants/orderConstants";
 // import { changePaymentMethod } from '../actions/cartActions';
-
 import Breadcrumb from "../components/Breadcrumb.component";
+import { PayPalButton } from "react-paypal-button-v2";
 
-const OrderPage = ({ match, history }) => {
+const OrderPage = ({ match }) => {
   const orderId = match.params.id;
+  let history = useHistory();
 
   const [sdkReady, setSdkReady] = useState(false);
+  const [clientIds, setClientIds] = useState();
 
   const dispatch = useDispatch();
 
@@ -45,7 +46,6 @@ const OrderPage = ({ match, history }) => {
   // }
 
   if (!loading) {
-    //   Calculate prices
     const addDecimals = (num) => {
       return (Math.round(num * 100) / 100).toFixed(2);
     };
@@ -54,13 +54,10 @@ const OrderPage = ({ match, history }) => {
       order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     );
 
-    // for each 100 euros spent, user will get 5 pts
-    // 1pt = 1euro
     order.loyaltyPoints = Math.round(order.totalPrice / 20).toFixed(0);
-    // order.loyaltyPoints = Math.round(cart.totalPrice / 20).toFixed(0);
   }
 
-  //   let orderSliced = orderId.slice(-5);
+  // let orderSliced = orderId.slice(-5);
 
   useEffect(() => {
     if (!userInfo) {
@@ -79,16 +76,16 @@ const OrderPage = ({ match, history }) => {
       document.body.appendChild(script);
     };
 
-    if (
-      !order ||
-      successPay ||
-      (order && order._id !== orderId) ||
-      successDeliver
-    ) {
-      dispatch({ type: ORDER_PAY_RESET }); // if we dont do this, if we pay it will just keep refreshing
-      dispatch({ type: ORDER_DELIVER_RESET }); // deliver reset, because we want to reset the state
+    if (!order || successPay || successDeliver || order._id !== orderId) {
+      dispatch({ type: ORDER_PAY_RESET });
+      dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
     } else if (!order.isPaid) {
+      if (!window.paypal) {
+        addPayPalScript();
+      } else {
+        setSdkReady(true);
+      }
       if (order.paymentMethod === "Paypal") {
         if (!window.paypal) {
           addPayPalScript();
@@ -99,7 +96,7 @@ const OrderPage = ({ match, history }) => {
         console.log("stripe");
       }
     }
-  }, [dispatch, orderId, successPay, successDeliver, order, history, userInfo]);
+  }, [dispatch, orderId, successPay, successDeliver, order]);
 
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult);
@@ -249,21 +246,33 @@ const OrderPage = ({ match, history }) => {
                           )}
                         </Row>
                       </ListGroup.Item>
-                      {!order.isPaid && order.paymentMethod === "Paypal" ? (
+                      {!order.isPaid && order.paymentMethod === "PayPal" ? (
+                        // {!order.isPaid ? (
                         <ListGroup.Item>
                           {loadingPay && <Spinner />}
                           {!sdkReady ? (
                             <Spinner />
                           ) : (
-                            <PayPalButton
-                              amount={order.totalPrice}
-                              onSuccess={successPaymentHandler}
-                            />
+                            // <PayPalButton
+                            //   amount={order.totalPrice}
+                            //   onSuccess={successPaymentHandler}
+                            // />
+                            <div style={{ textAlign: "center" }}>
+                              Show paypal button here (
+                              <a
+                                href={
+                                  "https://github.com/Luehang/react-paypal-button-v2/issues/93"
+                                }
+                              >
+                                https://github.com/Luehang/react-paypal-button-v2/issues/93
+                              </a>
+                              )
+                            </div>
                           )}
                         </ListGroup.Item>
                       ) : (
                         <ListGroup.Item>
-                          <p>Stripe checkout yet to be implemented</p>
+                          <p>Order needs to be paid</p>
                         </ListGroup.Item>
                       )}
                       {/* IF WANTED TO ADD MORE PAYMENTS JUST ADD THIS FOR EXAMPLE

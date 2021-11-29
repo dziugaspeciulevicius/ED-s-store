@@ -124,7 +124,7 @@ const DashboardPage = ({ location, history }) => {
                                   <th>TOTAL</th>
                                   <th>PAID</th>
                                   <th>DELIVERED</th>
-                                  <th></th>
+                                  <th />
                                 </tr>
                               </thead>
 
@@ -141,7 +141,7 @@ const DashboardPage = ({ location, history }) => {
                                         <i
                                           className="fas fa-times"
                                           style={{ color: "red" }}
-                                        ></i>
+                                        />
                                       )}
                                     </td>
                                     <td>
@@ -151,7 +151,7 @@ const DashboardPage = ({ location, history }) => {
                                         <i
                                           className="fas fa-times"
                                           style={{ color: "red" }}
-                                        ></i>
+                                        />
                                       )}
                                     </td>
                                     <td>
@@ -192,7 +192,7 @@ const DashboardPage = ({ location, history }) => {
                                   placeholder="Enter name"
                                   value={name}
                                   onChange={(e) => setName(e.target.value)}
-                                ></Form.Control>
+                                />
                               </Form.Group>
 
                               <Form.Group controlId="email">
@@ -202,7 +202,7 @@ const DashboardPage = ({ location, history }) => {
                                   placeholder="Enter email"
                                   value={email}
                                   onChange={(e) => setEmail(e.target.value)}
-                                ></Form.Control>
+                                />
                               </Form.Group>
 
                               <Form.Group controlId="password">
@@ -212,7 +212,7 @@ const DashboardPage = ({ location, history }) => {
                                   placeholder="Enter password"
                                   value={password}
                                   onChange={(e) => setPassword(e.target.value)}
-                                ></Form.Control>
+                                />
                               </Form.Group>
 
                               <Form.Group controlId="confirmPassword">
@@ -224,7 +224,7 @@ const DashboardPage = ({ location, history }) => {
                                   onChange={(e) =>
                                     setConfirmPassword(e.target.value)
                                   }
-                                ></Form.Control>
+                                />
                               </Form.Group>
 
                               <Button

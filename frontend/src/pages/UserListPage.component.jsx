@@ -4,10 +4,12 @@ import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
-import { listUsers, deleteUser } from "../actions/userActions";
+import { deleteUser, listUsers } from "../actions/userActions";
+import { useHistory } from "react-router-dom";
 
-const UserListPage = ({ history }) => {
+const UserListPage = () => {
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
@@ -20,6 +22,11 @@ const UserListPage = ({ history }) => {
   const { success: successDelete } = userDelete; // from state we get success and rename it to successDelete
 
   useEffect(() => {
+    // if (!userInfo && !userInfo.isAdmin) {
+    //   history.push("/login");
+    // } else {
+    //   dispatch(listUsers);
+    // }
     if (userInfo && userInfo.isAdmin) {
       dispatch(listUsers());
     } else {
@@ -76,7 +83,7 @@ const UserListPage = ({ history }) => {
                       padding: "0 1.2rem",
                     }}
                   >
-                    <i className="fas fa-edit"></i>
+                    <i className="fas fa-edit" />
                   </LinkContainer>{" "}
                   <i
                     className="fas fa-trash"
@@ -85,7 +92,7 @@ const UserListPage = ({ history }) => {
                       cursor: "pointer",
                     }}
                     onClick={() => deleteUserHandler(user._id)}
-                  ></i>
+                  />
                 </td>
               </tr>
             ))}

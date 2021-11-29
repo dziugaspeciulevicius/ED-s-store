@@ -1,23 +1,23 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router";
 
-import { Table, Button, Row, Col } from "react-bootstrap";
+import { Button, Col, Row, Table } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.component";
 import Spinner from "../components/Spinner.component";
 // import Paginate from "../components/Paginate.component";
 import {
-  listProducts,
-  deleteProduct,
   createProduct,
+  deleteProduct,
+  listProducts,
 } from "../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
 
 const ProductListPage = ({ history, match }) => {
   // const pageNumber = match.params.pageNumber || 1;
-
   const dispatch = useDispatch();
+  // let history = useHistory();
 
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
