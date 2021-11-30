@@ -23,7 +23,7 @@ const OrderPage = ({ match }) => {
   let history = useHistory();
 
   const [sdkReady, setSdkReady] = useState(false);
-  const [clientIds, setClientIds] = useState();
+  // const [clientIds, setClientIds] = useState();
 
   const dispatch = useDispatch();
 
@@ -76,16 +76,21 @@ const OrderPage = ({ match }) => {
       document.body.appendChild(script);
     };
 
-    if (!order || successPay || successDeliver || order._id !== orderId) {
+    if (
+      !order ||
+      successPay ||
+      successDeliver ||
+      (order && order._id !== orderId)
+    ) {
       dispatch({ type: ORDER_PAY_RESET });
       dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
     } else if (!order.isPaid) {
-      if (!window.paypal) {
-        addPayPalScript();
-      } else {
-        setSdkReady(true);
-      }
+      // if (!window.paypal) {
+      //   addPayPalScript();
+      // } else {
+      //   setSdkReady(true);
+      // }
       if (order.paymentMethod === "Paypal") {
         if (!window.paypal) {
           addPayPalScript();
@@ -96,7 +101,16 @@ const OrderPage = ({ match }) => {
         console.log("stripe");
       }
     }
-  }, [dispatch, orderId, successPay, successDeliver, order]);
+  }, [
+    dispatch,
+    orderId,
+    successPay,
+    successDeliver,
+    order,
+    history,
+    userInfo,
+    orderDetails,
+  ]);
 
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult);
@@ -105,6 +119,40 @@ const OrderPage = ({ match }) => {
 
   const deliverHandler = () => {
     dispatch(deliverOrder(order));
+  };
+
+  const renderPayments = () => {
+    if (!order.isPaid && order.paymentMethod === "Paypal") {
+      // if (order.paymentMethod === "Paypal") {
+      return (
+        <ListGroup.Item>
+          {loadingPay && <Spinner />}
+          {!sdkReady ? (
+            <Spinner />
+          ) : (
+            <PayPalButton
+              amount={order.totalPrice}
+              onSuccess={successPaymentHandler}
+            />
+          )}
+        </ListGroup.Item>
+      );
+    }
+
+    if (!order.isPaid && order.paymentMethod === "Stripe") {
+      return (
+        <ListGroup.Item>
+          {loadingPay && <Spinner />}
+          <div>Stripe payment goes here</div>
+        </ListGroup.Item>
+      );
+    }
+
+    return (
+      <ListGroup.Item>
+        You have not chosen any payment methods or something went wrong
+      </ListGroup.Item>
+    );
   };
 
   return loading ? (
@@ -159,7 +207,7 @@ const OrderPage = ({ match }) => {
                       <h2>Payment Method</h2>
                       <p>
                         <strong>Method: </strong>
-                        {order.paymentMethod}{" "}
+                        {order.paymentMethod}
                         {/*<Button onClick={changePaymentHandler} className="btn-custom-blue">Change payment method</Button>*/}
                       </p>
                       {order.isPaid ? (
@@ -246,41 +294,9 @@ const OrderPage = ({ match }) => {
                           )}
                         </Row>
                       </ListGroup.Item>
-                      {!order.isPaid && order.paymentMethod === "PayPal" ? (
-                        // {!order.isPaid ? (
-                        <ListGroup.Item>
-                          {loadingPay && <Spinner />}
-                          {!sdkReady ? (
-                            <Spinner />
-                          ) : (
-                            // <PayPalButton
-                            //   amount={order.totalPrice}
-                            //   onSuccess={successPaymentHandler}
-                            // />
-                            <div style={{ textAlign: "center" }}>
-                              Show paypal button here (
-                              <a
-                                href={
-                                  "https://github.com/Luehang/react-paypal-button-v2/issues/93"
-                                }
-                              >
-                                https://github.com/Luehang/react-paypal-button-v2/issues/93
-                              </a>
-                              )
-                            </div>
-                          )}
-                        </ListGroup.Item>
-                      ) : (
-                        <ListGroup.Item>
-                          <p>Order needs to be paid</p>
-                        </ListGroup.Item>
-                      )}
-                      {/* IF WANTED TO ADD MORE PAYMENTS JUST ADD THIS FOR EXAMPLE
-                        ) : !order.isPaid && order.paymentMethod === "Stripe" ? (
-                            <ListGroup.Item>
-                              <Button>Stripe?</Button>
-                            </ListGroup.Item>
-                          ) : ()*/}
+
+                      {renderPayments()}
+
                       {loadingDeliver && <Spinner />}
                       {userInfo &&
                         userInfo.isAdmin &&

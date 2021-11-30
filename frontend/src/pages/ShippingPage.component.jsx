@@ -35,7 +35,8 @@ const ShippingPage = ({ history }) => {
       })
     );
     // history.push(`/order/${order._id}`);
-    history.push("/place-order");
+    // history.push("/place-order");
+    history.push("/payment");
   };
 
   return (
