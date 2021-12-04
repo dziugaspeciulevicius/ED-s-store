@@ -101,16 +101,7 @@ const OrderPage = ({ match }) => {
         console.log("stripe");
       }
     }
-  }, [
-    dispatch,
-    orderId,
-    successPay,
-    successDeliver,
-    order,
-    history,
-    userInfo,
-    orderDetails,
-  ]);
+  }, [dispatch, orderId, successPay, successDeliver, order, history, userInfo]);
 
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult);
