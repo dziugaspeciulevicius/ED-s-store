@@ -4,8 +4,6 @@ import Product from "../components/Product.component";
 import { listProducts } from "../actions/productActions";
 
 import Slider from "react-slick";
-import "../sass/abstracts/slick.scss";
-import "../sass/abstracts/slick-theme.scss";
 
 import Image1 from "../assets/images/slide01.png";
 import Image2 from "../assets/images/slide02.jpg";
