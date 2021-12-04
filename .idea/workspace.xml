@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="remove unused material ui code">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" />
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/CartPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/CartPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserListPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/abstracts/slick-theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/abstracts/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PlaceOrderPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +218,7 @@
       <workItem from="1637766889924" duration="1222000" />
       <workItem from="1637780310236" duration="2161000" />
       <workItem from="1638112135626" duration="11665000" />
-      <workItem from="1638646804354" duration="2126000" />
+      <workItem from="1638646804354" duration="4135000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -387,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638648479781</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="cleanup">
+      <created>1638649349267</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1638649349267</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +429,8 @@
     <MESSAGE value="update unauthorized error message" />
     <MESSAGE value="fix /api/order being called infinite times" />
     <MESSAGE value="remove unused material ui code" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unused material ui code" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

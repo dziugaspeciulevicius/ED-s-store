@@ -128,7 +128,7 @@ const ProductPage = ({ history, match }) => {
                 <ListGroup variant="flush">
                   <ListGroupItem>
                     <Row>
-                      <div className="product-price">${product.price}</div>
+                      <div className="product-price">€{product.price}</div>
                     </Row>
                   </ListGroupItem>
                   <ListGroupItem>
@@ -331,7 +331,7 @@ const ProductPage = ({ history, match }) => {
                                           onChange={(e) =>
                                             setComment(e.target.value)
                                           }
-                                        ></Form.Control>
+                                        />
                                       </Form.Group>
                                       <Button
                                         className="add-to-cart-button"
