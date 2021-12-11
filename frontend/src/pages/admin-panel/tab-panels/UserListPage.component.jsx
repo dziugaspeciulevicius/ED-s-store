@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import Message from "../components/Message.component";
-import Spinner from "../components/Spinner.component";
-import { deleteUser, listUsers } from "../actions/userActions";
+import Message from "../../../components/Message.component";
+import Spinner from "../../../components/Spinner.component";
+import { deleteUser, listUsers } from "../../../actions/userActions";
 import { useHistory } from "react-router-dom";
 
 const UserListPage = () => {

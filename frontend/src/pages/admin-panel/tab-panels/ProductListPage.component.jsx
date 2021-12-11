@@ -4,17 +4,17 @@ import { withRouter } from "react-router";
 import { Button, Col, Row, Table } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import Message from "../components/Message.component";
-import Spinner from "../components/Spinner.component";
+import Message from "../../../components/Message.component";
+import Spinner from "../../../components/Spinner.component";
 // import Paginate from "../components/Paginate.component";
 import {
   createProduct,
   deleteProduct,
   listProducts,
-} from "../actions/productActions";
-import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
+} from "../../../actions/productActions";
+import { PRODUCT_CREATE_RESET } from "../../../constants/productConstants";
 
-const ProductListPage = ({ history, match }) => {
+const ProductListPage = ({ history }) => {
   // const pageNumber = match.params.pageNumber || 1;
   const dispatch = useDispatch();
   // let history = useHistory();
@@ -110,7 +110,7 @@ const ProductListPage = ({ history, match }) => {
                 <th>CATEGORY</th>
                 <th>GENDER</th>
                 <th>BRAND</th>
-                <th></th>
+                <th />
               </tr>
             </thead>
 
@@ -132,7 +132,7 @@ const ProductListPage = ({ history, match }) => {
                         // padding: "0 .4rem",
                       }}
                     >
-                      <i className="fas fa-edit"></i>
+                      <i className="fas fa-edit" />
                     </LinkContainer>{" "}
                     <i
                       className="fas fa-trash"
@@ -141,7 +141,7 @@ const ProductListPage = ({ history, match }) => {
                         cursor: "pointer",
                       }}
                       onClick={() => deleteProductHandler(product._id)}
-                    ></i>
+                    />
                   </td>
                 </tr>
               ))}

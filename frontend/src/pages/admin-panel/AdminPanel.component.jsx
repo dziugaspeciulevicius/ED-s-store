@@ -1,10 +1,9 @@
 import React from "react";
-import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
-import UserListPage from "../pages/UserListPage.component";
-import ProductListPage from "../pages/ProductListPage.component";
-import OrderListPage from "../pages/OrderListPage.component";
-
-import Breadcrumb from "../components/Breadcrumb.component";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import UserListPage from "./tab-panels/UserListPage.component";
+import ProductListPage from "./tab-panels/ProductListPage.component";
+import OrderListPage from "./tab-panels/OrderListPage.component";
+import Breadcrumb from "../../components/Breadcrumb.component";
 
 const AdminPanel = () => {
   return (
@@ -42,15 +41,15 @@ const AdminPanel = () => {
                       style={{ marginTop: "1rem" }}
                     >
                       <div className="tab-pane">
-                        {/*========== USERS PANEL ==========*/}
+                        {/* ========== USERS PANEL ========== */}
                         <TabPanel>
                           <UserListPage />
                         </TabPanel>
-                        {/*========== PRODUCTS PANEL ==========*/}
+                        {/* ========== PRODUCTS PANEL ========== */}
                         <TabPanel>
                           <ProductListPage />
                         </TabPanel>
-                        {/*========== ORDERS PANEL ==========*/}
+                        {/* ========== ORDERS PANEL ========== */}
                         <TabPanel>
                           <OrderListPage />
                         </TabPanel>

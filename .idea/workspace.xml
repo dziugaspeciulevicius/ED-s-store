@@ -4,11 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="show euros in the application">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add loyalty page tab in profile and show loyalty points">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/coin-svgrepo-com 1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/coin-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyLoyaltyPage.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyOrdersPage.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyProfilePage.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/sass/components/Loyalty.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PaymentPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/AdminPanel.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/AdminPanel.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/DashboardPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/DashboardPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/OrderListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/OrderListPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/UserListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/UserListPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPanel.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/AdminPanel.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DashboardPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/DashboardPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/OrderListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProductListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/ProductListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserEditPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserEditPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/base/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/components/Rating.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/components/Rating.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/DashboardPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/DashboardPage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/HomePage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/HomePage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/LoginPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/LoginPage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/PlaceOrderPage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/ProductPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/ProductPage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/ShippingPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/ShippingPage.styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -82,6 +106,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/pages/user-panel" />
+      <recent name="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels" />
+      <recent name="$PROJECT_DIR$/frontend/src/pages/admin-panel" />
     </key>
   </component>
   <component name="RunManager" selected="npm.data:import">
@@ -215,7 +244,7 @@
       <workItem from="1637780310236" duration="2161000" />
       <workItem from="1638112135626" duration="11665000" />
       <workItem from="1638646804354" duration="7951000" />
-      <workItem from="1639215550943" duration="2151000" />
+      <workItem from="1639215550943" duration="15365000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -392,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638651164854</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix paypal script to load and show paypal buttons">
+      <created>1639236722677</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1639236722678</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +447,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update bootstrap and react to latest versions" />
     <MESSAGE value="updated sass - node-sass no longer suported" />
     <MESSAGE value="update readme to let apple users know that they might want to change to another default port" />
     <MESSAGE value="update navbar and fix form controls" />
@@ -435,7 +470,9 @@
     <MESSAGE value="remove unused material ui code" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="show euros in the application" />
-    <option name="LAST_COMMIT_MESSAGE" value="show euros in the application" />
+    <MESSAGE value="fix paypal script to load and show paypal buttons" />
+    <MESSAGE value="add loyalty page tab in profile and show loyalty points" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loyalty page tab in profile and show loyalty points" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

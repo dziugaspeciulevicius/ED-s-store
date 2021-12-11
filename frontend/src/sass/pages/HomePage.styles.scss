@@ -1,8 +1,5 @@
 @import "../abstracts/variables";
 @import "../abstracts/breakpoints";
-// .row {
-//     justify-content: flex-start;
-// }
 
 .col-xl-3 {
   flex: 0 0 20%;
@@ -32,12 +29,6 @@
     font-size: 1.5rem;
     grid-gap: 10px;
   }
-  // display: grid;
-  // flex-wrap: wrap;
-  // justify-items: start;
-  // margin-right: -155px;
-  // margin-left: -155px;
-  // align-items: center;
 }
 
 .latest-products {
@@ -50,10 +41,6 @@
     text-align: center;
     color: $color-primary-dark;
   }
-  // align-items: center;
-  // align-self: center;
-  // align-content: center;
-  // text-align: center;
 }
 
 /*SLIDER */
