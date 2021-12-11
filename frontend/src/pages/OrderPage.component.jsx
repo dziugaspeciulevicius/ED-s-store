@@ -91,7 +91,7 @@ const OrderPage = ({ match }) => {
       // } else {
       //   setSdkReady(true);
       // }
-      if (order.paymentMethod === "Paypal") {
+      if (order.paymentMethod === "PayPal") {
         if (!window.paypal) {
           addPayPalScript();
         } else {
@@ -113,7 +113,7 @@ const OrderPage = ({ match }) => {
   };
 
   const renderPayments = () => {
-    if (!order.isPaid && order.paymentMethod === "Paypal") {
+    if (!order.isPaid && order.paymentMethod === "PayPal") {
       // if (order.paymentMethod === "Paypal") {
       return (
         <ListGroup.Item>
