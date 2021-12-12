@@ -153,15 +153,18 @@ const updateUser = asyncHandler(async (req, res) => {
     user.name = req.body.name || user.name; // if user found we're going to set user name to req.body.name
     user.email = req.body.email || user.email;
     user.isAdmin = req.body.isAdmin; // there was a bug I couldn't set a user as admin to false, left it like this
+    user.loyaltyPoints = req.body.loyaltyPoints || user.loyaltyPoints;
 
     const updatedUser = await user.save();
 
-    res.json({
-      _id: updatedUser._id,
-      name: updatedUser.name,
-      email: updatedUser.email,
-      isAdmin: updatedUser.isAdmin,
-    });
+    res.json(updatedUser);
+    // res.json({
+    //   _id: updatedUser._id,
+    //   name: updatedUser.name,
+    //   email: updatedUser.email,
+    //   isAdmin: updatedUser.isAdmin,
+    //   loyaltyPoints: updatedUser.loyaltyPoints,
+    // });
   } else {
     res.status(404);
     throw new Error("User not found");

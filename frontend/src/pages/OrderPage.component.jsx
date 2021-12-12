@@ -17,11 +17,17 @@ import {
 // import { changePaymentMethod } from '../actions/cartActions';
 import Breadcrumb from "../components/Breadcrumb.component";
 import { PayPalButton } from "react-paypal-button-v2";
+import {
+  getUserDetails,
+  updateUser,
+  updateUserProfile,
+} from "../actions/userActions";
 
 const OrderPage = ({ match }) => {
   const orderId = match.params.id;
   let history = useHistory();
 
+  const [loyaltyPoints, setLoyaltyPoints] = useState("");
   const [sdkReady, setSdkReady] = useState(false);
   // const [clientIds, setClientIds] = useState();
 
@@ -35,6 +41,16 @@ const OrderPage = ({ match }) => {
 
   const orderDeliver = useSelector((state) => state.orderDeliver);
   const { loading: loadingDeliver, success: successDeliver } = orderDeliver;
+
+  const userDetails = useSelector((state) => state.userDetails);
+  const { user } = userDetails;
+
+  const userUpdate = useSelector((state) => state.userUpdate);
+  const {
+    loading: loadingUpdate,
+    error: errorUpdate,
+    success: successUpdate,
+  } = userUpdate;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -55,6 +71,8 @@ const OrderPage = ({ match }) => {
     );
 
     order.loyaltyPoints = Math.round(order.totalPrice / 20).toFixed(0);
+    // setLoyaltyPoints(order.loyaltyPoints);
+    // console.log(loyaltyPoints);
   }
 
   // let orderSliced = orderId.slice(-5);
@@ -85,6 +103,8 @@ const OrderPage = ({ match }) => {
       dispatch({ type: ORDER_PAY_RESET });
       dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
+
+      // dispatch(getUserDetails(user?._id));
     } else if (!order.isPaid) {
       // if (!window.paypal) {
       //   addPayPalScript();
@@ -101,15 +121,60 @@ const OrderPage = ({ match }) => {
         console.log("stripe");
       }
     }
-  }, [dispatch, orderId, successPay, successDeliver, order, history, userInfo]);
+  }, [
+    dispatch,
+    orderId,
+    successPay,
+    successDeliver,
+    order,
+    history,
+    userInfo,
+    user,
+    loyaltyPoints,
+    successUpdate,
+  ]);
 
   const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult);
     dispatch(payOrder(orderId, paymentResult));
+    // dispatch(getUserDetails("profile"));
+
+    let totalLoyaltyPoints = +order.loyaltyPoints + userInfo.loyaltyPoints;
+    user.loyaltyPoints = totalLoyaltyPoints;
+    // let totalLoyaltyPoints = +order.loyaltyPoints + user.loyaltyPoints;
+    console.log("totalLoyaltyPoints", totalLoyaltyPoints);
+    // dispatch(updateUser({ loyaltyPoints: totalLoyaltyPoints }));
+    dispatch(updateUser(user));
+    // dispatch(updateUserProfile({ loyaltyPoints: totalLoyaltyPoints }));
+
+    // setLoyaltyPoints(orderDetails.loyaltyPoints);
+    // dispatch(updateUser({ loyaltyPoints: user.loyaltyPoints }));
   };
 
   const deliverHandler = () => {
     dispatch(deliverOrder(order));
+  };
+
+  const renderOrderItemsList = () => {
+    if (order.orderItems.length === 0) {
+      return <Message>Your order is empty</Message>;
+    } else {
+      return (
+        <ListGroup variant="flush">
+          {order.orderItems.map((item, index) => (
+            <ListGroup.Item key={index}>
+              <Row>
+                <Col>
+                  <Link to={`/product/${item.product}`}>{item.name}</Link>
+                </Col>
+                <Col>
+                  {item.qty} x €{item.price} = €{item.qty * item.price}
+                </Col>
+              </Row>
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
+      );
+    }
   };
 
   const renderPayments = () => {
@@ -139,11 +204,7 @@ const OrderPage = ({ match }) => {
       );
     }
 
-    return (
-      <ListGroup.Item>
-        You have not chosen any payment methods or something went wrong
-      </ListGroup.Item>
-    );
+    return <></>;
   };
 
   return loading ? (
@@ -212,27 +273,7 @@ const OrderPage = ({ match }) => {
 
                     <ListGroup.Item>
                       <h2>Order Items</h2>
-                      {order.orderItems.length === 0 ? (
-                        <Message>Your order is empty</Message>
-                      ) : (
-                        <ListGroup variant="flush">
-                          {order.orderItems.map((item, index) => (
-                            <ListGroup.Item key={index}>
-                              <Row>
-                                <Col>
-                                  <Link to={`/product/${item.product}`}>
-                                    {item.name}
-                                  </Link>
-                                </Col>
-                                <Col>
-                                  {item.qty} x €{item.price} = €
-                                  {item.qty * item.price}
-                                </Col>
-                              </Row>
-                            </ListGroup.Item>
-                          ))}
-                        </ListGroup>
-                      )}
+                      {renderOrderItemsList()}
                     </ListGroup.Item>
                   </ListGroup>
                 </Col>
