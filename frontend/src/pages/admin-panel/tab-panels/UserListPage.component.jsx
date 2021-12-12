@@ -54,6 +54,7 @@ const UserListPage = () => {
               <th>ID</th>
               <th>NAME</th>
               <th>EMAIL</th>
+              <th>LOYALTY POINTS</th>
               <th>ADMIN</th>
               <th>ACTION</th>
             </tr>
@@ -67,6 +68,7 @@ const UserListPage = () => {
                 <td>
                   <a href={`mailto:${user.email}`}>{user.email}</a>
                 </td>
+                <td>{user.loyaltyPoints}</td>
                 <td>
                   {user.isAdmin ? (
                     <i className="fas fa-check" style={{ color: "green" }} />
