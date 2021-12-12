@@ -16,7 +16,7 @@ const MyLoyaltyPageComponent = ({ history }) => {
 
   return (
     <>
-      <h2>My loyalty tracker</h2>
+      <h2 className={"header"}>My loyalty tracker</h2>
       <div className={"center"}>
         <div className="loyalty-stats-container">
           <div className="loyalty-stats-container--image">
