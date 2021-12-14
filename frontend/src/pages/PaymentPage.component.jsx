@@ -29,7 +29,7 @@ const PaymentPage = ({ history }) => {
       <FormContainer>
         <h1>Payment method</h1>
         <Form onSubmit={submitHandler}>
-          <Form.Group>
+          <Form.Group style={{ fontsize: "1.7rem" }}>
             <Form.Label as="legend">Select method</Form.Label>
             <Col>
               <Form.Check
