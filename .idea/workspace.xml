@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="fix header padding to apply for loyalty component only">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="loyalty points are now added into the account">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,11 +182,11 @@
     <list>
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Test Coverage" />
-      <item itemvalue="npm.client" />
       <item itemvalue="npm.data:destroy" />
+      <item itemvalue="npm.heroku-postbuild" />
+      <item itemvalue="npm.client" />
       <item itemvalue="npm.data:import" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="npm.heroku-postbuild" />
       <item itemvalue="npm.prettier-run" />
       <item itemvalue="npm.server" />
     </list>
@@ -438,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639302052023</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="loyalty points are now added into the account">
+      <created>1639490408286</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1639490408286</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +464,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update header imports" />
     <MESSAGE value="update packages" />
     <MESSAGE value="update server to use port 4000 instead of 5000" />
     <MESSAGE value="update .idea files" />
@@ -482,7 +488,8 @@
     <MESSAGE value="add dashboard page tabs" />
     <MESSAGE value="display loyalty points in user list in admin panel" />
     <MESSAGE value="fix header padding to apply for loyalty component only" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix header padding to apply for loyalty component only" />
+    <MESSAGE value="loyalty points are now added into the account" />
+    <option name="LAST_COMMIT_MESSAGE" value="loyalty points are now added into the account" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

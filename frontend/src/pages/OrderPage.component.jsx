@@ -16,7 +16,8 @@ import {
 } from "../constants/orderConstants";
 import Breadcrumb from "../components/Breadcrumb.component";
 import { PayPalButton } from "react-paypal-button-v2";
-import { updateUser } from "../actions/userActions";
+import { getUserDetails, updateUser } from "../actions/userActions";
+import "../sass/pages/OrderPage.styles.scss";
 
 const OrderPage = ({ match }) => {
   const orderId = match.params.id;
@@ -131,6 +132,135 @@ const OrderPage = ({ match }) => {
     dispatch(deliverOrder(order));
   };
 
+  // ===== LOYALTY / DISCOUNT CARD =====
+  const renderDiscountCard = () => {
+    return (
+      <>
+        <Card className={"discount-details-card"}>
+          <ListGroup variant="flush" className={"center"}>
+            <ListGroup.Item>
+              <h2>Get a discount</h2>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              You currently have{" "}
+              <span className={"discount-details-card--totalPoints"}>
+                {userInfo.loyaltyPoints} loyalty points*
+              </span>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Row>
+                <Col>Tax</Col>
+                <Col>€{order.taxPrice}</Col>
+              </Row>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Row>
+                <Col>Total</Col>
+                <Col>€{order.totalPrice}</Col>
+              </Row>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Row>
+                {order.isPaid ? (
+                  <Col className={"loyalty-pts-row"}>
+                    You have earned{" "}
+                    <span className={"loyalty-pts-row--value"}>
+                      {order.loyaltyPoints} loyalty points
+                    </span>
+                  </Col>
+                ) : (
+                  <Col className={"loyalty-pts-row"}>
+                    You will earn{" "}
+                    <span className={"loyalty-pts-row--value"}>
+                      {order.loyaltyPoints} loyalty points
+                    </span>
+                  </Col>
+                )}
+              </Row>
+            </ListGroup.Item>
+          </ListGroup>
+        </Card>
+
+        <div className={"discount-details-note"}>
+          <span className={"discount-details-note--asterisk"}>*</span> 1 point
+          is equal to 1 euro. You can cover up to 30% of the total price using
+          loyalty points.
+        </div>
+      </>
+    );
+  };
+
+  // ===== ORDER SUMMARY CARD =====
+  const renderOrderSummaryCard = () => {
+    return (
+      <Card style={{ marginTop: "2rem" }}>
+        <ListGroup variant="flush">
+          <ListGroup.Item className={"center"}>
+            <h2>Order Summary</h2>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Row>
+              <Col>Items</Col>
+              <Col>€{order.itemsPrice}</Col>
+            </Row>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Row>
+              <Col>Shipping</Col>
+              <Col>€{order.shippingPrice}</Col>
+            </Row>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Row>
+              <Col>Tax</Col>
+              <Col>€{order.taxPrice}</Col>
+            </Row>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Row>
+              <Col>Total</Col>
+              <Col>€{order.totalPrice}</Col>
+            </Row>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Row>
+              {order.isPaid ? (
+                <Col className={"loyalty-pts-row"}>
+                  You have earned{" "}
+                  <span className={"loyalty-pts-row--value"}>
+                    {order.loyaltyPoints} loyalty points
+                  </span>
+                </Col>
+              ) : (
+                <Col className={"loyalty-pts-row"}>
+                  You will earn{" "}
+                  <span className={"loyalty-pts-row--value"}>
+                    {order.loyaltyPoints} loyalty points
+                  </span>
+                </Col>
+              )}
+            </Row>
+          </ListGroup.Item>
+
+          {renderPayments()}
+
+          {loadingDeliver && <Spinner />}
+          {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+            <ListGroup.Item>
+              <Button
+                className="custom-btn-place-order btn-custom-blue"
+                onClick={deliverHandler}
+              >
+                Mark as delivered
+              </Button>
+            </ListGroup.Item>
+          )}
+        </ListGroup>
+      </Card>
+    );
+  };
+
+  // ===== ORDER ITEM LIST =====
   const renderOrderItemsList = () => {
     if (order.orderItems.length === 0) {
       return <Message>Your order is empty</Message>;
@@ -154,6 +284,7 @@ const OrderPage = ({ match }) => {
     }
   };
 
+  // ===== PAYMENT BUTTONS =====
   const renderPayments = () => {
     if (!order.isPaid && order.paymentMethod === "PayPal") {
       // if (order.paymentMethod === "Paypal") {
@@ -255,73 +386,8 @@ const OrderPage = ({ match }) => {
                   </ListGroup>
                 </Col>
                 <Col md={4}>
-                  <Card>
-                    <ListGroup variant="flush">
-                      <ListGroup.Item>
-                        <h2>Order Summary</h2>
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <Row>
-                          <Col>Items</Col>
-                          <Col>€{order.itemsPrice}</Col>
-                        </Row>
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <Row>
-                          <Col>Shipping</Col>
-                          <Col>€{order.shippingPrice}</Col>
-                        </Row>
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <Row>
-                          <Col>Tax</Col>
-                          <Col>€{order.taxPrice}</Col>
-                        </Row>
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <Row>
-                          <Col>Total</Col>
-                          <Col>€{order.totalPrice}</Col>
-                        </Row>
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <Row>
-                          {order.isPaid ? (
-                            <Col className={"loyalty-pts-row"}>
-                              You have earned{" "}
-                              <span className={"loyalty-pts-row--value"}>
-                                {order.loyaltyPoints} loyalty points
-                              </span>
-                            </Col>
-                          ) : (
-                            <Col className={"loyalty-pts-row"}>
-                              You will earn{" "}
-                              <span className={"loyalty-pts-row--value"}>
-                                {order.loyaltyPoints} loyalty points
-                              </span>
-                            </Col>
-                          )}
-                        </Row>
-                      </ListGroup.Item>
-
-                      {renderPayments()}
-
-                      {loadingDeliver && <Spinner />}
-                      {userInfo &&
-                        userInfo.isAdmin &&
-                        order.isPaid &&
-                        !order.isDelivered && (
-                          <ListGroup.Item>
-                            <Button
-                              className="custom-btn-place-order btn-custom-blue"
-                              onClick={deliverHandler}
-                            >
-                              Mark as delivered
-                            </Button>
-                          </ListGroup.Item>
-                        )}
-                    </ListGroup>
-                  </Card>
+                  {renderDiscountCard()}
+                  {renderOrderSummaryCard()}
                 </Col>
               </Row>
             </div>

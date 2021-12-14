@@ -1,3 +1,18 @@
 .btn-delivered {
   width: 100%;
 }
+
+.discount-details {
+  &-card {
+    &--totalPoints {
+      font-weight: bold;
+    }
+  }
+
+  &-note {
+    margin-top: 1rem;
+    &--asterisk {
+      font-weight: bold;
+    }
+  }
+}
