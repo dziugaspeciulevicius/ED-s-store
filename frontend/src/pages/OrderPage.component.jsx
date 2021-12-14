@@ -14,22 +14,15 @@ import {
   ORDER_DELIVER_RESET,
   ORDER_PAY_RESET,
 } from "../constants/orderConstants";
-// import { changePaymentMethod } from '../actions/cartActions';
 import Breadcrumb from "../components/Breadcrumb.component";
 import { PayPalButton } from "react-paypal-button-v2";
-import {
-  getUserDetails,
-  updateUser,
-  updateUserProfile,
-} from "../actions/userActions";
+import { updateUser } from "../actions/userActions";
 
 const OrderPage = ({ match }) => {
   const orderId = match.params.id;
   let history = useHistory();
 
-  const [loyaltyPoints, setLoyaltyPoints] = useState("");
   const [sdkReady, setSdkReady] = useState(false);
-  // const [clientIds, setClientIds] = useState();
 
   const dispatch = useDispatch();
 
@@ -46,11 +39,7 @@ const OrderPage = ({ match }) => {
   const { user } = userDetails;
 
   const userUpdate = useSelector((state) => state.userUpdate);
-  const {
-    loading: loadingUpdate,
-    error: errorUpdate,
-    success: successUpdate,
-  } = userUpdate;
+  const { success: successUpdate } = userUpdate;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -71,8 +60,6 @@ const OrderPage = ({ match }) => {
     );
 
     order.loyaltyPoints = Math.round(order.totalPrice / 20).toFixed(0);
-    // setLoyaltyPoints(order.loyaltyPoints);
-    // console.log(loyaltyPoints);
   }
 
   // let orderSliced = orderId.slice(-5);
@@ -130,24 +117,14 @@ const OrderPage = ({ match }) => {
     history,
     userInfo,
     user,
-    loyaltyPoints,
     successUpdate,
   ]);
 
   const successPaymentHandler = (paymentResult) => {
+    userInfo.loyaltyPoints = +order.loyaltyPoints + userInfo.loyaltyPoints;
+
     dispatch(payOrder(orderId, paymentResult));
-    // dispatch(getUserDetails("profile"));
-
-    let totalLoyaltyPoints = +order.loyaltyPoints + userInfo.loyaltyPoints;
-    user.loyaltyPoints = totalLoyaltyPoints;
-    // let totalLoyaltyPoints = +order.loyaltyPoints + user.loyaltyPoints;
-    console.log("totalLoyaltyPoints", totalLoyaltyPoints);
-    // dispatch(updateUser({ loyaltyPoints: totalLoyaltyPoints }));
-    dispatch(updateUser(user));
-    // dispatch(updateUserProfile({ loyaltyPoints: totalLoyaltyPoints }));
-
-    // setLoyaltyPoints(orderDetails.loyaltyPoints);
-    // dispatch(updateUser({ loyaltyPoints: user.loyaltyPoints }));
+    dispatch(updateUser(userInfo));
   };
 
   const deliverHandler = () => {

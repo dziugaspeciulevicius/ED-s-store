@@ -7,8 +7,6 @@
     <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="fix header padding to apply for loyalty component only">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/orderModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/userActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,11 +182,11 @@
     <list>
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Test Coverage" />
-      <item itemvalue="npm.data:destroy" />
-      <item itemvalue="npm.heroku-postbuild" />
       <item itemvalue="npm.client" />
+      <item itemvalue="npm.data:destroy" />
       <item itemvalue="npm.data:import" />
       <item itemvalue="npm.dev" />
+      <item itemvalue="npm.heroku-postbuild" />
       <item itemvalue="npm.prettier-run" />
       <item itemvalue="npm.server" />
     </list>
