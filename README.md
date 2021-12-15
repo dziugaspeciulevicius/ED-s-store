@@ -7,7 +7,7 @@
 ---
 ## Env Variables
 
-*__PORT note__: if you're using an apple device, you might want to use PORT = 4000, since Apple uses PORT 5000 by default for Apple Airplay receiver by default*
+*__PORT note__: if you're using an apple device, you might want to use PORT = 4000, since Apple uses PORT 5000 for Apple Airplay receiver by default*
 
 Create a .env file in the root directory and add the following:
 ```
