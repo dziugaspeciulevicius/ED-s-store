@@ -7,8 +7,11 @@ import {
   getUserDetails,
   updateUserProfile,
 } from "../../../actions/userActions";
+import { useHistory } from "react-router-dom";
 
-const MyProfilePageComponent = ({ history }) => {
+const MyProfilePageComponent = () => {
+  const history = useHistory();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

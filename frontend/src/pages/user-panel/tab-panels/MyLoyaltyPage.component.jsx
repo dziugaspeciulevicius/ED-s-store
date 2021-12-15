@@ -3,16 +3,27 @@ import { useDispatch, useSelector } from "react-redux";
 import CoinImage from "../../../assets/images/coin-svgrepo-com 1.svg";
 import { getUserDetails } from "../../../actions/userActions";
 import "../../../sass/components/Loyalty.styles.scss";
+import { useHistory } from "react-router-dom";
 
-const MyLoyaltyPageComponent = ({ history }) => {
+const MyLoyaltyPageComponent = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const userDetails = useSelector((state) => state.userDetails);
   const { user } = userDetails;
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
   useEffect(() => {
-    dispatch(getUserDetails("profile"));
-  }, [dispatch, history]);
+    if (userInfo) {
+      if (!user.name) {
+        dispatch(getUserDetails("profile"));
+      }
+    } else {
+      history.push("/login");
+    }
+  }, [dispatch, history, userInfo, user]);
 
   return (
     <>

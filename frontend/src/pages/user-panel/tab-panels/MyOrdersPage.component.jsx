@@ -5,9 +5,11 @@ import { Button, Table } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { listMyOrders } from "../../../actions/orderActions";
+import { useHistory } from "react-router-dom";
 
-const MyOrdersPageComponent = ({ history }) => {
+const MyOrdersPageComponent = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const userDetails = useSelector((state) => state.userDetails);
   const { user } = userDetails;

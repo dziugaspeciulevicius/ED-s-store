@@ -13,11 +13,12 @@ import {
   listProducts,
 } from "../../../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../../../constants/productConstants";
+import { useHistory } from "react-router-dom";
 
-const ProductListPage = ({ history }) => {
+const ProductListPage = () => {
   // const pageNumber = match.params.pageNumber || 1;
   const dispatch = useDispatch();
-  // let history = useHistory();
+  let history = useHistory();
 
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
@@ -52,17 +53,19 @@ const ProductListPage = ({ history }) => {
 
   useEffect(() => {
     dispatch({ type: PRODUCT_CREATE_RESET });
-
-    if (!userInfo.isAdmin) {
+    if (userInfo && userInfo.isAdmin) {
+      if (successProductCreate) {
+        history.push(`/admin/product/${createdProduct._id}/edit`);
+      } else {
+        // dispatch(listProducts("", pageNumber));
+        dispatch(listProducts());
+      }
+    } else {
       history.push("/login");
     }
 
-    if (successProductCreate) {
-      history.push(`/admin/product/${createdProduct._id}/edit`);
-    } else {
-      // dispatch(listProducts("", pageNumber));
-      dispatch(listProducts());
-    }
+    // if (!userInfo && !userInfo.isAdmin) {
+    // }
   }, [
     dispatch,
     history,
