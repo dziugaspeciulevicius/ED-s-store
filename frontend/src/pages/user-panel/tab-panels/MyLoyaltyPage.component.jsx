@@ -31,7 +31,7 @@ const MyLoyaltyPageComponent = () => {
       <div className={"center"}>
         <div className="loyalty-stats-container">
           <div className="loyalty-stats-container--image">
-            <img src={CoinImage} alt={"coin image"} />
+            <img src={CoinImage} alt={"coin"} />
           </div>
           <div>
             You currently have collected{" "}

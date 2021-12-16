@@ -73,6 +73,8 @@ const DashboardPage = () => {
                         <TabPanel>
                           <MyLoyaltyPageComponent />
                         </TabPanel>
+
+                        <TabPanel />
                       </div>
                     </div>
                   </div>
