@@ -16,7 +16,7 @@ import {
 } from "../constants/orderConstants";
 import Breadcrumb from "../components/Breadcrumb.component";
 import { PayPalButton } from "react-paypal-button-v2";
-import { getUserDetails, updateUser } from "../actions/userActions";
+import { updateUser } from "../actions/userActions";
 import "../sass/pages/OrderPage.styles.scss";
 
 const OrderPage = ({ match }) => {
@@ -24,6 +24,7 @@ const OrderPage = ({ match }) => {
   let history = useHistory();
 
   const [sdkReady, setSdkReady] = useState(false);
+  const [pointsQuantity, setPointsQuantity] = useState();
 
   const dispatch = useDispatch();
 
@@ -45,6 +46,8 @@ const OrderPage = ({ match }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const finalPriceAfterDiscount = order?.totalPrice - pointsQuantity;
+
   // const changePaymentHandler = () => {
   //   // e.preventDefault();
   //   dispatch(changePaymentMethod());
@@ -59,11 +62,17 @@ const OrderPage = ({ match }) => {
     order.itemsPrice = addDecimals(
       order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     );
+    order.loyaltyPoints = Math.round(
+      (finalPriceAfterDiscount ? finalPriceAfterDiscount : order.totalPrice) /
+        20
+    ).toFixed(0);
 
-    order.loyaltyPoints = Math.round(order.totalPrice / 20).toFixed(0);
+    order.maxSpendablePoints = Math.round(
+      (order.totalPrice * 30) / 100
+    ).toFixed(0);
   }
 
-  // let orderSliced = orderId.slice(-5);
+  let orderSliced = orderId.slice(-5);
 
   useEffect(() => {
     if (!userInfo) {
@@ -91,14 +100,7 @@ const OrderPage = ({ match }) => {
       dispatch({ type: ORDER_PAY_RESET });
       dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
-
-      // dispatch(getUserDetails(user?._id));
     } else if (!order.isPaid) {
-      // if (!window.paypal) {
-      //   addPayPalScript();
-      // } else {
-      //   setSdkReady(true);
-      // }
       if (order.paymentMethod === "PayPal") {
         if (!window.paypal) {
           addPayPalScript();
@@ -107,6 +109,8 @@ const OrderPage = ({ match }) => {
         }
       } else if (order.paymentMethod === "Stripe") {
         console.log("stripe");
+      } else {
+        console.log("nothing to return");
       }
     }
   }, [
@@ -122,8 +126,16 @@ const OrderPage = ({ match }) => {
   ]);
 
   const successPaymentHandler = (paymentResult) => {
+    // reduce points from user
+    if (!isNaN(pointsQuantity)) {
+      userInfo.loyaltyPoints = userInfo.loyaltyPoints - pointsQuantity;
+      console.log("1 userInfo.loyaltyPoints", userInfo.loyaltyPoints);
+    }
+
+    // add points to the user
     userInfo.loyaltyPoints = +order.loyaltyPoints + userInfo.loyaltyPoints;
 
+    // dispatch actions
     dispatch(payOrder(orderId, paymentResult));
     dispatch(updateUser(userInfo));
   };
@@ -132,68 +144,86 @@ const OrderPage = ({ match }) => {
     dispatch(deliverOrder(order));
   };
 
+  const setPoints = (points) => {
+    setPointsQuantity(points);
+  };
+
+  const onClear = () => {
+    setPointsQuantity("");
+  };
+
   // ===== LOYALTY / DISCOUNT CARD =====
   const renderDiscountCard = () => {
-    return (
-      <>
-        <Card className={"discount-details-card"}>
-          <ListGroup variant="flush" className={"center"}>
-            <ListGroup.Item>
-              <h2>Get a discount</h2>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              You currently have{" "}
-              <span className={"discount-details-card--totalPoints"}>
-                {userInfo.loyaltyPoints} loyalty points*
-              </span>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Row>
-                <Col>Tax</Col>
-                <Col>€{order.taxPrice}</Col>
-              </Row>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Row>
-                <Col>Total</Col>
-                <Col>€{order.totalPrice}</Col>
-              </Row>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Row>
-                {order.isPaid ? (
-                  <Col className={"loyalty-pts-row"}>
-                    You have earned{" "}
-                    <span className={"loyalty-pts-row--value"}>
-                      {order.loyaltyPoints} loyalty points
-                    </span>
-                  </Col>
-                ) : (
-                  <Col className={"loyalty-pts-row"}>
-                    You will earn{" "}
-                    <span className={"loyalty-pts-row--value"}>
-                      {order.loyaltyPoints} loyalty points
-                    </span>
-                  </Col>
-                )}
-              </Row>
-            </ListGroup.Item>
-          </ListGroup>
-        </Card>
+    if (!order.isPaid && userInfo?.loyaltyPoints > 0) {
+      return (
+        <div className={"discount-details"}>
+          <Card className={"discount-details-card"}>
+            <ListGroup variant="flush" className={"center"}>
+              <ListGroup.Item>
+                <h2>Get a discount</h2>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <div>
+                  You currently have{" "}
+                  <span className={"discount-details-card--totalPoints"}>
+                    {userInfo.loyaltyPoints} loyalty points
+                  </span>
+                </div>
+                <div>
+                  You can use{" "}
+                  <span className={"discount-details-card--totalPoints"}>
+                    {order.maxSpendablePoints > userInfo?.loyaltyPoints
+                      ? userInfo?.loyaltyPoints
+                      : order.maxSpendablePoints}{" "}
+                    loyalty points*
+                  </span>
+                </div>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <div className="input-group discount-details-card--input-group">
+                  Enter the amount of points you want to use:
+                  <input
+                    value={pointsQuantity}
+                    onChange={(e) => setPoints(e.target.value)}
+                    placeholder={`1 - ${
+                      order.maxSpendablePoints > userInfo?.loyaltyPoints
+                        ? userInfo?.loyaltyPoints
+                        : order.maxSpendablePoints
+                    }`}
+                    min={1}
+                    max={
+                      order.maxSpendablePoints > userInfo?.loyaltyPoints
+                        ? userInfo?.loyaltyPoints
+                        : order.maxSpendablePoints
+                    }
+                    type={"number"}
+                    className="discount-details-card--input-number"
+                  />
+                  <button
+                    className="discount-details-card--clear-button"
+                    onClick={() => onClear()}
+                  >
+                    Clear
+                  </button>
+                </div>
+              </ListGroup.Item>
+            </ListGroup>
+          </Card>
 
-        <div className={"discount-details-note"}>
-          <span className={"discount-details-note--asterisk"}>*</span> 1 point
-          is equal to 1 euro. You can cover up to 30% of the total price using
-          loyalty points.
+          <div className={"discount-details-note"}>
+            <span className={"discount-details-note--asterisk"}>*</span> 1 point
+            is equal to 1 euro. You can cover up to 30% of the total price using
+            loyalty points.
+          </div>
         </div>
-      </>
-    );
+      );
+    }
   };
 
   // ===== ORDER SUMMARY CARD =====
   const renderOrderSummaryCard = () => {
     return (
-      <Card style={{ marginTop: "2rem" }}>
+      <Card>
         <ListGroup variant="flush">
           <ListGroup.Item className={"center"}>
             <h2>Order Summary</h2>
@@ -219,7 +249,11 @@ const OrderPage = ({ match }) => {
           <ListGroup.Item>
             <Row>
               <Col>Total</Col>
-              <Col>€{order.totalPrice}</Col>
+              {isNaN(finalPriceAfterDiscount) ? (
+                <Col>€{order.totalPrice}</Col>
+              ) : (
+                <Col>€{finalPriceAfterDiscount}</Col>
+              )}
             </Row>
           </ListGroup.Item>
           <ListGroup.Item>
@@ -295,7 +329,11 @@ const OrderPage = ({ match }) => {
             <Spinner />
           ) : (
             <PayPalButton
-              amount={order.totalPrice}
+              amount={
+                isNaN(finalPriceAfterDiscount)
+                  ? order.totalPrice
+                  : finalPriceAfterDiscount
+              }
               onSuccess={successPaymentHandler}
             />
           )}
@@ -321,7 +359,7 @@ const OrderPage = ({ match }) => {
     <Message variant="danger">{error}</Message>
   ) : (
     <>
-      <Breadcrumb parent={"Orders"} title={`Order`} />
+      <Breadcrumb parent={"Orders"} title={`Order ${orderSliced}`} />
 
       <div className="main">
         <div className="page-content">

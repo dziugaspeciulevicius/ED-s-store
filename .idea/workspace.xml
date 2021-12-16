@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="loyalty points are now added into the account">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/DashboardPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/DashboardPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyLoyaltyPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyLoyaltyPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,6 +227,7 @@
       <workItem from="1638112135626" duration="11665000" />
       <workItem from="1638646804354" duration="7951000" />
       <workItem from="1639215550943" duration="32086000" />
+      <workItem from="1639683570117" duration="6934000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -445,7 +453,28 @@
       <option name="project" value="LOCAL" />
       <updated>1639490408286</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="create seperate card for loyalty functionality in order details page">
+      <created>1639496995672</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1639496995672</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update routing issues">
+      <created>1639559535136</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1639559535136</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix form control inputs being too small">
+      <created>1639561116718</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1639561116718</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,9 +493,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update packages" />
-    <MESSAGE value="update server to use port 4000 instead of 5000" />
-    <MESSAGE value="update .idea files" />
     <MESSAGE value="add prettier to the project" />
     <MESSAGE value="run prettier through the project files" />
     <MESSAGE value="prettier .idea files" />
@@ -489,7 +515,10 @@
     <MESSAGE value="display loyalty points in user list in admin panel" />
     <MESSAGE value="fix header padding to apply for loyalty component only" />
     <MESSAGE value="loyalty points are now added into the account" />
-    <option name="LAST_COMMIT_MESSAGE" value="loyalty points are now added into the account" />
+    <MESSAGE value="create seperate card for loyalty functionality in order details page" />
+    <MESSAGE value="update routing issues" />
+    <MESSAGE value="fix form control inputs being too small" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix form control inputs being too small" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
