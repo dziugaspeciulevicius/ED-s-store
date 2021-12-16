@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.scss";
 import {
-  Row,
+  Button,
+  Card,
   Col,
+  Container,
+  Form,
   Image,
   ListGroup,
-  Card,
-  Button,
   ListGroupItem,
+  Row,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import "react-tabs/style/react-tabs.scss";
 import Breadcrumb from "../components/Breadcrumb.component";
 import Rating from "../components/Rating.component";
 import Spinner from "../components/Spinner.component";
 import Message from "../components/Message.component";
 import "../sass/pages/ProductPage.styles.scss";
 import {
-  listProductDetails,
   createProductReview,
+  listProductDetails,
 } from "../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../constants/productConstants";
 
@@ -156,10 +157,10 @@ const ProductPage = ({ history, match }) => {
                                   type="button"
                                   className="btn quantity-left-minus"
                                   onClick={minusQty}
-                                  data-type="minus"
+                                  datatype="minus"
                                   data-field=""
                                 >
-                                  <i className="fas fa-angle-left"></i>
+                                  &mdash;
                                 </button>
                               </span>
                               <input
@@ -173,10 +174,10 @@ const ProductPage = ({ history, match }) => {
                                   type="button"
                                   className="btn quantity-right-plus"
                                   onClick={plusQty}
-                                  data-type="plus"
+                                  datatype="plus"
                                   data-field=""
                                 >
-                                  <i className="fas fa-angle-right"></i>
+                                  &#xff0b;
                                 </button>
                               </span>
                             </div>
@@ -228,26 +229,26 @@ const ProductPage = ({ history, match }) => {
                           {/*========== DESCRIPTION TAB ==========*/}
                           <Tab className="nav-item">
                             <span className="nav-link">
-                              <i className="icofont icofont-ui-home"></i>
+                              <i className="icofont icofont-ui-home" />
                               Description
                             </span>
-                            <div className="material-border"></div>
+                            <div className="material-border" />
                           </Tab>
                           {/*========== DETAILS TAB ==========*/}
                           <Tab className="nav-item">
                             <span className="nav-link">
-                              <i className="icofont icofont-man-in-glasses"></i>
+                              <i className="icofont icofont-man-in-glasses" />
                               Details
                             </span>
-                            <div className="material-border"></div>
+                            <div className="material-border" />
                           </Tab>
                           {/*========== REVIEWS TAB ==========*/}
                           <Tab className="nav-item">
                             <span className="nav-link">
-                              <i className="icofont icofont-contacts"></i>
+                              <i className="icofont icofont-contacts" />
                               Reviews
                             </span>
-                            <div className="material-border"></div>
+                            <div className="material-border" />
                           </Tab>
                         </TabList>
                         {/*========== DESCRIPTION PANEL ==========*/}
