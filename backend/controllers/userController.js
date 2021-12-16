@@ -153,7 +153,7 @@ const updateUser = asyncHandler(async (req, res) => {
     user.name = req.body.name || user.name; // if user found we're going to set user name to req.body.name
     user.email = req.body.email || user.email;
     user.isAdmin = req.body.isAdmin; // there was a bug I couldn't set a user as admin to false, left it like this
-    user.loyaltyPoints = req.body.loyaltyPoints || user.loyaltyPoints;
+    user.loyaltyPoints = req.body.loyaltyPoints;
 
     const updatedUser = await user.save();
 
