@@ -45,7 +45,10 @@ const LoginPage = ({ location, history }) => {
   return (
     <div>
       <Breadcrumb title={"Login"} />
-      <FormContainer className="form-container">
+      <FormContainer
+        className="form-container"
+        style={{ transform: "scale(1.5)" }}
+      >
         <h1>Log In</h1>
         {error && <Message variant="danger">{error}</Message>}
         {loading && <Spinner />}

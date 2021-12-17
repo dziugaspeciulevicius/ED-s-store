@@ -1,7 +1,8 @@
 import React from "react";
-import { shallow, mount, render } from "enzyme";
+import { shallow } from "enzyme";
 import "../../setupTests";
-import ProductListPage from "../../pages/ProductListPage.component";
+import ProductListPage from "../../pages/admin-panel/tab-panels/ProductListPage.component";
+
 jest.mock("../../pages/ProductListPage.component");
 
 describe("<ProductListPage />", () => {

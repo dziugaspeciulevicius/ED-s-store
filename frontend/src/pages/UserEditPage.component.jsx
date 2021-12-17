@@ -79,7 +79,7 @@ const UserEditPage = ({ match, history }) => {
                 placeholder="Enter name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-              ></Form.Control>
+              />
             </Form.Group>
 
             <Form.Group controlId="email">
@@ -89,7 +89,7 @@ const UserEditPage = ({ match, history }) => {
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-              ></Form.Control>
+              />
             </Form.Group>
 
             <Form.Group controlId="isAdmin">
@@ -98,7 +98,7 @@ const UserEditPage = ({ match, history }) => {
                 label="Is Admin"
                 checked={isAdmin}
                 onChange={(e) => setIsAdmin(e.target.checked)}
-              ></Form.Check>
+              />
             </Form.Group>
             <Button type="submit" variant="primary" className="btn-custom-blue">
               Update

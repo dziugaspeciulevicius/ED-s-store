@@ -4,20 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="merge prettier changes">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="increase jwt token to expire in 2 hours">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/orderModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/orderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/orderRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/coin-svgrepo-com.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShippingPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShippingPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/ProductListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/ProductListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyOrdersPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyOrdersPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyProfilePage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyProfilePage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="frontend-mui-ts" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +62,6 @@
     <setting file="file://$PROJECT_DIR$/frontend/src/pages/LoginPage.component.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/frontend/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/frontend/src/pages/HomePage.component.jsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/frontend/src/sass/abstracts/slick-theme.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/frontend/src/components/Header.component.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/frontend/src/bootstrap.min.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/seeder.js" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +78,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -67,14 +87,20 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/pages/user-panel" />
+      <recent name="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels" />
+      <recent name="$PROJECT_DIR$/frontend/src/pages/admin-panel" />
+    </key>
   </component>
-  <component name="RunManager" selected="npm.heroku-postbuild">
+  <component name="RunManager" selected="npm.data:import">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -170,19 +196,19 @@
       <item itemvalue="Jest.Test Coverage" />
       <item itemvalue="npm.data:destroy" />
       <item itemvalue="npm.heroku-postbuild" />
-      <item itemvalue="npm.server" />
       <item itemvalue="npm.client" />
-      <item itemvalue="npm.dev" />
       <item itemvalue="npm.data:import" />
+      <item itemvalue="npm.dev" />
       <item itemvalue="npm.prettier-run" />
+      <item itemvalue="npm.server" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.data:import" />
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.prettier-run" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.client" />
-        <item itemvalue="npm.server" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +229,10 @@
       <workItem from="1637705391806" duration="311000" />
       <workItem from="1637766889924" duration="1222000" />
       <workItem from="1637780310236" duration="2161000" />
+      <workItem from="1638112135626" duration="11665000" />
+      <workItem from="1638646804354" duration="7951000" />
+      <workItem from="1639215550943" duration="32086000" />
+      <workItem from="1639683570117" duration="11496000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -302,7 +332,203 @@
       <option name="project" value="LOCAL" />
       <updated>1637779908312</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add loyalty pts in the backend">
+      <created>1638097939861</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1638097939861</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change jwt to expire in 2 hours">
+      <created>1638104568549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1638104568549</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update redux to update order">
+      <created>1638104623434</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1638104623434</updated>
+    </task>
+    <task id="LOCAL-00018" summary="display loyalty pts before placing the order">
+      <created>1638122465571</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1638122465571</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactor">
+      <created>1638220286634</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1638220286634</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactor payment flow">
+      <created>1638300199290</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1638300199290</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update unauthorized error message">
+      <created>1638304212867</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1638304212867</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix /api/order being called infinite times">
+      <created>1638648160338</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1638648160339</updated>
+    </task>
+    <task id="LOCAL-00023" summary="remove unused material ui code">
+      <created>1638648479781</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1638648479781</updated>
+    </task>
+    <task id="LOCAL-00024" summary="cleanup">
+      <created>1638649349267</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1638649349267</updated>
+    </task>
+    <task id="LOCAL-00025" summary="show euros in the application">
+      <created>1638651164854</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1638651164854</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix paypal script to load and show paypal buttons">
+      <created>1639236722677</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1639236722678</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add loyalty page tab in profile and show loyalty points">
+      <created>1639259065399</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1639259065399</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refactoring tabs">
+      <created>1639259234988</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1639259234988</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add dashboard page tabs">
+      <created>1639259260601</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1639259260601</updated>
+    </task>
+    <task id="LOCAL-00030" summary="display loyalty points in user list in admin panel">
+      <created>1639301794063</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1639301794063</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix header padding to apply for loyalty component only">
+      <created>1639302052023</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1639302052023</updated>
+    </task>
+    <task id="LOCAL-00032" summary="loyalty points are now added into the account">
+      <created>1639490408286</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1639490408286</updated>
+    </task>
+    <task id="LOCAL-00033" summary="create seperate card for loyalty functionality in order details page">
+      <created>1639496995672</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1639496995672</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update routing issues">
+      <created>1639559535136</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1639559535136</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix form control inputs being too small">
+      <created>1639561116718</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1639561116718</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix some of the errors">
+      <created>1639694190913</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694190913</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add a test product image">
+      <created>1639694208396</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694208396</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update user action and controller">
+      <created>1639694253674</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694253674</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix product card and order page styling">
+      <created>1639694290052</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694290052</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix product card and product page">
+      <created>1639694413211</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694413211</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix functionality to store and update user loyalty points">
+      <created>1639694435152</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694435152</updated>
+    </task>
+    <task id="LOCAL-00042" summary="increase jwt token to expire in 2 hours">
+      <created>1639764000550</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1639764000550</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,20 +547,32 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update bootstrap and react to latest versions" />
-    <MESSAGE value="updated sass - node-sass no longer suported" />
-    <MESSAGE value="update readme to let apple users know that they might want to change to another default port" />
-    <MESSAGE value="update navbar and fix form controls" />
-    <MESSAGE value="update proxy to use 4000 instead of 5000 now" />
-    <MESSAGE value="update header imports" />
-    <MESSAGE value="update packages" />
-    <MESSAGE value="update server to use port 4000 instead of 5000" />
-    <MESSAGE value="update .idea files" />
-    <MESSAGE value="add prettier to the project" />
-    <MESSAGE value="run prettier through the project files" />
-    <MESSAGE value="prettier .idea files" />
-    <MESSAGE value="merge prettier changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge prettier changes" />
+    <MESSAGE value="display loyalty pts before placing the order" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="refactor payment flow" />
+    <MESSAGE value="update unauthorized error message" />
+    <MESSAGE value="fix /api/order being called infinite times" />
+    <MESSAGE value="remove unused material ui code" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="show euros in the application" />
+    <MESSAGE value="fix paypal script to load and show paypal buttons" />
+    <MESSAGE value="add loyalty page tab in profile and show loyalty points" />
+    <MESSAGE value="refactoring tabs" />
+    <MESSAGE value="add dashboard page tabs" />
+    <MESSAGE value="display loyalty points in user list in admin panel" />
+    <MESSAGE value="fix header padding to apply for loyalty component only" />
+    <MESSAGE value="loyalty points are now added into the account" />
+    <MESSAGE value="create seperate card for loyalty functionality in order details page" />
+    <MESSAGE value="update routing issues" />
+    <MESSAGE value="fix form control inputs being too small" />
+    <MESSAGE value="fix some of the errors" />
+    <MESSAGE value="add a test product image" />
+    <MESSAGE value="update user action and controller" />
+    <MESSAGE value="fix product card and order page styling" />
+    <MESSAGE value="fix product card and product page" />
+    <MESSAGE value="fix functionality to store and update user loyalty points" />
+    <MESSAGE value="increase jwt token to expire in 2 hours" />
+    <option name="LAST_COMMIT_MESSAGE" value="increase jwt token to expire in 2 hours" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

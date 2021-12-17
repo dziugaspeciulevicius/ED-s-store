@@ -1,23 +1,24 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router";
 
-import { Table, Button, Row, Col } from "react-bootstrap";
+import { Button, Col, Row, Table } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import Message from "../components/Message.component";
-import Spinner from "../components/Spinner.component";
+import Message from "../../../components/Message.component";
+import Spinner from "../../../components/Spinner.component";
 // import Paginate from "../components/Paginate.component";
 import {
-  listProducts,
-  deleteProduct,
   createProduct,
-} from "../actions/productActions";
-import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
+  deleteProduct,
+  listProducts,
+} from "../../../actions/productActions";
+import { PRODUCT_CREATE_RESET } from "../../../constants/productConstants";
+import { useHistory } from "react-router-dom";
 
-const ProductListPage = ({ history, match }) => {
+const ProductListPage = () => {
   // const pageNumber = match.params.pageNumber || 1;
-
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
@@ -52,16 +53,15 @@ const ProductListPage = ({ history, match }) => {
 
   useEffect(() => {
     dispatch({ type: PRODUCT_CREATE_RESET });
-
-    if (!userInfo.isAdmin) {
-      history.push("/login");
-    }
-
-    if (successProductCreate) {
-      history.push(`/admin/product/${createdProduct._id}/edit`);
+    if (userInfo && userInfo.isAdmin) {
+      if (successProductCreate) {
+        history.push(`/admin/product/${createdProduct._id}/edit`);
+      } else {
+        // dispatch(listProducts("", pageNumber));
+        dispatch(listProducts());
+      }
     } else {
-      // dispatch(listProducts("", pageNumber));
-      dispatch(listProducts());
+      history.push("/login");
     }
   }, [
     dispatch,
@@ -110,7 +110,7 @@ const ProductListPage = ({ history, match }) => {
                 <th>CATEGORY</th>
                 <th>GENDER</th>
                 <th>BRAND</th>
-                <th></th>
+                <th />
               </tr>
             </thead>
 
@@ -129,10 +129,9 @@ const ProductListPage = ({ history, match }) => {
                       style={{
                         color: " #667EEA",
                         cursor: "pointer",
-                        // padding: "0 .4rem",
                       }}
                     >
-                      <i className="fas fa-edit"></i>
+                      <i className="fas fa-edit" />
                     </LinkContainer>{" "}
                     <i
                       className="fas fa-trash"
@@ -141,13 +140,12 @@ const ProductListPage = ({ history, match }) => {
                         cursor: "pointer",
                       }}
                       onClick={() => deleteProductHandler(product._id)}
-                    ></i>
+                    />
                   </td>
                 </tr>
               ))}
             </tbody>
           </Table>
-          {/* <Paginate pages={pages} page={page} isAdmin={true} /> */}
         </>
       )}
     </>

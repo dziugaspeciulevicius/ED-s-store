@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import Message from "../components/Message.component";
-import Spinner from "../components/Spinner.component";
-import { listUsers, deleteUser } from "../actions/userActions";
+import Message from "../../../components/Message.component";
+import Spinner from "../../../components/Spinner.component";
+import { deleteUser, listUsers } from "../../../actions/userActions";
+import { useHistory } from "react-router-dom";
 
-const UserListPage = ({ history }) => {
+const UserListPage = () => {
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
@@ -47,6 +49,7 @@ const UserListPage = ({ history }) => {
               <th>ID</th>
               <th>NAME</th>
               <th>EMAIL</th>
+              <th>LOYALTY POINTS</th>
               <th>ADMIN</th>
               <th>ACTION</th>
             </tr>
@@ -60,11 +63,12 @@ const UserListPage = ({ history }) => {
                 <td>
                   <a href={`mailto:${user.email}`}>{user.email}</a>
                 </td>
+                <td>{user.loyaltyPoints}</td>
                 <td>
                   {user.isAdmin ? (
-                    <i className="fas fa-check" style={{ color: "green" }}></i>
+                    <i className="fas fa-check" style={{ color: "green" }} />
                   ) : (
-                    <i className="fas fa-times" style={{ color: "red" }}></i>
+                    <i className="fas fa-times" style={{ color: "red" }} />
                   )}
                 </td>
                 <td>
@@ -76,7 +80,7 @@ const UserListPage = ({ history }) => {
                       padding: "0 1.2rem",
                     }}
                   >
-                    <i className="fas fa-edit"></i>
+                    <i className="fas fa-edit" />
                   </LinkContainer>{" "}
                   <i
                     className="fas fa-trash"
@@ -85,7 +89,7 @@ const UserListPage = ({ history }) => {
                       cursor: "pointer",
                     }}
                     onClick={() => deleteUserHandler(user._id)}
-                  ></i>
+                  />
                 </td>
               </tr>
             ))}

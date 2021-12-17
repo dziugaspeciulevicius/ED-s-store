@@ -16,6 +16,7 @@ const authUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      loyaltyPoints: user.loyaltyPoints,
       token: generateToken(user._id),
     });
   } else {
@@ -49,6 +50,7 @@ const registerUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      loyaltyPoints: user.loyaltyPoints,
       token: generateToken(user._id),
     });
   } else {
@@ -68,6 +70,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      loyaltyPoints: user.loyaltyPoints,
     });
   } else {
     res.status(404);
@@ -150,6 +153,7 @@ const updateUser = asyncHandler(async (req, res) => {
     user.name = req.body.name || user.name; // if user found we're going to set user name to req.body.name
     user.email = req.body.email || user.email;
     user.isAdmin = req.body.isAdmin; // there was a bug I couldn't set a user as admin to false, left it like this
+    user.loyaltyPoints = req.body.loyaltyPoints;
 
     const updatedUser = await user.save();
 
@@ -158,6 +162,7 @@ const updateUser = asyncHandler(async (req, res) => {
       name: updatedUser.name,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
+      loyaltyPoints: updatedUser.loyaltyPoints,
     });
   } else {
     res.status(404);

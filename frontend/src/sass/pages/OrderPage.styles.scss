@@ -1,0 +1,44 @@
+@import "../abstracts/variables";
+
+.btn-delivered {
+  width: 100%;
+}
+
+.discount-details {
+  margin-bottom: 2rem;
+  &-card {
+    &--totalPoints {
+      font-weight: bold;
+    }
+
+    &--input-group {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &--input-number {
+      width: 80%;
+      text-align: center;
+    }
+
+    &--clear-button {
+      font-size: 1.3rem;
+      padding: 0 5px;
+      background-color: $color-primary-light;
+      color: $color-white;
+    }
+  }
+
+  &-recalculate {
+    width: 85%;
+    margin-top: 5px;
+  }
+
+  &-note {
+    margin-top: 1rem;
+
+    &--asterisk {
+      font-weight: bold;
+    }
+  }
+}

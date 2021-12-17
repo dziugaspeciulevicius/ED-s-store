@@ -118,7 +118,7 @@ const CartPage = ({ match, location, history }) => {
                           </td>
 
                           <td>
-                            <h2>${item.price}</h2>
+                            <h2>€{item.price}</h2>
                           </td>
 
                           <td>
@@ -222,7 +222,7 @@ const CartPage = ({ match, location, history }) => {
                       </td>
                       <td>
                         <h2 className="custom-total-price">
-                          $
+                          €
                           {cartItems
                             .reduce(
                               (acc, item) => acc + item.qty * item.price,

@@ -1,0 +1,47 @@
+@import "../abstracts/variables";
+
+.header {
+  padding-bottom: 2rem;
+}
+
+.loyalty-stats-container {
+  padding: 3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: solid $black-color 1px;
+
+  background-color: rgba($color-primary-dark, 0.2);
+  border-radius: 20px;
+
+  &--image {
+    padding-bottom: 1rem;
+  }
+
+  &--points {
+    font-weight: 700;
+    font-style: italic;
+
+    &__digit {
+      font-size: 3rem;
+    }
+  }
+
+  &--info {
+    text-align: left;
+    line-height: 1.5;
+
+    & > :first-child {
+      font-style: italic;
+      padding-bottom: 1rem;
+    }
+
+    & > p {
+      font-weight: 200;
+    }
+  }
+}
+
+.separator {
+  border-top: 1px solid #bbb;
+  border-radius: 5px;
+}

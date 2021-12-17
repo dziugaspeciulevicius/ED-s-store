@@ -18,7 +18,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
   if (orderItems && orderItems === 0) {
     res.status(400);
     throw new Error("No order items");
-    return;
   } else {
     const order = new Order({
       orderItems,
@@ -64,7 +63,7 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     order.isPaid = true;
     order.paidAt = Date.now();
     order.paymentResult = {
-      //stuff added from PAYPAL
+      //data added from PAYPAL
       id: req.body.id,
       status: req.body.status,
       update_time: req.body.update_time,
