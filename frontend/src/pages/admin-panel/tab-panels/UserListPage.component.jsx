@@ -22,11 +22,6 @@ const UserListPage = () => {
   const { success: successDelete } = userDelete; // from state we get success and rename it to successDelete
 
   useEffect(() => {
-    // if (!userInfo && !userInfo.isAdmin) {
-    //   history.push("/login");
-    // } else {
-    //   dispatch(listUsers);
-    // }
     if (userInfo && userInfo.isAdmin) {
       dispatch(listUsers());
     } else {

@@ -58,7 +58,7 @@ const orderSchema = mongoose.Schema(
     loyaltyPoints: {
       type: Number,
       required: true,
-      default: 0.0,
+      default: 0,
     },
     isPaid: {
       type: Boolean,

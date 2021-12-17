@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="increase jwt token to expire in 2 hours">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/userActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OrderPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/DashboardPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/DashboardPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyLoyaltyPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyLoyaltyPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/components/Product.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/OrderPage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/orderModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/orderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/orderRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/orderActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/coin-svgrepo-com.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/orderConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShippingPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShippingPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/ProductListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/ProductListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyOrdersPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyOrdersPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyProfilePage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user-panel/tab-panels/MyProfilePage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/orderReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +232,7 @@
       <workItem from="1638112135626" duration="11665000" />
       <workItem from="1638646804354" duration="7951000" />
       <workItem from="1639215550943" duration="32086000" />
-      <workItem from="1639683570117" duration="6934000" />
+      <workItem from="1639683570117" duration="11496000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
@@ -474,7 +479,56 @@
       <option name="project" value="LOCAL" />
       <updated>1639561116718</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix some of the errors">
+      <created>1639694190913</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694190913</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add a test product image">
+      <created>1639694208396</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694208396</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update user action and controller">
+      <created>1639694253674</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694253674</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix product card and order page styling">
+      <created>1639694290052</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694290052</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix product card and product page">
+      <created>1639694413211</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694413211</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix functionality to store and update user loyalty points">
+      <created>1639694435152</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1639694435152</updated>
+    </task>
+    <task id="LOCAL-00042" summary="increase jwt token to expire in 2 hours">
+      <created>1639764000550</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1639764000550</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,13 +547,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add prettier to the project" />
-    <MESSAGE value="run prettier through the project files" />
-    <MESSAGE value="prettier .idea files" />
-    <MESSAGE value="merge prettier changes" />
-    <MESSAGE value="add loyalty pts in the backend" />
-    <MESSAGE value="change jwt to expire in 2 hours" />
-    <MESSAGE value="update redux to update order" />
     <MESSAGE value="display loyalty pts before placing the order" />
     <MESSAGE value="refactor" />
     <MESSAGE value="refactor payment flow" />
@@ -518,7 +565,14 @@
     <MESSAGE value="create seperate card for loyalty functionality in order details page" />
     <MESSAGE value="update routing issues" />
     <MESSAGE value="fix form control inputs being too small" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix form control inputs being too small" />
+    <MESSAGE value="fix some of the errors" />
+    <MESSAGE value="add a test product image" />
+    <MESSAGE value="update user action and controller" />
+    <MESSAGE value="fix product card and order page styling" />
+    <MESSAGE value="fix product card and product page" />
+    <MESSAGE value="fix functionality to store and update user loyalty points" />
+    <MESSAGE value="increase jwt token to expire in 2 hours" />
+    <option name="LAST_COMMIT_MESSAGE" value="increase jwt token to expire in 2 hours" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

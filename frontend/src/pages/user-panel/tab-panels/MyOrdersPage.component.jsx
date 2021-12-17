@@ -28,14 +28,6 @@ const MyOrdersPageComponent = () => {
     } else {
       history.push("/login");
     }
-
-    // if (!userInfo) {
-    //   history.push("/login");
-    // } else {
-    //   if (!user.name) {
-    //     dispatch(listMyOrders());
-    //   }
-    // }
   }, [dispatch, history, userInfo, user]);
 
   return (

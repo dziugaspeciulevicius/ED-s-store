@@ -63,9 +63,6 @@ const ProductListPage = () => {
     } else {
       history.push("/login");
     }
-
-    // if (!userInfo && !userInfo.isAdmin) {
-    // }
   }, [
     dispatch,
     history,
@@ -132,7 +129,6 @@ const ProductListPage = () => {
                       style={{
                         color: " #667EEA",
                         cursor: "pointer",
-                        // padding: "0 .4rem",
                       }}
                     >
                       <i className="fas fa-edit" />
@@ -150,7 +146,6 @@ const ProductListPage = () => {
               ))}
             </tbody>
           </Table>
-          {/* <Paginate pages={pages} page={page} isAdmin={true} /> */}
         </>
       )}
     </>

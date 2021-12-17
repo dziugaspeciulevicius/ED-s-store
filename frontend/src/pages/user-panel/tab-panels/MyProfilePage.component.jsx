@@ -40,17 +40,6 @@ const MyProfilePageComponent = () => {
     } else {
       history.push("/login");
     }
-
-    // if (!userInfo) {
-    //   history.push("/login");
-    // } else {
-    //   if (!user.name) {
-    //     dispatch(getUserDetails("profile"));
-    //   } else {
-    //     setName(user.name);
-    //     setEmail(user.email);
-    //   }
-    // }
   }, [dispatch, history, userInfo, user]);
 
   const submitHandler = (e) => {

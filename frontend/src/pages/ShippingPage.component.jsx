@@ -34,8 +34,6 @@ const ShippingPage = ({ history }) => {
         postalCode,
       })
     );
-    // history.push(`/order/${order._id}`);
-    // history.push("/place-order");
     history.push("/payment");
   };
 

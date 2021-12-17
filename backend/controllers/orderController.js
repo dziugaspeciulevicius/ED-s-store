@@ -13,7 +13,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
     taxPrice,
     shippingPrice,
     totalPrice,
-    loyaltyPoints,
   } = req.body;
 
   if (orderItems && orderItems === 0) {
@@ -29,7 +28,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
       taxPrice,
       shippingPrice,
       totalPrice,
-      loyaltyPoints,
     });
 
     const createdOrder = await order.save();
@@ -37,26 +35,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
     res.status(201).json(createdOrder);
   }
 });
-
-//TODO: fix this
-// // @desc Update order loyalty points
-// // @route PUT /api/orders/:id/loyalty
-// // @access Private
-// const updateOrderLoyaltyPoints = asyncHandler(async (req, res) => {
-//   const order = await Order.findById(req.params.id);
-//
-//   if (order) {
-//     order.loyaltyPoints = req.params.loyaltyPoints;
-//     // req.body.loyaltyPoints || order.loyaltyPoints;
-//
-//     const updatedOrder = await order.save();
-//
-//     res.json(updatedOrder);
-//   } else {
-//     res.status(404);
-//     throw new Error("Order not found");
-//   }
-// });
 
 // @desc Get order by ID
 // @route GET /api/orders/:id
@@ -138,8 +116,6 @@ const getOrders = asyncHandler(async (req, res) => {
 
 export {
   addOrderItems,
-  //TODO: and this
-  // updateOrderLoyaltyPoints,
   getOrderById,
   updateOrderToPaid,
   updateOrderToDelivered,

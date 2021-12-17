@@ -38,22 +38,6 @@ export const orderCreateReducer = (state = {}, action) => {
   }
 };
 
-//TODO: fix this
-// export const orderLoyaltyPointsReducer = (state = {}, action) => {
-//   switch (action.type) {
-//     case ORDER_LOYALTY_POINTS_REQUEST:
-//       return { loading: true };
-//     case ORDER_LOYALTY_POINTS_SUCCESS:
-//       return { loading: false, success: true };
-//     case ORDER_LOYALTY_POINTS_FAIL:
-//       return { loading: false, error: action.payload };
-//     case ORDER_LOYALTY_POINTS_RESET:
-//       return {};
-//     default:
-//       return state;
-//   }
-// };
-
 export const orderDetailsReducer = (
   // loading true because it was trying to load the order before loading was true
   state = { loading: true, orderItems: [], shippingAddress: {} },
