@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import colors from "colors";
 import morgan from "morgan";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
-import connectDB from "./config/db.js";
+import { connectDB, connectDBProd } from "./config/db.js";
 
 // import routes
 import productRoutes from "./routes/productRoutes.js";
@@ -14,11 +14,9 @@ import uploadRoutes from "./routes/uploadRoutes.js";
 
 dotenv.config();
 
-connectDB();
-
 const app = express();
-
 if (process.env.NODE_ENV === "development") {
+  connectDB();
   app.use(morgan("dev"));
 }
 
@@ -40,6 +38,8 @@ const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 if (process.env.NODE_ENV === "production") {
+  connectDBProd();
+
   // we want to set frontend/build folder as our static folder
   // so we can directly access it and load index.html
   app.use(express.static(path.join(__dirname, "/frontend/build")));

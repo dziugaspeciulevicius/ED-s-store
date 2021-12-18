@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/seeder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/seeder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +222,7 @@
       <workItem from="1638646804354" duration="7951000" />
       <workItem from="1639215550943" duration="32086000" />
       <workItem from="1639683570117" duration="11496000" />
-      <workItem from="1639770384699" duration="2642000" />
+      <workItem from="1639770384699" duration="6937000" />
     </task>
     <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
       <created>1637440325794</created>
