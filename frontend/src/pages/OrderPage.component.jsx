@@ -16,7 +16,7 @@ import {
 } from "../constants/orderConstants";
 import Breadcrumb from "../components/Breadcrumb.component";
 import { PayPalButton } from "react-paypal-button-v2";
-import { updateUser } from "../actions/userActions";
+import { updateUserProfile } from "../actions/userActions";
 import "../sass/pages/OrderPage.styles.scss";
 
 const OrderPage = ({ match }) => {
@@ -137,7 +137,7 @@ const OrderPage = ({ match }) => {
 
     // dispatch actions
     dispatch(payOrder(orderId, paymentResult));
-    dispatch(updateUser(userInfo));
+    dispatch(updateUserProfile(userInfo));
   };
 
   const deliverHandler = () => {

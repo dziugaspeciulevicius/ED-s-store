@@ -90,6 +90,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     if (req.body.password) {
       user.password = req.body.password;
     }
+    user.loyaltyPoints = req.body.loyaltyPoints;
 
     const updatedUser = await user.save();
 
@@ -98,6 +99,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       name: updatedUser.name,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
+      loyaltyPoints: updatedUser.loyaltyPoints,
       token: generateToken(updatedUser._id),
     });
   } else {
