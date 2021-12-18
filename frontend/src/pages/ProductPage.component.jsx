@@ -65,20 +65,69 @@ const ProductPage = ({ history, match }) => {
     ); // pass in id from params.id
   };
 
-  const minusQty = () => {
-    if (qty > 0) {
-      setQty(qty - 1);
-    } else {
-      console.log("Bro, you cannot go into negative orders");
-    }
-  };
+  const productQuantity = () => {
+    const minusQty = () => {
+      if (qty > 0) {
+        setQty(qty - 1);
+      } else {
+        console.log("You cannot go into negative orders");
+      }
+    };
 
-  const plusQty = () => {
-    if (qty < product.countInStock) {
-      setQty(qty + 1);
-    } else {
-      console.log("Out of stock");
-    }
+    const plusQty = () => {
+      if (qty < product.countInStock) {
+        setQty(qty + 1);
+      } else {
+        console.log("Out of stock");
+      }
+    };
+    return (
+      <>
+        {product.countInStock > 0 && (
+          <ListGroupItem>
+            <Row>
+              <div className="stock-text">Select quantity:</div>
+            </Row>
+            <Row>
+              <div>
+                <div className="qty-box">
+                  <div className="input-group">
+                    <span className="input-group-prepend">
+                      <button
+                        type="button"
+                        className="btn quantity-left-minus"
+                        onClick={minusQty}
+                        datatype="minus"
+                        data-field=""
+                      >
+                        &mdash;
+                      </button>
+                    </span>
+                    <input
+                      type="text"
+                      name="quantity"
+                      value={qty}
+                      className="form-control input-number"
+                    />
+                    <span className="input-group-prepend">
+                      <button
+                        type="button"
+                        className="btn quantity-right-plus"
+                        onClick={plusQty}
+                        datatype="plus"
+                        data-field=""
+                      >
+                        &#xff0b;
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Row>
+          </ListGroupItem>
+        )}
+      </>
+    );
   };
 
   return (
@@ -142,49 +191,7 @@ const ProductPage = ({ history, match }) => {
                     </Row>
                   </ListGroupItem>
 
-                  {product.countInStock > 0 && (
-                    <ListGroupItem>
-                      <Row>
-                        <div className="stock-text">Select quantity:</div>
-                      </Row>
-                      <Row>
-                        <div>
-                          <div className="qty-box">
-                            <div className="input-group">
-                              <span className="input-group-prepend">
-                                <button
-                                  type="button"
-                                  className="btn quantity-left-minus"
-                                  onClick={minusQty}
-                                  datatype="minus"
-                                  data-field=""
-                                >
-                                  &mdash;
-                                </button>
-                              </span>
-                              <input
-                                type="text"
-                                name="quantity"
-                                value={qty}
-                                className="form-control input-number"
-                              />
-                              <span className="input-group-prepend">
-                                <button
-                                  type="button"
-                                  className="btn quantity-right-plus"
-                                  onClick={plusQty}
-                                  datatype="plus"
-                                  data-field=""
-                                >
-                                  &#xff0b;
-                                </button>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </Row>
-                    </ListGroupItem>
-                  )}
+                  {productQuantity()}
 
                   <ListGroupItem>
                     <Button
@@ -203,6 +210,7 @@ const ProductPage = ({ history, match }) => {
             </Col>
           </Row>
         )}
+
         {loading ? (
           <div
             style={{
@@ -284,6 +292,13 @@ const ProductPage = ({ history, match }) => {
                               {product.reviews.length === 0 && (
                                 <Message>No reviews</Message>
                               )}
+
+                              {errorProductReview && (
+                                <Message variant="danger">
+                                  {errorProductReview}
+                                </Message>
+                              )}
+
                               <ListGroup variant="flush">
                                 {" "}
                                 {product.reviews.map((review) => (
@@ -294,14 +309,11 @@ const ProductPage = ({ history, match }) => {
                                     <p>{review.comment}</p>
                                   </ListGroup.Item>
                                 ))}
-                                <ListGroup.Item>
-                                  <h2>Write a review</h2>
-                                  {errorProductReview && (
-                                    <Message variant="danger">
-                                      {errorProductReview}
-                                    </Message>
-                                  )}
-                                  {userInfo ? (
+                                {!product.reviews.find(
+                                  (x) => x.user === userInfo._id
+                                ) && (
+                                  <ListGroup.Item>
+                                    <h2>Write a review</h2>
                                     <Form onSubmit={submitHandler}>
                                       <Form.Group controlId="rating">
                                         <Form.Label>Rating</Form.Label>
@@ -340,13 +352,14 @@ const ProductPage = ({ history, match }) => {
                                         Submit
                                       </Button>
                                     </Form>
-                                  ) : (
-                                    <Message>
-                                      Please <Link to="/login">sign in</Link> to
-                                      write a review{" "}
-                                    </Message>
-                                  )}
-                                </ListGroup.Item>
+                                  </ListGroup.Item>
+                                )}
+                                {!userInfo && (
+                                  <Message>
+                                    Please <Link to="/login">sign in</Link> to
+                                    write a review{" "}
+                                  </Message>
+                                )}
                               </ListGroup>
                             </Col>
                           </Row>
