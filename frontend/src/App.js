@@ -25,6 +25,7 @@ const App = () => {
       <Router>
         <ScrollToTop />
         <Header />
+        {/*<NavbarComponent />*/}
         <main className="pb-3">
           <Switch>
             <Route
