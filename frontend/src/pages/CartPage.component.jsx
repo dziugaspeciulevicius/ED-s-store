@@ -23,26 +23,6 @@ const CartPage = ({ match, location, history }) => {
     }
   }, [dispatch, productId, qty]);
 
-  // const minusQty = () => {
-  //   if (qty > 0) {
-  //     qty = qty - 1;
-  //   } else {
-  //     console.log("Bro, you cannot go into negative orders");
-  //   }
-  // };
-
-  // const plusQty = () => {
-  //   if (qty < cartItems.productId.qty) {
-  //     qty = qty + 1;
-  //   } else {
-  //     console.log("Out of stock");
-  //   }
-  // };
-
-  //   const changeQty = (e) => {
-  //     dispatch(addToCart(item.product, Number(e.target.value)));
-  //   };
-
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
   };
@@ -122,49 +102,6 @@ const CartPage = ({ match, location, history }) => {
                           </td>
 
                           <td>
-                            {/*<div className="qty-box">
-                              <div className="input-group">
-                                <span className="input-group-prepend">
-                                  <button
-                                    type="button"
-                                    className="btn quantity-left-minus"
-                                    onClick={minusQty}
-                                    data-type="minus"
-                                    data-field=""
-                                  >
-                                    <i className="fas fa-angle-left"></i>
-                                  </button>
-                                </span>
-                                <input
-                                  type="text"
-                                  name="quantity"
-                                  value={item.qty}
-                                  readOnly={true}
-                                  className="form-control input-number"
-                                  onChange={(e) =>
-                                    dispatch(
-                                      addToCart(
-                                        item.product,
-                                        Number(e.target.value)
-                                      )
-                                    )
-                                  }
-                                />
-
-                                <span className="input-group-prepend">
-                                  <button
-                                    type="button"
-                                    className="btn quantity-right-plus"
-                                    onClick={plusQty}
-                                    data-type="plus"
-                                    data-field=""
-                                  >
-                                    <i className="fas fa-angle-right"></i>
-                                  </button>
-                                </span>
-                              </div>
-                            </div>
-                            {/*item.qty >= item.stock ? "out of Stock" : ""*/}
                             <Col md={8} className="text-center">
                               <Form.Control
                                 as="select"
@@ -197,7 +134,7 @@ const CartPage = ({ match, location, history }) => {
                                 removeFromCartHandler(item.product)
                               }
                             >
-                              <i className="fas fa-times"></i>
+                              <i className="fas fa-times" />
                             </Button>
                           </td>
 
@@ -245,7 +182,6 @@ const CartPage = ({ match, location, history }) => {
               </div>
             </div>
           </div>
-          {/*</div>*/}
         </section>
       )}
     </div>

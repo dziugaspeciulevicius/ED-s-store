@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="cleanup">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="fix styling issues and undefined issue when coming into the product page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/components/Header.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/components/Header.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/LoginPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/LoginPage.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/CartPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/CartPage.component.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,13 +223,6 @@
       <workItem from="1639215550943" duration="32086000" />
       <workItem from="1639683570117" duration="11496000" />
       <workItem from="1639770384699" duration="6937000" />
-    </task>
-    <task id="LOCAL-00002" summary="updated sass - node-sass no longer suported">
-      <created>1637440398252</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1637440398252</updated>
     </task>
     <task id="LOCAL-00003" summary="updated sass - update readme to let apple users know that they might want to change to another default port">
       <created>1637700586365</created>
@@ -571,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639923908380</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fix styling issues and undefined issue when coming into the product page">
+      <created>1639928610947</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1639928610947</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +586,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add loyalty page tab in profile and show loyalty points" />
     <MESSAGE value="refactoring tabs" />
     <MESSAGE value="add dashboard page tabs" />
     <MESSAGE value="display loyalty points in user list in admin panel" />
@@ -615,7 +610,8 @@
     <MESSAGE value="add react-router-dom" />
     <MESSAGE value="fix product component for SR to read it out properly" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="fix styling issues and undefined issue when coming into the product page" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix styling issues and undefined issue when coming into the product page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
