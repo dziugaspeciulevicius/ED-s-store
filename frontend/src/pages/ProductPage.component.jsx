@@ -310,7 +310,7 @@ const ProductPage = ({ history, match }) => {
                                   </ListGroup.Item>
                                 ))}
                                 {!product.reviews.find(
-                                  (x) => x.user === userInfo._id
+                                  (x) => x.user === userInfo?._id
                                 ) && (
                                   <ListGroup.Item>
                                     <h2>Write a review</h2>

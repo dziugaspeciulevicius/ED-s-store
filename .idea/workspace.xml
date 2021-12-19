@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="add Material UI navigation bar">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/NavBar.tsx" afterDir="false" />
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/clover.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Footer.component.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Footer.component.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProductPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/admin-panel/tab-panels/UserListPage.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/sass/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/base/_base.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/sass/components/Header.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/components/Header.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sass/pages/LoginPage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sass/pages/LoginPage.styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,13 +227,6 @@
       <workItem from="1639215550943" duration="32086000" />
       <workItem from="1639683570117" duration="11496000" />
       <workItem from="1639770384699" duration="6937000" />
-    </task>
-    <task id="LOCAL-00001" summary="update bootstrap and react to latest versions">
-      <created>1637440325794</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1637440325794</updated>
     </task>
     <task id="LOCAL-00002" summary="updated sass - node-sass no longer suported">
       <created>1637440398252</created>
@@ -559,7 +543,35 @@
       <option name="project" value="LOCAL" />
       <updated>1639917854037</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fix styling">
+      <created>1639923832449</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1639923832449</updated>
+    </task>
+    <task id="LOCAL-00048" summary="add react-router-dom">
+      <created>1639923845294</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1639923845294</updated>
+    </task>
+    <task id="LOCAL-00049" summary="fix product component for SR to read it out properly">
+      <created>1639923881833</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1639923881833</updated>
+    </task>
+    <task id="LOCAL-00050" summary="cleanup">
+      <created>1639923908379</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1639923908380</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,10 +590,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove unused material ui code" />
-    <MESSAGE value="cleanup" />
-    <MESSAGE value="show euros in the application" />
-    <MESSAGE value="fix paypal script to load and show paypal buttons" />
     <MESSAGE value="add loyalty page tab in profile and show loyalty points" />
     <MESSAGE value="refactoring tabs" />
     <MESSAGE value="add dashboard page tabs" />
@@ -603,7 +611,11 @@
     <MESSAGE value="add font and icons cdn's" />
     <MESSAGE value="add theme provider" />
     <MESSAGE value="add Material UI navigation bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Material UI navigation bar" />
+    <MESSAGE value="fix styling" />
+    <MESSAGE value="add react-router-dom" />
+    <MESSAGE value="fix product component for SR to read it out properly" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
