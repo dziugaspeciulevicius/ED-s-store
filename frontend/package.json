@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "proxy": "http://127.0.0.1:4000",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -66,5 +66,8 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "redux-mock-store": "^1.5.4"
+  },
+  "engines": {
+    "node": "17.x"
   }
 }
