@@ -7,38 +7,19 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  /* this will inherit everything we put on boarder-box for box-sizing */
 }
 
 html {
   scroll-behavior: smooth;
 
-  //This defines what 1rem is
   font-size: 62.5%; //1rem = 10px; 10px/16px=62.5%
 
   @include respond(big-desktop) {
-    //width < 1800?
     font-size: 75%; //1rem = 12px, 12/16=75%
   }
-
-  @include respond(tab-land) {
-    //width < 900?
-    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
-  }
-
-  @include respond(tab-port) {
-    //width < 600?
-    font-size: 50%; //1rem = 8px, 8/16 = 50%
-  }
-
-  // @include respond(phone) {
-  //   font-size: 50%;
-  // }
-  //PHONE ^ QUERY NOT REQUIRED BECAUSE WE HAVE 50% ON TAB-PORT ALSO
 }
 
 body {
-  // padding-top: 6.5rem;
   font-family: "Roboto", sans-serif;
 }
 
