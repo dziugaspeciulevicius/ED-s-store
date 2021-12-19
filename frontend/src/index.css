@@ -8,7 +8,8 @@ body {
   margin: 0;
 }
 
+/*this is required with old navbar*/
 main {
   min-height: 80vh;
-  margin-top: 7rem;
+  margin-top: 5rem;
 }

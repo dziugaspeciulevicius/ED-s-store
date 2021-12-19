@@ -222,7 +222,7 @@
         <line num="5" count="5" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="Footer.component.js" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Footer.component.js">
+      <file name="Footer.component.jsx" path="D:\MY FILES\dev\eds-store - MERN eCommerce\eds-store\frontend\src\components\Footer.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="1" type="stmt"/>

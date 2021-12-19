@@ -17,6 +17,7 @@ import AdminPanel from "./pages/admin-panel/AdminPanel.component";
 import UserEditPage from "./pages/UserEditPage.component";
 import ProductEditPage from "./pages/ProductEditPage.component";
 import NotFound from "./components/NotFound.component";
+import RoutingConstants from "./core/constants/routing";
 
 const App = () => {
   return (
@@ -24,32 +25,59 @@ const App = () => {
       <Router>
         <ScrollToTop />
         <Header />
+        {/*<NavbarComponent />*/}
         <main className="pb-3">
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/page/:pageNumber" component={HomePage} />
             <Route
               exact
-              path="/search/:keyword/page/:pageNumber"
+              path={RoutingConstants.homepage}
               component={HomePage}
             />
-            <Route exact path="/search/:keyword" component={HomePage} />
-            <Route path="/product/:id" component={ProductPage} />
-            <Route path="/cart/:id?" component={CartPage} />
-            <Route path="/login" component={LoginPage} />
-            <Route path="/register" component={RegisterPage} />
-            <Route path="/profile" component={DashboardPage} />
-            <Route exact path="/admin" component={AdminPanel} />
-            <Route exact path="/admin/user/:id/edit" component={UserEditPage} />
             <Route
               exact
-              path="/admin/product/:id/edit"
+              path={RoutingConstants.homeWithPagination}
+              component={HomePage}
+            />
+            <Route
+              exact
+              path={RoutingConstants.homeWithSearchAndPagination}
+              component={HomePage}
+            />
+            <Route
+              exact
+              path={RoutingConstants.homeWithSearch}
+              component={HomePage}
+            />
+            <Route path={RoutingConstants.product} component={ProductPage} />
+            <Route path={RoutingConstants.cart} component={CartPage} />
+            <Route path={RoutingConstants.login} component={LoginPage} />
+            <Route path={RoutingConstants.register} component={RegisterPage} />
+            <Route
+              path={RoutingConstants.dashboard}
+              component={DashboardPage}
+            />
+            <Route
+              exact
+              path={RoutingConstants.adminPanel}
+              component={AdminPanel}
+            />
+            <Route
+              exact
+              path={RoutingConstants.userEdit}
+              component={UserEditPage}
+            />
+            <Route
+              exact
+              path={RoutingConstants.productEdit}
               component={ProductEditPage}
             />
-            <Route path="/shipping" component={ShippingPage} />
-            <Route path="/payment" component={PaymentPage} />
-            <Route path="/place-order" component={PlaceOrderPage} />
-            <Route path="/order/:id" component={OrderPage} />
+            <Route path={RoutingConstants.shipping} component={ShippingPage} />
+            <Route path={RoutingConstants.payment} component={PaymentPage} />
+            <Route
+              path={RoutingConstants.placeOrder}
+              component={PlaceOrderPage}
+            />
+            <Route path={RoutingConstants.order} component={OrderPage} />
             <Route component={NotFound} />
           </Switch>
         </main>

@@ -77,7 +77,7 @@ const UserListPage = () => {
                     style={{
                       color: " #667EEA",
                       cursor: "pointer",
-                      padding: "0 1.2rem",
+                      padding: "0 0.6rem",
                     }}
                   >
                     <i className="fas fa-edit" />
