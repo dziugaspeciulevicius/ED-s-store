@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import "../../setupTests";
 import ProductListPage from "../../pages/admin-panel/tab-panels/ProductListPage.component";
 
-jest.mock("../../pages/ProductListPage.component");
+jest.mock("../../pages/admin-panel/tab-panels/ProductListPage.component");
 
 describe("<ProductListPage />", () => {
   it("Renders <ProductListPage /> component correctly", () => {

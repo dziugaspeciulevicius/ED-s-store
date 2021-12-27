@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="fix styling issues and undefined issue when coming into the product page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/CartPage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/CartPage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/AboutPage.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/ContactPage.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/DashboardPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/DashboardPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/OrderListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/OrderListPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/ShopPage.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/UserListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/UserListPage.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +82,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -89,7 +95,7 @@
       <recent name="$PROJECT_DIR$/frontend/src/pages/admin-panel" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.data:import">
+  <component name="RunManager" selected="npm.test:coverage">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -110,14 +116,31 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="client" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="client" />
-      </scripts>
+    <configuration name="&lt;ProductListPage /&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
       <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" />
+      <test-names>
+        <test-name value="&lt;ProductListPage /&gt;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;ProductListPage /&gt;.Renders &lt;ProductListPage /&gt; component correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" />
+      <test-names>
+        <test-name value="&lt;ProductListPage /&gt;" />
+        <test-name value="Renders &lt;ProductListPage /&gt; component correctly" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="data:destroy" type="js.build_tools.npm">
@@ -140,31 +163,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="heroku-postbuild" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="heroku-postbuild" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="prettier-run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="prettier-run" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -180,24 +183,34 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test:coverage" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:coverage" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Test Coverage" />
       <item itemvalue="npm.data:destroy" />
       <item itemvalue="npm.heroku-postbuild" />
-      <item itemvalue="npm.client" />
       <item itemvalue="npm.data:import" />
-      <item itemvalue="npm.dev" />
-      <item itemvalue="npm.prettier-run" />
       <item itemvalue="npm.server" />
+      <item itemvalue="Jest.&lt;ProductListPage /&gt;.Renders &lt;ProductListPage /&gt; component correctly" />
+      <item itemvalue="Jest.&lt;ProductListPage /&gt;" />
+      <item itemvalue="npm.test:coverage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:coverage" />
+        <item itemvalue="Jest.&lt;ProductListPage /&gt;" />
+        <item itemvalue="Jest.&lt;ProductListPage /&gt;.Renders &lt;ProductListPage /&gt; component correctly" />
         <item itemvalue="npm.data:import" />
         <item itemvalue="npm.server" />
-        <item itemvalue="npm.prettier-run" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.client" />
       </list>
     </recent_temporary>
   </component>
@@ -223,6 +236,7 @@
       <workItem from="1639215550943" duration="32086000" />
       <workItem from="1639683570117" duration="11496000" />
       <workItem from="1639770384699" duration="6937000" />
+      <workItem from="1640636439778" duration="643000" />
     </task>
     <task id="LOCAL-00003" summary="updated sass - update readme to let apple users know that they might want to change to another default port">
       <created>1637700586365</created>
