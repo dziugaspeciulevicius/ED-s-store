@@ -5,12 +5,12 @@
 <head>
     <title>Code coverage report for src/actions/userActions.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="..\..\prettify.css" />
-    <link rel="stylesheet" href="..\..\base.css" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(..\..\sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -18,7 +18,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="..\..\index.html">All files</a> / <a href="index.html">src/actions</a> userActions.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/actions</a> userActions.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -306,55 +306,7 @@
 <a name='L248'></a><a href='#L248'>248</a>
 <a name='L249'></a><a href='#L249'>249</a>
 <a name='L250'></a><a href='#L250'>250</a>
-<a name='L251'></a><a href='#L251'>251</a>
-<a name='L252'></a><a href='#L252'>252</a>
-<a name='L253'></a><a href='#L253'>253</a>
-<a name='L254'></a><a href='#L254'>254</a>
-<a name='L255'></a><a href='#L255'>255</a>
-<a name='L256'></a><a href='#L256'>256</a>
-<a name='L257'></a><a href='#L257'>257</a>
-<a name='L258'></a><a href='#L258'>258</a>
-<a name='L259'></a><a href='#L259'>259</a>
-<a name='L260'></a><a href='#L260'>260</a>
-<a name='L261'></a><a href='#L261'>261</a>
-<a name='L262'></a><a href='#L262'>262</a>
-<a name='L263'></a><a href='#L263'>263</a>
-<a name='L264'></a><a href='#L264'>264</a>
-<a name='L265'></a><a href='#L265'>265</a>
-<a name='L266'></a><a href='#L266'>266</a>
-<a name='L267'></a><a href='#L267'>267</a>
-<a name='L268'></a><a href='#L268'>268</a>
-<a name='L269'></a><a href='#L269'>269</a>
-<a name='L270'></a><a href='#L270'>270</a>
-<a name='L271'></a><a href='#L271'>271</a>
-<a name='L272'></a><a href='#L272'>272</a>
-<a name='L273'></a><a href='#L273'>273</a>
-<a name='L274'></a><a href='#L274'>274</a>
-<a name='L275'></a><a href='#L275'>275</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L251'></a><a href='#L251'>251</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -605,37 +557,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import axios from "axios";
-import {
-  USER_DETAILS_FAIL,
-  USER_DETAILS_REQUEST,
-  USER_DETAILS_SUCCESS,
-  USER_DETAILS_RESET,
-  USER_LOGIN_FAIL,
-  USER_LOGIN_REQUEST,
-  USER_LOGIN_SUCCESS,
-  USER_LOGOUT,
-  USER_REGISTER_FAIL,
-  USER_REGISTER_REQUEST,
-  USER_REGISTER_SUCCESS,
-  USER_UPDATE_PROFILE_FAIL,
-  USER_UPDATE_PROFILE_REQUEST,
-  USER_UPDATE_PROFILE_SUCCESS,
-  USER_LIST_REQUEST,
-  USER_LIST_SUCCESS,
-  USER_LIST_FAIL,
-  USER_LIST_RESET,
-  USER_DELETE_REQUEST,
-  USER_DELETE_SUCCESS,
-  USER_DELETE_FAIL,
-  USER_UPDATE_REQUEST,
-  USER_UPDATE_SUCCESS,
-} from "../constants/userConstants";
+import * as userConstants from "../constants/userConstants";
 import { ORDER_LIST_MY_RESET } from "../constants/orderConstants";
 &nbsp;
 export const login = <span class="fstat-no" title="function not covered" >(e</span>mail, password) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (dispatch) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  try {</span>
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_LOGIN_REQUEST,
+      type: userConstants.USER_LOGIN_REQUEST,
     });
 &nbsp;
     const config = <span class="cstat-no" title="statement not covered" >{</span>
@@ -651,14 +579,14 @@ export const login = <span class="fstat-no" title="function not covered" >(e</sp
     );
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_LOGIN_SUCCESS,
+      type: userConstants.USER_LOGIN_SUCCESS,
       payload: data,
     });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    localStorage.setItem("userInfo", JSON.stringify(data));</span>
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_LOGIN_FAIL,
+      type: userConstants.USER_LOGIN_FAIL,
       payload:
         error.response &amp;&amp; error.response.data.message
           ? error.response.data.message
@@ -669,16 +597,16 @@ export const login = <span class="fstat-no" title="function not covered" >(e</sp
 &nbsp;
 export const logout = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  localStorage.removeItem("userInfo");</span>
-<span class="cstat-no" title="statement not covered" >  dispatch({ type: USER_LOGOUT });</span>
-<span class="cstat-no" title="statement not covered" >  dispatch({ type: USER_DETAILS_RESET });</span>
+<span class="cstat-no" title="statement not covered" >  dispatch({ type: userConstants.USER_LOGOUT });</span>
+<span class="cstat-no" title="statement not covered" >  dispatch({ type: userConstants.USER_DETAILS_RESET });</span>
 <span class="cstat-no" title="statement not covered" >  dispatch({ type: ORDER_LIST_MY_RESET });</span>
-<span class="cstat-no" title="statement not covered" >  dispatch({ type: USER_LIST_RESET });</span>
+<span class="cstat-no" title="statement not covered" >  dispatch({ type: userConstants.USER_LIST_RESET });</span>
 };
 &nbsp;
 export const register = <span class="fstat-no" title="function not covered" >(n</span>ame, email, password) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (dispatch) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  try {</span>
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_REGISTER_REQUEST,
+      type: userConstants.USER_REGISTER_REQUEST,
     });
 &nbsp;
     const config = <span class="cstat-no" title="statement not covered" >{</span>
@@ -694,19 +622,19 @@ export const register = <span class="fstat-no" title="function not covered" >(n<
     );
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_REGISTER_SUCCESS,
+      type: userConstants.USER_REGISTER_SUCCESS,
       payload: data,
     });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_LOGIN_SUCCESS,
+      type: userConstants.USER_LOGIN_SUCCESS,
       payload: data,
     });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    localStorage.setItem("userInfo", JSON.stringify(data));</span>
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_REGISTER_FAIL,
+      type: userConstants.USER_REGISTER_FAIL,
       payload:
         error.response &amp;&amp; error.response.data.message
           ? error.response.data.message
@@ -718,7 +646,7 @@ export const register = <span class="fstat-no" title="function not covered" >(n<
 export const getUserDetails = <span class="fstat-no" title="function not covered" >(i</span>d) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (dispatch, getState) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  try {</span>
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_DETAILS_REQUEST,
+      type: userConstants.USER_DETAILS_REQUEST,
     });
 &nbsp;
     const {
@@ -735,12 +663,12 @@ export const getUserDetails = <span class="fstat-no" title="function not covered
     const { data } = <span class="cstat-no" title="statement not covered" >await axios.get(`/api/users/${id}`, config);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_DETAILS_SUCCESS,
+      type: userConstants.USER_DETAILS_SUCCESS,
       payload: data,
     });
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_DETAILS_FAIL,
+      type: userConstants.USER_DETAILS_FAIL,
       payload:
         error.response &amp;&amp; error.response.data.message
           ? error.response.data.message
@@ -752,7 +680,7 @@ export const getUserDetails = <span class="fstat-no" title="function not covered
 export const updateUserProfile = <span class="fstat-no" title="function not covered" >(u</span>ser) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (dispatch, getState) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  try {</span>
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_UPDATE_PROFILE_REQUEST,
+      type: userConstants.USER_UPDATE_PROFILE_REQUEST,
     });
 &nbsp;
     const {
@@ -769,12 +697,12 @@ export const updateUserProfile = <span class="fstat-no" title="function not cove
     const { data } = <span class="cstat-no" title="statement not covered" >await axios.put(`/api/users/profile`, user, config);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_UPDATE_PROFILE_SUCCESS,
+      type: userConstants.USER_UPDATE_PROFILE_SUCCESS,
       payload: data,
     });
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_UPDATE_PROFILE_FAIL,
+      type: userConstants.USER_UPDATE_PROFILE_FAIL,
       payload:
         error.response &amp;&amp; error.response.data.message
           ? error.response.data.message
@@ -786,7 +714,7 @@ export const updateUserProfile = <span class="fstat-no" title="function not cove
 export const listUsers = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (dispatch, getState) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  try {</span>
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_LIST_REQUEST,
+      type: userConstants.USER_LIST_REQUEST,
     });
 &nbsp;
     const {
@@ -802,12 +730,12 @@ export const listUsers = <span class="fstat-no" title="function not covered" >()
     const { data } = <span class="cstat-no" title="statement not covered" >await axios.get(`/api/users`, config);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_LIST_SUCCESS,
+      type: userConstants.USER_LIST_SUCCESS,
       payload: data,
     });
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_LIST_FAIL,
+      type: userConstants.USER_LIST_FAIL,
       payload:
         error.response &amp;&amp; error.response.data.message
           ? error.response.data.message
@@ -819,7 +747,7 @@ export const listUsers = <span class="fstat-no" title="function not covered" >()
 export const deleteUser = <span class="fstat-no" title="function not covered" >(i</span>d) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (dispatch, getState) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  try {</span>
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_DELETE_REQUEST,
+      type: userConstants.USER_DELETE_REQUEST,
     });
 &nbsp;
     const {
@@ -834,10 +762,10 @@ export const deleteUser = <span class="fstat-no" title="function not covered" >(
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    await axios.delete(`/api/users/${id}`, config);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    dispatch({ type: USER_DELETE_SUCCESS });</span>
+<span class="cstat-no" title="statement not covered" >    dispatch({ type: userConstants.USER_DELETE_SUCCESS });</span>
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_DELETE_FAIL,
+      type: userConstants.USER_DELETE_FAIL,
       payload:
         error.response &amp;&amp; error.response.data.message
           ? error.response.data.message
@@ -849,7 +777,7 @@ export const deleteUser = <span class="fstat-no" title="function not covered" >(
 export const updateUser = <span class="fstat-no" title="function not covered" >(u</span>ser) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (dispatch, getState) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  try {</span>
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_UPDATE_REQUEST,
+      type: userConstants.USER_UPDATE_REQUEST,
     });
 &nbsp;
     const {
@@ -858,19 +786,19 @@ export const updateUser = <span class="fstat-no" title="function not covered" >(
 &nbsp;
     const config = <span class="cstat-no" title="statement not covered" >{</span>
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
 &nbsp;
-    const {data} = <span class="cstat-no" title="statement not covered" >await axios.put(`/api/users/${user._id}`, user, config);</span>
+    const { data } = <span class="cstat-no" title="statement not covered" >await axios.put(`/api/users/${user._id}`, user, config);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    dispatch({ type: USER_UPDATE_SUCCESS });</span>
-<span class="cstat-no" title="statement not covered" >    dispatch({ type: USER_DETAILS_SUCCESS, payload: data });</span>
-<span class="cstat-no" title="statement not covered" >    dispatch({ type: USER_DETAILS_RESET });</span>
+<span class="cstat-no" title="statement not covered" >    dispatch({ type: userConstants.USER_UPDATE_SUCCESS });</span>
+<span class="cstat-no" title="statement not covered" >    dispatch({ type: userConstants.USER_DETAILS_SUCCESS, payload: data });</span>
+<span class="cstat-no" title="statement not covered" >    dispatch({ type: userConstants.USER_DETAILS_RESET });</span>
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    dispatch({</span>
-      type: USER_DELETE_FAIL,
+      type: userConstants.USER_DELETE_FAIL,
       payload:
         error.response &amp;&amp; error.response.data.message
           ? error.response.data.message
@@ -885,17 +813,17 @@ export const updateUser = <span class="fstat-no" title="function not covered" >(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Nov 14 2021 17:57:37 GMT+0200 (Eastern European Standard Time)
+                at Mon Dec 27 2021 22:33:34 GMT+0200 (Eastern European Standard Time)
             </div>
         </div>
-        <script src="..\..\prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="..\..\sorter.js"></script>
-        <script src="..\..\block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

@@ -5,12 +5,12 @@
 <head>
     <title>Code coverage report for src/App.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="..\prettify.css" />
-    <link rel="stylesheet" href="..\base.css" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(..\sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -18,7 +18,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="..\index.html">All files</a> / <a href="index.html">src</a> App.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> App.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -127,12 +127,26 @@
 <a name='L69'></a><a href='#L69'>69</a>
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,6 +169,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -200,29 +238,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-&nbsp;
 import Header from "./components/Header.component";
 import Footer from "./components/Footer.component";
-&nbsp;
 import HomePage from "./pages/HomePage.component";
 import ProductPage from "./pages/ProductPage.component";
-import ShopPage from "./pages/ShopPage.component";
-import ContactPage from "./pages/ContactPage.component";
-import AboutPage from "./pages/AboutPage.component";
 import CartPage from "./pages/CartPage.component";
 import LoginPage from "./pages/LoginPage.component";
 import RegisterPage from "./pages/RegisterPage.component";
-import DashboardPage from "./pages/DashboardPage.component";
+import DashboardPage from "./pages/user-panel/DashboardPage.component";
 import ShippingPage from "./pages/ShippingPage.component";
 import PaymentPage from "./pages/PaymentPage.component";
 import PlaceOrderPage from "./pages/PlaceOrderPage.component";
 import OrderPage from "./pages/OrderPage.component";
 import ScrollToTop from "./components/ScrollToTop.component";
-import AdminPanel from "./pages/AdminPanel.component";
+import AdminPanel from "./pages/admin-panel/AdminPanel.component";
 import UserEditPage from "./pages/UserEditPage.component";
 import ProductEditPage from "./pages/ProductEditPage.component";
-&nbsp;
 import NotFound from "./components/NotFound.component";
+import RoutingConstants from "./core/constants/routing";
 &nbsp;
 const App = () =&gt; {
   return (
@@ -230,35 +263,59 @@ const App = () =&gt; {
       &lt;Router&gt;
         &lt;ScrollToTop /&gt;
         &lt;Header /&gt;
+        {/*&lt;NavbarComponent /&gt;*/}
         &lt;main className="pb-3"&gt;
           &lt;Switch&gt;
-            &lt;Route exact path="/" component={HomePage} /&gt;
-            &lt;Route exact path="/page/:pageNumber" component={HomePage} /&gt;
             &lt;Route
               exact
-              path="/search/:keyword/page/:pageNumber"
+              path={RoutingConstants.homepage}
               component={HomePage}
             /&gt;
-            &lt;Route exact path="/search/:keyword" component={HomePage} /&gt;
-            &lt;Route path="/product/:id" component={ProductPage} /&gt;
-            &lt;Route path="/cart/:id?" component={CartPage} /&gt;
-            &lt;Route path="/shop" component={ShopPage} /&gt;
-            &lt;Route path="/contact" component={ContactPage} /&gt;
-            &lt;Route path="/about" component={AboutPage} /&gt;
-            &lt;Route path="/login" component={LoginPage} /&gt;
-            &lt;Route path="/register" component={RegisterPage} /&gt;
-            &lt;Route path="/profile" component={DashboardPage} /&gt;
-            &lt;Route exact path="/admin" component={AdminPanel} /&gt;
-            &lt;Route exact path="/admin/user/:id/edit" component={UserEditPage} /&gt;
             &lt;Route
               exact
-              path="/admin/product/:id/edit"
+              path={RoutingConstants.homeWithPagination}
+              component={HomePage}
+            /&gt;
+            &lt;Route
+              exact
+              path={RoutingConstants.homeWithSearchAndPagination}
+              component={HomePage}
+            /&gt;
+            &lt;Route
+              exact
+              path={RoutingConstants.homeWithSearch}
+              component={HomePage}
+            /&gt;
+            &lt;Route path={RoutingConstants.product} component={ProductPage} /&gt;
+            &lt;Route path={RoutingConstants.cart} component={CartPage} /&gt;
+            &lt;Route path={RoutingConstants.login} component={LoginPage} /&gt;
+            &lt;Route path={RoutingConstants.register} component={RegisterPage} /&gt;
+            &lt;Route
+              path={RoutingConstants.dashboard}
+              component={DashboardPage}
+            /&gt;
+            &lt;Route
+              exact
+              path={RoutingConstants.adminPanel}
+              component={AdminPanel}
+            /&gt;
+            &lt;Route
+              exact
+              path={RoutingConstants.userEdit}
+              component={UserEditPage}
+            /&gt;
+            &lt;Route
+              exact
+              path={RoutingConstants.productEdit}
               component={ProductEditPage}
             /&gt;
-            &lt;Route path="/shipping" component={ShippingPage} /&gt;
-            &lt;Route path="/payment" component={PaymentPage} /&gt;
-            &lt;Route path="/place-order" component={PlaceOrderPage} /&gt;
-            &lt;Route path="/order/:id" component={OrderPage} /&gt;
+            &lt;Route path={RoutingConstants.shipping} component={ShippingPage} /&gt;
+            &lt;Route path={RoutingConstants.payment} component={PaymentPage} /&gt;
+            &lt;Route
+              path={RoutingConstants.placeOrder}
+              component={PlaceOrderPage}
+            /&gt;
+            &lt;Route path={RoutingConstants.order} component={OrderPage} /&gt;
             &lt;Route component={NotFound} /&gt;
           &lt;/Switch&gt;
         &lt;/main&gt;
@@ -276,17 +333,17 @@ export default App;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Nov 14 2021 17:57:37 GMT+0200 (Eastern European Standard Time)
+                at Mon Dec 27 2021 22:33:34 GMT+0200 (Eastern European Standard Time)
             </div>
         </div>
-        <script src="..\prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="..\sorter.js"></script>
-        <script src="..\block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     
