@@ -1,9 +1,9 @@
 # .github/workflows/scheduled-builds.yml
-name: Visit the store every hour
+name: CronJob
 
 on:
   schedule:
-    - cron: '35 * * * *'
+    - cron: '0 * * * *'
 jobs:
   build:
     name: Trigger Site Visit
