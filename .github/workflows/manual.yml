@@ -1,0 +1,13 @@
+# .github/workflows/scheduled-builds.yml
+name: Visit the store every hour
+
+on:
+  schedule:
+    - cron: '35 * * * *'
+jobs:
+  build:
+    name: Trigger Site Visit
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL request
+        run: curl https://eds-store-mern.herokuapp.com/
