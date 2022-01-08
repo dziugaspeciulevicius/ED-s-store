@@ -4,15 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="fix styling issues and undefined issue when coming into the product page">
+    <list default="true" id="697ed363-b710-4fda-b36f-61a1927d04ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/AboutPage.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/ContactPage.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/DashboardPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/DashboardPage.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/OrderListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/OrderListPage.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/ShopPage.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/__tests__/pages/UserListPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__tests__/pages/UserListPage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/clover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/App.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/App.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/cartActions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/cartActions.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/orderActions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/orderActions.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/productActions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/productActions.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/userActions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/actions/userActions.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Breadcrumb.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Breadcrumb.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/CheckoutSteps.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/CheckoutSteps.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Footer.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Footer.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/FormContainer.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/FormContainer.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Header.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Header.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Message.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Message.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/NavBar.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/NavBar.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/NotFound.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/NotFound.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Paginate.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Paginate.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Product.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Product.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Rating.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Rating.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/ScrollToTop.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/ScrollToTop.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/SearchBox.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/SearchBox.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Spinner.component.jsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/Spinner.component.jsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/components/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/cartConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/cartConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/orderConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/orderConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/productConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/productConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/userConstants.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/constants/userConstants.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/core/constants/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/core/constants/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/core/constants/routing.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/core/constants/routing.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/orderReducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/orderReducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/productReducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/productReducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/userReducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/reducers/userReducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/store.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/store.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/theme.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coverage/lcov-report/src/theme.ts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +62,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="frontend-mui-ts" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,7 +125,7 @@
       <recent name="$PROJECT_DIR$/frontend/src/pages/admin-panel" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:coverage">
+  <component name="RunManager" selected="npm.data:import">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -110,37 +140,20 @@
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
       <jest-options value="--env=jsdom --coverage --watchAll=true" />
       <envs />
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="&lt;ProductListPage /&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="client" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="client" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" />
-      <test-names>
-        <test-name value="&lt;ProductListPage /&gt;" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="&lt;ProductListPage /&gt;.Renders &lt;ProductListPage /&gt; component correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/__tests__/pages/ProductListPage.test.js" />
-      <test-names>
-        <test-name value="&lt;ProductListPage /&gt;" />
-        <test-name value="Renders &lt;ProductListPage /&gt; component correctly" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="data:destroy" type="js.build_tools.npm">
@@ -163,11 +176,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="heroku-postbuild" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="heroku-postbuild" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prettier-run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prettier-run" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -183,34 +216,24 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:coverage" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:coverage" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Test Coverage" />
       <item itemvalue="npm.data:destroy" />
       <item itemvalue="npm.heroku-postbuild" />
       <item itemvalue="npm.data:import" />
+      <item itemvalue="npm.client" />
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.prettier-run" />
       <item itemvalue="npm.server" />
-      <item itemvalue="Jest.&lt;ProductListPage /&gt;.Renders &lt;ProductListPage /&gt; component correctly" />
-      <item itemvalue="Jest.&lt;ProductListPage /&gt;" />
-      <item itemvalue="npm.test:coverage" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:coverage" />
-        <item itemvalue="Jest.&lt;ProductListPage /&gt;" />
-        <item itemvalue="Jest.&lt;ProductListPage /&gt;.Renders &lt;ProductListPage /&gt; component correctly" />
-        <item itemvalue="npm.data:import" />
         <item itemvalue="npm.server" />
+        <item itemvalue="npm.prettier-run" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.data:import" />
+        <item itemvalue="npm.client" />
       </list>
     </recent_temporary>
   </component>
@@ -237,6 +260,7 @@
       <workItem from="1639683570117" duration="11496000" />
       <workItem from="1639770384699" duration="6937000" />
       <workItem from="1640636439778" duration="643000" />
+      <workItem from="1641668242224" duration="551000" />
     </task>
     <task id="LOCAL-00003" summary="updated sass - update readme to let apple users know that they might want to change to another default port">
       <created>1637700586365</created>
